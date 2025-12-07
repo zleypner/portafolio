@@ -16,7 +16,7 @@ export default function Footer() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#00FF99"
+            stroke="#00CC7A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -29,7 +29,7 @@ export default function Footer() {
               fontFamily="Arial, sans-serif"
               fontSize="10"
               fontWeight="bold"
-              fill="#00FF99"
+              fill="#00CC7A"
             >
               in
             </text>
@@ -47,7 +47,7 @@ export default function Footer() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#00FF99"
+            stroke="#00CC7A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -67,7 +67,7 @@ export default function Footer() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#00FF99"
+            stroke="#00CC7A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -87,7 +87,7 @@ export default function Footer() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#00FF99"
+            stroke="#00CC7A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -103,7 +103,7 @@ export default function Footer() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#00FF99"
+            stroke="#00CC7A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -117,7 +117,6 @@ export default function Footer() {
 
       <div className="footer-content">
         <div className="footer-quote">Every line of code is a step toward freedom.</div>
-        <div className="footer-hashtags">#BuildInPublic • #LatamDev • #AI4Good</div>
         <div className="footer-location">Born in LATAM. Building for the world.</div>
       </div>
 

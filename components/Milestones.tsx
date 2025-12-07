@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import EventAccordionCard from './EventAccordionCard';
 
 const milestonesData = [
   {
@@ -103,11 +102,80 @@ const milestonesData = [
     image: '/Stellar.jpg',
     link: 'https://x.com/anwar_zlcr/status/1974647108054434260',
   },
+  {
+    title: 'Blockchain Jungle',
+    type: 'Conference',
+    date: 'November 2025',
+    location: 'Costa Rica',
+    description:
+      "Attending one of LATAM's premier blockchain conferences, connecting with industry leaders and exploring cutting-edge developments in Web3 and blockchain technology.",
+    achievements: [
+      'Networked with blockchain innovators and industry leaders',
+      'Explored latest trends in Web3 and decentralized technologies',
+      'Contributed to discussions on blockchain adoption in LATAM',
+    ],
+    techStack: ['Blockchain', 'Web3', 'DeFi', 'NFTs'],
+    image: '/blockchain-jungle.jpg',
+    link: '#',
+  },
+  {
+    title: 'Polkadot Hackathon',
+    type: 'Hackathon',
+    date: '13nov - 15 nov',
+    location: 'Argentina',
+    description:
+      'Participating in the Polkadot ecosystem hackathon, building innovative solutions on the Polkadot network and exploring parachain development.',
+    achievements: [
+      'Developed solutions on Polkadot network',
+      'Learned about substrate framework and parachain architecture',
+      'Collaborated with developers on cross-chain interoperability',
+    ],
+    techStack: ['Polkadot', 'Substrate', 'Rust', 'Web3'],
+    image: '/polkadot-hackathon.jpg',
+    link: '#',
+  },
+  {
+    title: 'DevConnect',
+    type: 'Conference',
+    date: 'November 2025',
+    location: 'Argentina',
+    description:
+      'Attending DevConnect to engage with the Ethereum developer community, participate in technical discussions, and explore the future of decentralized applications.',
+    achievements: [
+      'Engaged with Ethereum core developers and researchers',
+      'Participated in technical workshops on EVM and scaling solutions',
+      'Built connections within the global Ethereum community',
+    ],
+    techStack: ['Ethereum', 'Solidity', 'EVM', 'Layer 2'],
+    image: '/devconnect.jpg',
+    link: '#',
+  },
+  {
+    title: 'Stellar Hackathon Residency + Hackathon',
+    type: 'Hackathon',
+    date: 'November 2025',
+    location: 'Argentina',
+    description:
+      'Immersive residency program followed by intensive hackathon focused on building payment and financial inclusion solutions on the Stellar network.',
+    achievements: [
+      'Built payment solutions on Stellar blockchain',
+      'Learned about cross-border payment infrastructure',
+      'Contributed to financial inclusion initiatives in LATAM',
+    ],
+    techStack: ['Stellar', 'Soroban', 'Smart Contracts', 'Payments'],
+    image: '/stellar-hackathon.jpg',
+    link: '#',
+  },
 ];
 
 export default function Milestones() {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsInitialized = useRef(false);
+  const [activeCardId, setActiveCardId] = useState<number | null>(null);
+
+  const handleCardClick = (id: number) => {
+    setActiveCardId((prevId) => (prevId === id ? null : id));
+  };
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -170,44 +238,22 @@ export default function Milestones() {
 
       <div className="milestones-grid">
         {milestonesData.map((milestone, index) => (
-          <div key={index} className="milestone-card">
-            <div className="milestone-image-container">
-              <Image
-                src={milestone.image}
-                alt={`${milestone.title} ${milestone.date}`}
-                className="milestone-image"
-                width={800}
-                height={600}
-                priority={index < 2}
-              />
-            </div>
-            <div className="milestone-header">
-              <h3 className="milestone-title">{milestone.title}</h3>
-              <span className="milestone-type">{milestone.type}</span>
-            </div>
-            <div className="milestone-meta">
-              {milestone.date} • {milestone.location}
-            </div>
-            <p className="milestone-description">{milestone.description}</p>
-            <div className="milestone-achievements">
-              <h4>Key Achievements:</h4>
-              <ul>
-                {milestone.achievements.map((achievement, achievementIndex) => (
-                  <li key={achievementIndex}>{achievement}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="milestone-tech">
-              {milestone.techStack.map((tech, techIndex) => (
-                <span key={techIndex} className="tech-badge">
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <Link href={milestone.link} className="milestone-link" target="_blank">
-              Read More
-            </Link>
-          </div>
+          <EventAccordionCard
+            key={index}
+            id={index}
+            image={milestone.image}
+            title={milestone.title}
+            type={milestone.type}
+            date={milestone.date}
+            location={milestone.location}
+            description={milestone.description}
+            achievements={milestone.achievements}
+            techStack={milestone.techStack}
+            link={milestone.link}
+            isActive={activeCardId === index}
+            onClick={() => handleCardClick(index)}
+            priority={index < 2}
+          />
         ))}
       </div>
     </section>

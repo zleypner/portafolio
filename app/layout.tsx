@@ -10,7 +10,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: 'Anwar Portfolio',
-  description: 'Full-Stack Software Engineer | Building products that make a difference',
+  description: 'Software Engineer | Full-Stack • AI/ML • Cloud • Security',
 };
 
 export default function RootLayout({

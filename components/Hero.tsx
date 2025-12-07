@@ -25,35 +25,39 @@ export default function Hero() {
 
   return (
     <section className="hero" id="home">
-      <div>
+      <div className="hero-container">
         <h1 className="typewriter">
           Hi, I&apos;m <span className="glitch" data-text="Anwar">Anwar</span>
         </h1>
-        <p className="typewriter-subtitle">Full-Stack Software Engineer</p>
+        <p className="typewriter-subtitle">Software Engineer | Full-Stack • AI/ML • Cloud • Security</p>
+        
+        <p className="hero-value-proposition">
+          Specializing in the secure integration of AI/ML models into scalable, cloud-based full-stack applications.
+        </p>
 
-        <p className="hero-description">
-          I´m driven by the challenge of building products that make people&apos;s lives easier.
-        </p>
-        <p className="hero-description">
-          I love sharing my knowledge, collaborating with teams, and continuously improving as a
-          developer—mentoring others and working with startup founders and builders to turn ideas
-          into real impact.
-        </p>
+        <div className="hero-cta-buttons">
+          <Link href="#projects" className="cta-primary">
+            View My Projects
+          </Link>
+          <Link href="#contact" className="cta-secondary">
+            Contact Me
+          </Link>
+        </div>
 
         <div className="socials">
-          <Link href="https://www.linkedin.com/in/anwardev/" target="_blank">
+          <Link href="https://www.linkedin.com/in/anwardev/" target="_blank" aria-label="LinkedIn Profile">
             💼 LinkedIn
           </Link>
-          <Link href="https://x.com/anwar_zlcr" target="_blank">
+          <Link href="https://x.com/anwar_zlcr" target="_blank" aria-label="X Profile">
             𝕏 X
           </Link>
-          <Link href="https://github.com/zleypner" target="_blank">
+          <Link href="https://github.com/zleypner" target="_blank" aria-label="GitHub Profile">
             ⚡ GitHub
           </Link>
-          <Link href="https://instagram.com/anwar.zl" target="_blank">
+          <Link href="https://instagram.com/anwar.zl" target="_blank" aria-label="Instagram Profile">
             📷 Instagram
           </Link>
-          <Link href="https://t.me/anwar_crzl" target="_blank">
+          <Link href="https://t.me/anwar_crzl" target="_blank" aria-label="Telegram Profile">
             ✈️ Telegram
           </Link>
         </div>
