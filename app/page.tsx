@@ -3,6 +3,7 @@
 import Sidebar from '@/components/Sidebar';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
+import Milestones from '@/components/Milestones';
 import Projects from '@/components/Projects';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+        <Milestones />
       </main>
     </div>
   );
