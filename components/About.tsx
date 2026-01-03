@@ -1,6 +1,11 @@
 'use client';
 
+import { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+
 export default function About() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section id="about" className="content-section">
       <p>
@@ -14,14 +19,37 @@ export default function About() {
         , where I build and maintain React + TypeScript platforms used by thousands of users across global clients. I've optimized frontend performance with Next.js (SSR/SSG), integrated REST and GraphQL APIs, and improved backend flows that reduced key API response times by roughly 25%.
       </p>
       <p>
-        My expertise spans the <strong>full stack</strong> — from designing reusable UI components with React and TypeScript to engineering backend services with FastAPI and Node.js. I've set up automated testing pipelines, containerized applications with Docker, and streamlined CI/CD workflows with GitHub Actions to deliver reliable, production-ready code.
+        Previously, I worked at{' '}
+        <a href="https://www.3m.com" target="_blank" rel="noopener noreferrer">
+          3M Science
+        </a>
+        {' '}as an IT Systems Engineer, where I engineered Python and PowerShell automation scripts, supported enterprise environments across multiple regions, and improved incident resolution through automation and structured documentation.
       </p>
-      <p>
-        I'm also exploring the <strong>AI/ML space</strong>, working with LangChain, RAG pipelines, vector databases (PGVector, Milvus), and semantic search to build intelligent, context-aware applications. My focus areas include <strong>Full Stack Software Engineering</strong>, <strong>AI/ML</strong>, <strong>Cloud Infrastructure</strong>, and <strong>Security</strong>.
-      </p>
-      <p>
-        Previously, I worked at <strong>3M</strong> as an IT Systems Engineer, where I engineered Python and PowerShell automation scripts, supported enterprise environments across multiple regions, and improved incident resolution through automation and structured documentation.
-      </p>
+
+      <div className={`about-expandable ${isExpanded ? 'expanded' : ''}`}>
+        <p>
+          My expertise spans the <strong>full stack</strong> — from designing reusable UI components with React and TypeScript to engineering backend services with FastAPI and Node.js. I've set up automated testing pipelines, containerized applications with Docker, and streamlined CI/CD workflows with GitHub Actions to deliver reliable, production-ready code.
+        </p>
+        <p>
+          I'm also exploring the <strong>AI/ML space</strong>, working with LangChain, RAG pipelines, vector databases (PGVector, Milvus), and semantic search to build intelligent, context-aware applications. My focus areas include <strong>Full Stack Software Engineering</strong>, <strong>AI/ML</strong>, <strong>Cloud Infrastructure</strong>, and <strong>Security</strong>.
+        </p>
+      </div>
+
+      <button
+        className="read-more-btn"
+        onClick={() => setIsExpanded(!isExpanded)}
+        aria-expanded={isExpanded}
+      >
+        {isExpanded ? (
+          <>
+            Read Less <ChevronUp size={18} />
+          </>
+        ) : (
+          <>
+            Read More <ChevronDown size={18} />
+          </>
+        )}
+      </button>
     </section>
   );
 }
