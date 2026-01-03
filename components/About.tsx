@@ -4,40 +4,23 @@ export default function About() {
   return (
     <section id="about" className="content-section">
       <p>
-        I'm a developer passionate about crafting accessible, pixel-perfect user
-        interfaces that blend thoughtful design with robust engineering. My favorite
-        work lies at the intersection of design and development, creating experiences
-        that not only look great but are meticulously built for performance and usability.
+        I'm a full-stack software engineer specializing in <strong>TypeScript</strong>, <strong>React</strong>, <strong>Python</strong>, and <strong>API-driven architectures</strong>. I build fast, scalable platforms with clean backend services, robust API integrations, and automation across developer workflows.
       </p>
       <p>
-        Currently, I'm a Senior Front-End Engineer at{' '}
-        <a href="https://www.klaviyo.com" target="_blank" rel="noopener noreferrer">
-          Klaviyo
+        Currently, I'm a Software Engineer at{' '}
+        <a href="https://www.bcdme.com" target="_blank" rel="noopener noreferrer">
+          BCD Meetings & Events
         </a>
-        , specializing in accessibility. I contribute to the creation and maintenance of UI components
-        that power Klaviyo's frontend, ensuring our platform meets web accessibility
-        standards and best practices to deliver an inclusive user experience.
+        , where I build and maintain React + TypeScript platforms used by thousands of users across global clients. I've optimized frontend performance with Next.js (SSR/SSG), integrated REST and GraphQL APIs, and improved backend flows that reduced key API response times by roughly 25%.
       </p>
       <p>
-        In the past, I've had the opportunity to develop software across a variety of
-        settings — from{' '}
-        <strong>advertising agencies</strong> and{' '}
-        <strong>large corporations</strong> to{' '}
-        <strong>start-ups</strong> and{' '}
-        <strong>small digital product studios</strong>. Additionally, I also released a{' '}
-        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-          comprehensive video course
-        </a>{' '}
-        a few years ago, guiding learners through building a web app with
-        the Spotify API.
+        My expertise spans the <strong>full stack</strong> — from designing reusable UI components with React and TypeScript to engineering backend services with FastAPI and Node.js. I've set up automated testing pipelines, containerized applications with Docker, and streamlined CI/CD workflows with GitHub Actions to deliver reliable, production-ready code.
       </p>
       <p>
-        In my spare time, I'm usually climbing, playing tennis, hanging out with my wife
-        and two cats, or running around Hyrule searching for{' '}
-        <a href="https://zelda.fandom.com/wiki/Korok" target="_blank" rel="noopener noreferrer">
-          Korok seeds
-        </a>
-        .
+        I'm also exploring the <strong>AI/ML space</strong>, working with LangChain, RAG pipelines, vector databases (PGVector, Milvus), and semantic search to build intelligent, context-aware applications. My focus areas include <strong>Full Stack Software Engineering</strong>, <strong>AI/ML</strong>, <strong>Cloud Infrastructure</strong>, and <strong>Security</strong>.
+      </p>
+      <p>
+        Previously, I worked at <strong>3M</strong> as an IT Systems Engineer, where I engineered Python and PowerShell automation scripts, supported enterprise environments across multiple regions, and improved incident resolution through automation and structured documentation.
       </p>
     </section>
   );

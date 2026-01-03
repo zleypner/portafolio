@@ -34,7 +34,7 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #00CC7A;
+  border-bottom: 1px solid #60A5FA;
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -52,13 +52,13 @@ body {
 .nav-logo a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00CC7A;
+  color: #60A5FA;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .nav-logo a:hover {
-  text-shadow: 0 0 10px rgba(0, 204, 122, 0.6);
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.6);
 }
 
 .nav-menu {
@@ -76,8 +76,8 @@ body {
 }
 
 .nav-link:hover {
-  color: #00CC7A;
-  text-shadow: 0 0 8px rgba(0, 204, 122, 0.4);
+  color: #60A5FA;
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.4);
 }
 
 .nav-link::after {
@@ -87,7 +87,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #00CC7A;
+  background: #60A5FA;
   transition: width 0.3s ease;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 
 .resume-btn {
-  background: #00CC7A;
+  background: #60A5FA;
   color: #000000 !important;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -107,7 +107,7 @@ body {
 .resume-btn:hover {
   background: #00e676;
   color: #000000 !important;
-  box-shadow: 0 0 15px rgba(0, 204, 122, 0.6);
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.6);
   transform: translateY(-2px);
 }
 
@@ -124,7 +124,7 @@ body {
 .bar {
   width: 25px;
   height: 3px;
-  background: #00CC7A;
+  background: #60A5FA;
   margin: 3px 0;
   transition: 0.3s;
   border-radius: 2px;
@@ -177,15 +177,15 @@ body {
   white-space: nowrap;
   animation: typing 1.5s steps(20) 0.5s forwards, blink 1s infinite 2.5s;
   width: 0;
-  text-shadow: 0 0 10px rgba(0, 204, 122, 0.85);
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.85);
 }
 
 .typewriter .glitch {
-  background: linear-gradient(135deg, #00CC7A, #008855);
+  background: linear-gradient(135deg, #60A5FA, #008855);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 17px rgba(0, 204, 122, 0.42);
+  text-shadow: 0 0 17px rgba(96, 165, 250, 0.42);
 }
 
 .typewriter-subtitle {
@@ -238,21 +238,21 @@ body {
   font-size: 1rem;
   transition: all 0.3s ease;
   display: inline-block;
-  border: 2px solid #00CC7A;
+  border: 2px solid #60A5FA;
   position: relative;
   overflow: hidden;
 }
 
 .cta-primary {
   background: transparent;
-  color: #00CC7A;
+  color: #60A5FA;
 }
 
 .cta-primary:hover {
-  background: #00CC7A;
+  background: #60A5FA;
   color: #000000;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 5px 20px rgba(0, 204, 122, 0.4);
+  box-shadow: 0 5px 20px rgba(96, 165, 250, 0.4);
 }
 
 .cta-secondary {
@@ -290,11 +290,11 @@ body {
 .neon-divider {
   width: 96px;
   height: 2px;
-  background: #00CC7A;
+  background: #60A5FA;
   margin: 1.5rem auto;
   border-radius: 50px;
   animation: pulse 2s ease-in-out infinite;
-  box-shadow: 0 0 10px #00CC7A;
+  box-shadow: 0 0 10px #60A5FA;
 }
 
 .neon-divider:nth-child(2) {
@@ -426,12 +426,12 @@ section.visible {
 }
 
 h1, h2 {
-  color: #00CC7A;
+  color: #60A5FA;
   margin-bottom: 1rem;
 }
 
 h3 {
-  color: #00CC7A;
+  color: #60A5FA;
   margin-bottom: 1rem;
   margin-top: 3rem;
 }
@@ -486,8 +486,8 @@ li::before {
   background-color: #00e676;
   color: #0d0d0d;
   transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(0, 204, 122, 0.6);
-  border-color: #00CC7A;
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
+  border-color: #60A5FA;
 }
 
 .scroll-indicator {
@@ -523,9 +523,9 @@ li::before {
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 16px solid #00CC7A;
+  border-top: 16px solid #60A5FA;
   animation: bounce 2s infinite;
-  filter: drop-shadow(0 0 4px rgba(0, 204, 122, 0.3));
+  filter: drop-shadow(0 0 4px rgba(96, 165, 250, 0.3));
 }
 
 
@@ -609,11 +609,11 @@ footer {
   text-align: center;
   padding: 4rem 2rem;
   background: #000000;
-  color: #00CC7A;
+  color: #60A5FA;
   font-size: 1rem;
   position: relative;
   overflow: hidden;
-  border-top: 2px solid #00CC7A;
+  border-top: 2px solid #60A5FA;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -639,7 +639,7 @@ footer {
 
 .footer-social-icon:hover {
   transform: scale(1.1) translateY(-2px);
-  filter: drop-shadow(0 0 8px rgba(0, 204, 122, 0.6));
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.6));
 }
 
 .footer-social-icon svg {
@@ -647,7 +647,7 @@ footer {
 }
 
 .footer-social-icon:hover svg {
-  stroke: #00CC7A;
+  stroke: #60A5FA;
   filter: brightness(1.2);
 }
 
@@ -658,30 +658,30 @@ footer {
 .footer-quote {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #00CC7A;
+  color: #60A5FA;
   font-weight: 500;
 }
 
 .footer-hashtags {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #00CC7A;
+  color: #60A5FA;
 }
 
 .footer-location {
   font-size: 1rem;
-  color: #00CC7A;
+  color: #60A5FA;
   margin-bottom: 2rem;
 }
 
 .footer-copyright {
   font-size: 0.9rem;
-  color: #00CC7A;
+  color: #60A5FA;
   opacity: 0.8;
 }
 
 .footer-copyright .triangle {
-  color: #00CC7A;
+  color: #60A5FA;
   font-size: 1rem;
 }
 
@@ -729,7 +729,7 @@ footer {
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     padding: 2rem 0;
-    border-top: 1px solid #00CC7A;
+    border-top: 1px solid #60A5FA;
   }
 
   .nav-menu.active {
@@ -786,7 +786,7 @@ footer {
 
 .projects-heading {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: #00CC7A;
+  color: #60A5FA;
   text-align: center;
   margin-bottom: 1rem;
   position: relative;
@@ -800,16 +800,16 @@ footer {
 }
 
 .github-link {
-  color: #00CC7A;
+  color: #60A5FA;
   text-decoration: none;
-  border-bottom: 1px solid #00CC7A;
+  border-bottom: 1px solid #60A5FA;
   transition: all 0.3s ease;
 }
 
 .github-link:hover {
-  color: #00CC7A;
-  text-shadow: 0 0 8px rgba(0, 204, 122, 0.6);
-  border-bottom-color: #00CC7A;
+  color: #60A5FA;
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+  border-bottom-color: #60A5FA;
 }
 
 
@@ -825,7 +825,7 @@ footer {
 
 .project-card {
   background: #111111;
-  border: 2px solid #00CC7A;
+  border: 2px solid #60A5FA;
   border-radius: 16px;
   padding: 2.5rem;
   transition: all 0.3s ease;
@@ -840,7 +840,7 @@ footer {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 204, 122, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -850,14 +850,14 @@ footer {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 204, 122, 0.3);
-  border-color: #00CC7A;
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.3);
+  border-color: #60A5FA;
 }
 
 .project-title {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #00CC7A;
+  color: #60A5FA;
   margin-bottom: 1.25rem;
   font-family: 'Roboto Mono', monospace;
   line-height: 1.3;
@@ -879,8 +879,8 @@ footer {
 
 .tech-tag {
   background: transparent;
-  border: 1px solid #00CC7A;
-  color: #00CC7A;
+  border: 1px solid #60A5FA;
+  color: #60A5FA;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.875rem;
@@ -890,7 +890,7 @@ footer {
 }
 
 .tech-tag:hover {
-  background: #00CC7A;
+  background: #60A5FA;
   color: #000000;
 }
 
@@ -902,8 +902,8 @@ footer {
 
 .project-btn {
   background: transparent;
-  color: #00CC7A;
-  border: 2px solid #00CC7A;
+  color: #60A5FA;
+  border: 2px solid #60A5FA;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -914,10 +914,10 @@ footer {
 }
 
 .project-btn:hover {
-  background: #00CC7A;
+  background: #60A5FA;
   color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 204, 122, 0.3);
+  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
 }
 
 .project-btn.secondary {
@@ -982,12 +982,12 @@ footer {
 
 /* Milestones Section Styles */
 .milestones-section {
-  background: #0a0a0a;
+  background: #0a192f;
   padding: 4rem 2rem;
   max-width: 1000px;
   margin: auto;
-  opacity: 0;
-  transform: translateY(50px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all 0.8s ease;
 }
 
@@ -998,7 +998,7 @@ footer {
 
 .milestones-heading {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: #00CC7A;
+  color: #60A5FA;
   text-align: center;
   margin-bottom: 1rem;
   position: relative;
@@ -1026,7 +1026,7 @@ footer {
 
 .milestone-card {
   background: #1a1a1a;
-  border: 2px solid #00CC7A;
+  border: 2px solid #60A5FA;
   border-radius: 12px;
   padding: 0.25rem 0.75rem;
   transition: all 0.3s ease;
@@ -1043,7 +1043,7 @@ footer {
   opacity: 0;
   transform: scale(0.95);
   transition: all 1.2s ease;
-  border: 1px solid rgba(0, 204, 122, 0.3);
+  border: 1px solid rgba(96, 165, 250, 0.3);
 }
 
 .milestone-image.loaded {
@@ -1070,7 +1070,7 @@ footer {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 204, 122, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -1080,8 +1080,8 @@ footer {
 
 .milestone-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 204, 122, 0.3);
-  border-color: #00CC7A;
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.3);
+  border-color: #60A5FA;
 }
 
 .milestone-header {
@@ -1093,7 +1093,7 @@ footer {
 .milestone-title {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #00CC7A;
+  color: #60A5FA;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
 }
@@ -1106,13 +1106,13 @@ footer {
 }
 
 .milestone-type {
-  background: rgba(0, 204, 122, 0.2);
-  color: #00CC7A;
+  background: rgba(96, 165, 250, 0.2);
+  color: #60A5FA;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-family: 'Roboto Mono', monospace;
-  border: 1px solid #00CC7A;
+  border: 1px solid #60A5FA;
 }
 
 .milestone-meta {
@@ -1140,7 +1140,7 @@ footer {
 }
 
 .milestone-achievements h4 {
-  color: #00CC7A;
+  color: #60A5FA;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
   font-family: 'Roboto Mono', monospace;
@@ -1164,7 +1164,7 @@ footer {
   content: '▶';
   position: absolute;
   left: 0;
-  color: #00CC7A;
+  color: #60A5FA;
   font-size: 0.7rem;
 }
 
@@ -1177,8 +1177,8 @@ footer {
 
 .tech-badge {
   background: transparent;
-  border: 1px solid #00CC7A;
-  color: #00CC7A;
+  border: 1px solid #60A5FA;
+  color: #60A5FA;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -1187,14 +1187,14 @@ footer {
 }
 
 .tech-badge:hover {
-  background: #00CC7A;
+  background: #60A5FA;
   color: #000000;
 }
 
 .milestone-link {
   background: transparent;
-  color: #00CC7A;
-  border: 2px solid #00CC7A;
+  color: #60A5FA;
+  border: 2px solid #60A5FA;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
@@ -1206,10 +1206,10 @@ footer {
 }
 
 .milestone-link:hover {
-  background: #00CC7A;
+  background: #60A5FA;
   color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 204, 122, 0.3);
+  box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
 }
 
 /* Accordion Styles */
@@ -1227,7 +1227,7 @@ footer {
 }
 
 .accordion-trigger:focus-visible {
-  outline: 2px solid #00CC7A;
+  outline: 2px solid #60A5FA;
   outline-offset: 2px;
   border-radius: 8px;
 }
