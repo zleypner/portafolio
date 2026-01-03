@@ -2,20 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Linkedin, Twitter, Github, Instagram } from 'lucide-react';
+import { Linkedin, Twitter, Github, Instagram, Code } from 'lucide-react';
 
 const navigation = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Roadmap', href: '#roadmap' },
 ];
 
 const socials = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/anwardev/', icon: Linkedin },
-  { name: 'Twitter', href: 'https://x.com/anwar_zlcr', icon: Twitter },
   { name: 'GitHub', href: 'https://github.com/zleypner', icon: Github },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/anwardev/', icon: Linkedin },
+  { name: 'CodePen', href: 'https://codepen.io/', icon: Code },
   { name: 'Instagram', href: 'https://instagram.com/anwar.zl', icon: Instagram },
+  { name: 'Twitter', href: 'https://x.com/anwar_zlcr', icon: Twitter },
 ];
 
 export default function Sidebar() {
