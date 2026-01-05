@@ -1723,6 +1723,7 @@ footer {
     margin-left: 0;
     width: 100%;
     padding: 3rem 2rem;
+    padding-bottom: 120px; /* Add space for bottom nav */
   }
 
   .experience-card {
