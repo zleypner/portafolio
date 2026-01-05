@@ -31,7 +31,7 @@ export default function About() {
           My expertise spans the <strong>full stack</strong> — from designing reusable UI components with React and TypeScript to engineering backend services with FastAPI and Node.js. I've set up automated testing pipelines, containerized applications with Docker, and streamlined CI/CD workflows with GitHub Actions to deliver reliable, production-ready code.
         </p>
         <p>
-          I'm also exploring the <strong>AI/ML space</strong>, working with LangChain, RAG pipelines, vector databases (PGVector, Milvus), and semantic search to build intelligent, context-aware applications. My focus areas include <strong>Full Stack Software Engineering</strong>, <strong>AI/ML</strong>, <strong>Cloud Infrastructure</strong>, and <strong>Security</strong>.
+          I'm also exploring the <strong>AI/ML space</strong>, working with LangChain, RAG pipelines, vector databases (PGVector, Milvus), and semantic search to build intelligent, context-aware applications. My focus areas include <strong>Full Stack Software Engineering</strong>, <strong>AI/ML</strong>, and <strong>Cloud Infrastructure</strong>.
         </p>
       </div>
 
