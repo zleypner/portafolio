@@ -5,6 +5,14 @@ import { ExternalLink } from 'lucide-react';
 
 const projectsData = [
   {
+    title: 'BrewFi (CoffeeChain)',
+    description:
+      'The loyalty network turning every coffee into connection. A decentralized coffee and restaurant loyalty rewards platform built on Avalanche, powered by Tether (USDT). BrewFi enables cafés and restaurants to reward customers with $BREWFI tokens, creating a transparent, community-driven Web3 loyalty ecosystem that bridges real-world dining with digital ownership. Features an invisible wallet for seamless user experience.',
+    techStack: ['TypeScript', 'JavaScript', 'Solidity', 'CSS', 'Avalanche', 'Web3'],
+    codeUrl: 'https://github.com/zleypner/avax_brewfi',
+    demoUrl: 'https://app.brew-fi.com/',
+  },
+  {
     title: 'Money Momentum',
     description:
       'A full-stack web application for personal money momentum tracking built with React and Express.js. Features secure authentication, money management, data visualization, and comprehensive reporting.',
@@ -42,6 +50,25 @@ export default function Projects() {
                 </span>
               ))}
             </div>
+            {project.demoUrl && (
+              <div style={{ marginTop: '1rem' }}>
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: 'var(--green)',
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                  }}
+                >
+                  Live Demo <ExternalLink size={14} aria-hidden="true" />
+                </a>
+              </div>
+            )}
           </article>
         ))}
       </div>
