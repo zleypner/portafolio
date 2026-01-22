@@ -108,7 +108,7 @@ const milestonesData = [
     date: 'November 2025',
     location: 'Costa Rica',
     description:
-      "Attending one of LATAM's premier blockchain conferences, connecting with industry leaders and exploring cutting-edge developments in Web3 and blockchain technology.",
+      "I had the opportunity to speak on a panel at Blockchain Jungle — the Costa Rica's leading tech event, bringing together founders, innovators, and world-class speakers shaping the future of this industry. Attending one of LATAM's premier blockchain conferences, connecting with industry leaders and exploring cutting-edge developments in Web3 and blockchain technology.",
     achievements: [
       'Networked with blockchain innovators and industry leaders',
       'Explored latest trends in Web3 and decentralized technologies',
