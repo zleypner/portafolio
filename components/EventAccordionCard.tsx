@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 interface EventAccordionCardProps {
   id: number;
-  image: string;
+  image: string | string[];
   title: string;
   type: string;
   date: string;
@@ -17,6 +17,7 @@ interface EventAccordionCardProps {
   isActive: boolean;
   onClick: () => void;
   priority?: boolean;
+  video?: string;
 }
 
 export default function EventAccordionCard({
@@ -33,6 +34,7 @@ export default function EventAccordionCard({
   isActive,
   onClick,
   priority = false,
+  video,
 }: EventAccordionCardProps) {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -66,16 +68,48 @@ export default function EventAccordionCard({
       >
         <div className="accordion-inner">
           {isActive && (
-            <div className="milestone-image-container">
-              <Image
-                src={image}
-                alt={`${title} ${date}`}
-                className="milestone-image loaded"
-                width={800}
-                height={600}
-                priority={priority}
-              />
-            </div>
+            <>
+              {video && (
+                <div className="milestone-video-container">
+                  <video
+                    src={video}
+                    controls
+                    className="milestone-video"
+                    preload="metadata"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              )}
+              {image && (
+                <div className={Array.isArray(image) ? "milestone-images-grid" : "milestone-image-container"}>
+                  {Array.isArray(image) ? (
+                    image.map((img, imgIndex) => (
+                      <Image
+                        key={imgIndex}
+                        src={img}
+                        alt={`${title} ${date} - Image ${imgIndex + 1}`}
+                        className="milestone-image loaded"
+                        width={800}
+                        height={600}
+                        priority={priority && imgIndex === 0}
+                        unoptimized
+                      />
+                    ))
+                  ) : (
+                    <Image
+                      src={image}
+                      alt={`${title} ${date}`}
+                      className="milestone-image loaded"
+                      width={800}
+                      height={600}
+                      priority={priority}
+                      unoptimized
+                    />
+                  )}
+                </div>
+              )}
+            </>
           )}
           <div className="milestone-type-container">
             <span className="milestone-type">{type}</span>

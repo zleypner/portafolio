@@ -115,8 +115,9 @@ const milestonesData = [
       'Contributed to discussions on blockchain adoption in LATAM',
     ],
     techStack: ['Blockchain', 'Web3', 'DeFi', 'NFTs'],
-    image: '/blockchain-jungle.jpg',
-    link: '#',
+    image: '/IMG_2267.jpg',
+    video: '/videoBJ.MP4',
+    link: 'https://www.linkedin.com/posts/anwardev_last-november-i-had-the-opportunity-to-speak-activity-7419909210324238336-33pf?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqiwowBuMywTok_I-3zvuR4oARA8wxa3q4',
   },
   {
     title: 'Polkadot Hackathon',
@@ -131,8 +132,8 @@ const milestonesData = [
       'Collaborated with developers on cross-chain interoperability',
     ],
     techStack: ['Polkadot', 'Substrate', 'Rust', 'Web3'],
-    image: '/polkadot-hackathon.jpg',
-    link: '#',
+    image: '/argentina/Polkadot.JPG',
+    link: 'https://www.linkedin.com/posts/anwardev_visualizing-whats-ahead-standing-alone-activity-7407057080186167297-6BLJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqiwowBuMywTok_I-3zvuR4oARA8wxa3q4',
   },
   {
     title: 'DevConnect',
@@ -147,7 +148,14 @@ const milestonesData = [
       'Built connections within the global Ethereum community',
     ],
     techStack: ['Ethereum', 'Solidity', 'EVM', 'Layer 2'],
-    image: '/devconnect.jpg',
+    image: [
+      '/argentina/devconnect.JPG',
+      '/argentina/devconnect1.JPG',
+      '/argentina/devconnect2.JPG',
+      '/argentina/devconnect3.JPG',
+      '/argentina/devconnect4.JPG',
+      '/argentina/devconnect5.jpg',
+    ],
     link: '#',
   },
   {
@@ -163,8 +171,8 @@ const milestonesData = [
       'Contributed to financial inclusion initiatives in LATAM',
     ],
     techStack: ['Stellar', 'Soroban', 'Smart Contracts', 'Payments'],
-    image: '/stellar-hackathon.jpg',
-    link: '#',
+    image: '/argentina/stellararg.JPG',
+    link: 'https://www.linkedin.com/posts/anwardev_visualizing-whats-ahead-standing-alone-activity-7407057080186167297-6BLJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqiwowBuMywTok_I-3zvuR4oARA8wxa3q4',
   },
 ];
 
@@ -253,6 +261,7 @@ export default function Milestones() {
             isActive={activeCardId === index}
             onClick={() => handleCardClick(index)}
             priority={index < 2}
+            video={(milestone as any).video}
           />
         ))}
       </div>
