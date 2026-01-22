@@ -9,14 +9,14 @@ export default function About() {
   return (
     <section id="about" className="content-section">
       <p>
-        I'm a full-stack software engineer specializing in <strong>TypeScript</strong>, <strong>React</strong>, <strong>Python</strong>, and <strong>API-driven architectures</strong>. I build fast, scalable platforms with clean backend services, robust API integrations, and automation across developer workflows.
+        I'm a full-stack software engineer specializing in <strong>TypeScript</strong>, <strong>React</strong>, <strong>Angular</strong>, <strong>.NET</strong>, and <strong>SQL</strong>. I build fast, scalable platforms with clean backend services, robust API integrations, and automation across developer workflows.
       </p>
       <p>
         Currently, I'm a Software Engineer at{' '}
         <a href="https://www.bcdme.com" target="_blank" rel="noopener noreferrer">
           BCD Meetings & Events
         </a>
-        , where I build and maintain React + TypeScript platforms used by thousands of users across global clients. I've optimized frontend performance with Next.js (SSR/SSG), integrated REST and GraphQL APIs, and improved backend flows that reduced key API response times by roughly 25%.
+        , where I contribute to enterprise-scale platforms using React and Angular, supporting internal and client-facing business applications. I build and maintain user interfaces with Next.js (SSR/SSG) and Angular, focusing on performance, usability, and consistency. I integrate frontend applications with REST APIs built in .NET, and work with SQL Server and PostgreSQL databases to support enterprise data models and reporting needs.
       </p>
       <p>
         Previously, I worked at{' '}
