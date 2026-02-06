@@ -13,10 +13,10 @@ export default function About() {
       </p>
       <p>
         Currently, I'm a Software Engineer at{' '}
-        <a href="https://www.bcdme.com" target="_blank" rel="noopener noreferrer">
-          BCD Meetings & Events
+        <a href="https://www.pwc.com" target="_blank" rel="noopener noreferrer">
+          PwC
         </a>
-        , where I contribute to enterprise-scale platforms using React and Angular, supporting internal and client-facing business applications. I build and maintain user interfaces with Next.js (SSR/SSG) and Angular, focusing on performance, usability, and consistency. I integrate frontend applications with REST APIs built in .NET, and work with SQL Server and PostgreSQL databases to support enterprise data models and reporting needs.
+        , working on enterprise-scale web platforms.
       </p>
       <p>
         Previously, I worked at{' '}
