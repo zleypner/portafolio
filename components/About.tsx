@@ -16,7 +16,7 @@ export default function About() {
         <a href="https://www.pwc.com" target="_blank" rel="noopener noreferrer">
           PwC
         </a>
-        , working on enterprise-scale web platforms.
+        , contributing to enterprise-scale web platforms by building and maintaining frontend applications, integrating them with backend services, and supporting business-critical workflows across internal and client-facing environments.
       </p>
       <p>
         Previously, I worked at{' '}
@@ -28,7 +28,7 @@ export default function About() {
 
       <div className={`about-expandable ${isExpanded ? 'expanded' : ''}`}>
         <p>
-          My expertise spans the <strong>full stack</strong> — from designing reusable UI components with React and TypeScript to engineering backend services with FastAPI and Node.js. I've set up automated testing pipelines, containerized applications with Docker, and streamlined CI/CD workflows with GitHub Actions to deliver reliable, production-ready code.
+          My expertise spans the <strong>full stack</strong> — from designing reusable, performant UI components with React and TypeScript to building and maintaining backend services and APIs with Node.js and FastAPI. I've implemented automated testing, containerized applications with Docker, and CI/CD pipelines using GitHub Actions to consistently deliver reliable, production-ready systems.
         </p>
         <p>
           I'm also exploring the <strong>AI/ML space</strong>, working with LangChain, RAG pipelines, vector databases (PGVector, Milvus), and semantic search to build intelligent, context-aware applications. My focus areas include <strong>Full Stack Software Engineering</strong>, <strong>AI/ML</strong>, and <strong>Cloud Infrastructure</strong>.
