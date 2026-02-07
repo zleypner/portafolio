@@ -33,7 +33,7 @@ const experiences = [
       'Introduced structured technical documentation and automation playbooks inside ServiceNow and internal knowledge bases, improving L2/L3 support efficiency.',
       'Participated in root-cause analysis of recurring system failures, helping reduce repeat incidents through automation and process improvements.',
     ],
-    techStack: ['Python', 'PowerShell', 'ServiceNow', 'Microsoft 365', 'Windows', 'macOS'],
+    techStack: ['Python', 'PowerShell', 'C# (.NET)', 'ServiceNow', 'Microsoft 365', 'Windows', 'macOS'],
   },
   {
     date: '2017 — 2020',
