@@ -18,7 +18,7 @@ const experiences = [
       'Supported containerized development and CI/CD pipelines using Docker and GitHub Actions.',
       'Collaborated with cross-functional teams through code reviews and shared debugging in a large enterprise codebase.',
     ],
-    techStack: ['TypeScript', 'React', 'Next.js', 'REST APIs', 'SQL', 'Docker', 'CI/CD'],
+    techStack: ['TypeScript', 'React', 'Next.js', 'REST APIs', 'SQL', 'Docker', 'CI/CD', 'Java OR Node.js'],
   },
   {
     date: '2020 — 2022',
