@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={robotoMono.className}>
+      <head>
         <GoogleAnalytics />
-        {children}
-      </body>
+      </head>
+      <body className={robotoMono.className}>{children}</body>
     </html>
   );
 }
