@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto_Mono } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const robotoMono = Roboto_Mono({
   weight: ['400', '500', '700'],
@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   description: 'Full-Stack Software Engineer specializing in building accessible, pixel-perfect digital experiences for the web.',
 };
 
+const gaId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,10 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <GoogleAnalytics />
-      </head>
-      <body className={robotoMono.className}>{children}</body>
+      <body className={robotoMono.className}>
+        {children}
+        {gaId?.startsWith('G-') && <GoogleAnalytics gaId={gaId} />}
+      </body>
     </html>
   );
 }
