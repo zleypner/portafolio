@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto_Mono } from 'next/font/google';
 import './globals.css';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const robotoMono = Roboto_Mono({
   weight: ['400', '500', '700'],
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={robotoMono.className}>{children}</body>
+      <body className={robotoMono.className}>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
