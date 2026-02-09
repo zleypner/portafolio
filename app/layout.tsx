@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Roboto_Mono } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from 'next/script';
 import './globals.css';
 
 const robotoMono = Roboto_Mono({
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Full-Stack Software Engineer specializing in building accessible, pixel-perfect digital experiences for the web.',
 };
 
-const gaId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
 
 export default function RootLayout({
   children,
@@ -23,10 +23,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={robotoMono.className}>
-        {children}
-        {gaId?.startsWith('G-') && <GoogleAnalytics gaId={gaId} />}
-      </body>
+      <head>
+        {GA_ID?.startsWith('G-') && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="beforeInteractive"
+            />
+            <Script
+              id="gtag-init"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
+      </head>
+      <body className={robotoMono.className}>{children}</body>
     </html>
   );
 }
