@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GA4 Test</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', { debug_mode: true });
+    </script>
+  </head>
+  <body>
+    <h1>Google Analytics 4 Test Page</h1>
+    <p>If this page loads and GA Realtime shows a user, GA is working.</p>
+  </body>
+</html>
