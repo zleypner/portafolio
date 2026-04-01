@@ -13,11 +13,11 @@ const projectsData = [
     demoUrl: 'https://app.brew-fi.com/',
   },
   {
-    title: 'Money Momentum',
+    title: 'Campaign Multivariate Regression',
     description:
-      'A full-stack web application for personal money momentum tracking built with React and Express.js. Features secure authentication, money management, data visualization, and comprehensive reporting.',
-    techStack: ['React', 'Express.js', 'SQLite', 'Chart.js', 'JWT'],
-    codeUrl: 'https://github.com/zleypner/Money-Momentum',
+      'A full-stack ML application for analyzing marketing campaign performance using multivariate linear regression. Features dataset upload, model training with automatic data quality checks, predictions with confidence intervals, and interactive visualizations for model diagnostics.',
+    techStack: ['Next.js', 'TypeScript', 'FastAPI', 'Python', 'Scikit-learn'],
+    codeUrl: 'https://github.com/zleypner/multivariate-linear-regression',
   },
   {
     title: 'Auth Dashboard App',
