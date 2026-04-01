@@ -19,13 +19,6 @@ const projectsData = [
     techStack: ['Next.js', 'TypeScript', 'FastAPI', 'Python', 'Scikit-learn'],
     codeUrl: 'https://github.com/zleypner/multivariate-linear-regression',
   },
-  {
-    title: 'Auth Dashboard App',
-    description:
-      'A production-ready authentication and dashboard application built with React (Vite + TypeScript) frontend and Node.js + Express + JWT backend. Features secure JWT-based auth, protected routes, and modern UI.',
-    techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma'],
-    codeUrl: 'https://github.com/zleypner/Auth-Dashboard-App-React-Node-Express-JWT-',
-  },
 ];
 
 export default function Projects() {
