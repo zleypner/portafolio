@@ -12,13 +12,6 @@ const projectsData = [
     codeUrl: 'https://github.com/zleypner/avax_brewfi',
     demoUrl: 'https://app.brew-fi.com/',
   },
-  {
-    title: 'Campaign Multivariate Regression',
-    description:
-      'A full-stack ML application for analyzing marketing campaign performance using multivariate linear regression. Features dataset upload, model training with automatic data quality checks, predictions with confidence intervals, and interactive visualizations for model diagnostics.',
-    techStack: ['Next.js', 'TypeScript', 'FastAPI', 'Python', 'Scikit-learn'],
-    codeUrl: 'https://github.com/zleypner/multivariate-linear-regression',
-  },
 ];
 
 export default function Projects() {
