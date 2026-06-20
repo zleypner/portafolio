@@ -11,14 +11,13 @@ const experiences = [
     description: [
       'Contributed to enterprise-scale applications using React, Next.js (SSR/SSG), Angular, and TypeScript, supporting internal and client-facing platforms.',
       'Built and maintained user interfaces with a focus on performance, usability, and predictable async behavior.',
-      'Integrated frontend applications with backend services via REST APIs developed in .NET to support core business workflows.',
-      'Worked with SQL Server and PostgreSQL, writing and optimizing queries to support application data needs.',
+      'Integrated frontend applications with backend services via REST APIs to support core business workflows.',
       'Assisted in maintaining and improving backend services, delivering bug fixes and incremental enhancements.',
       'Participated in implementing automated testing (unit, integration, E2E) to improve application reliability.',
       'Supported containerized development and CI/CD pipelines using Docker and GitHub Actions.',
       'Collaborated with cross-functional teams through code reviews and shared debugging in a large enterprise codebase.',
     ],
-    techStack: ['TypeScript', 'React', 'Next.js', 'REST APIs', 'SQL', 'Docker', 'CI/CD', 'Java OR Node.js'],
+    techStack: ['TypeScript', 'React', 'Next.js', 'REST APIs', 'Docker', 'CI/CD'],
   },
   {
     date: '2020 — 2022',
