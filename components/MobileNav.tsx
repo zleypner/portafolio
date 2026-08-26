@@ -1,12 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { User, Briefcase, FolderGit2, Award } from 'lucide-react';
+import { User, Briefcase, Award } from 'lucide-react';
 
 const navigation = [
   { name: 'About', href: '#about', icon: User },
   { name: 'Experience', href: '#experience', icon: Briefcase },
-  { name: 'Projects', href: '#projects', icon: FolderGit2 },
   { name: 'Milestones', href: '#milestones', icon: Award },
 ];
 

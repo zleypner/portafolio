@@ -97,22 +97,6 @@ export default function Footer() {
             <circle cx="17.5" cy="6.5" r="1.5"></circle>
           </svg>
         </Link>
-        <Link href="#projects" className="footer-social-icon" aria-label="Projects Section">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#00CC7A"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M12 2l8 4-8 4-8-4 8-4z"></path>
-            <path d="M12 10l8 4-8 4-8-4 8-4z"></path>
-            <path d="M12 18l8 4-8 4-8-4 8-4z"></path>
-          </svg>
-        </Link>
       </div>
 
       <div className="footer-content">

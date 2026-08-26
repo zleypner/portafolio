@@ -19,7 +19,6 @@ const XIcon = ({ size = 20 }: { size?: number }) => (
 const navigation = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
   { name: 'Milestones', href: '#milestones' },
 ];
 
