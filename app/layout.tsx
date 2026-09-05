@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Roboto_Mono } from 'next/font/google';
+import { Roboto_Mono, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 
@@ -7,6 +7,14 @@ const robotoMono = Roboto_Mono({
   weight: ['400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-roboto-mono',
+});
+
+const playfairDisplay = Playfair_Display({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
 });
 
 export const metadata: Metadata = {
@@ -45,7 +53,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={robotoMono.className}>{children}</body>
+      <body className={`${robotoMono.variable} ${playfairDisplay.variable} ${robotoMono.className}`}>{children}</body>
     </html>
   );
 }
