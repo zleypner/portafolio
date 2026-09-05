@@ -22,9 +22,9 @@ export default function Home() {
     <div className="landing-page" style={{ background: '#0a0a0a', color: '#ffffff' }}>
       <LandingNav />
       <LandingHero />
-      <Empresas />
       <SobreAnwar />
       <Inicios />
+      <Empresas />
       <Proposito />
       <Contacto />
       <LandingFooter />
