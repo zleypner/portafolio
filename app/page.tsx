@@ -3,829 +3,1055 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const logos = [
-  { src: '/assets/yieldge/logos/3m.png', alt: '3M' },
-  { src: '/assets/yieldge/logos/drzuniga-logo.png', alt: 'Gastromedical' },
-  { src: '/assets/yieldge/logos/phyclogo-removedbg.png', alt: 'PHYC' },
-  { src: '/assets/yieldge/logos/construrack.png', alt: 'Construrack' },
-  { src: '/assets/yieldge/logos/bnggroup.PNG', alt: 'BNG Group' },
+const professionalServices = [
+  'Marca personal y posicionamiento profesional.',
+  'Sitio web personal y portafolio.',
+  'Estrategia de comunicación y contenido.',
+  'Posicionamiento en Google y buscadores con IA.',
+  'Optimización de redes sociales.',
+  'Estrategias para generar oportunidades comerciales.',
+];
+
+const businessServices = [
+  'Sitios web corporativos y plataformas digitales.',
+  'SEO y posicionamiento en buscadores con IA.',
+  'Marketing digital y adquisición de clientes.',
+  'Inteligencia artificial y automatizaciones.',
+  'Desarrollo de software a la medida.',
+  'Optimización de conversiones y procesos.',
+];
+
+const valueProps = [
+  { bold: 'Visibilidad', text: 'para que te encuentren.' },
+  { bold: 'Autoridad', text: 'para que confíen.' },
+  { bold: 'Estrategia', text: 'para convertir oportunidades en clientes.' },
+  { bold: 'Tecnología', text: 'para crecer de forma más eficiente.' },
+];
+
+const processSteps = [
+  {
+    number: '01',
+    title: 'Conozcamos tu negocio',
+    desc: 'Primero entiendo quién sos, qué hacés y cuáles son tus objetivos. Identificamos oportunidades para fortalecer tu presencia digital y hacer crecer tu negocio.',
+  },
+  {
+    number: '02',
+    title: 'Construyamos tu estrategia',
+    desc: 'Diseñamos e implementamos las soluciones que realmente necesitás, combinando presencia digital, marketing, tecnología e inteligencia artificial.',
+  },
+  {
+    number: '03',
+    title: 'Hagamos crecer tu marca',
+    desc: 'Medimos resultados, optimizamos y seguimos mejorando para que tu presencia digital genere confianza, atraiga oportunidades y acompañe tu crecimiento.',
+  },
 ];
 
 export default function Home() {
+  const carouselImages = [
+    { src: '/assets/yieldge/anwar/MFS_5808.jpg', alt: 'Anwar Sánchez' },
+    { src: '/assets/yieldge/anwar/MFS_5809.jpg', alt: 'Anwar Sánchez' },
+    { src: '/assets/yieldge/anwar/MFS_5810.jpg', alt: 'Anwar Sánchez' },
+    { src: '/assets/yieldge/anwar/MFS_5814.jpg', alt: 'Anwar Sánchez' },
+    { src: '/assets/yieldge/anwar/MFS_5817.jpg', alt: 'Anwar Sánchez' },
+    { src: '/assets/yieldge/anwar/MFS_5818.jpg', alt: 'Anwar Sánchez' },
+  ];
+
   return (
     <>
       <style jsx global>{`
-        .home-navbar {
+        :root {
+          --black: #0a0a0a;
+          --white: #fafafa;
+          --gray: #6b7280;
+          --gray-dark: #374151;
+          --gray-light: #f3f4f6;
+          --gray-muted: #f9fafb;
+          --brand: #25D366;
+          --brand-soft: rgba(37, 211, 102, 0.05);
+          --line: rgba(0, 0, 0, 0.06);
+          --font-serif: 'Times New Roman', Georgia, serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          background: var(--white);
+          color: var(--black);
+        }
+
+        /* Navbar */
+        .navbar {
           position: fixed;
           top: 0;
           left: 0;
           right: 0;
           z-index: 100;
-          mix-blend-mode: difference;
+          background: rgba(250, 250, 250, 0.9);
+          backdrop-filter: blur(12px);
+          border-bottom: 1px solid var(--line);
         }
 
-        .home-navbar-container {
+        .navbar-container {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 25px 40px;
           max-width: 1200px;
           margin: 0 auto;
+          padding: 16px 24px;
         }
 
-        .home-navbar-logo {
+        .navbar-logo {
           font-family: var(--font-serif);
           font-size: 14px;
-          letter-spacing: 0.3em;
-          color: var(--white);
+          letter-spacing: 0.2em;
+          color: var(--black);
           text-transform: uppercase;
           text-decoration: none;
+          font-weight: 500;
         }
 
-        .home-navbar-links {
+        .navbar-links {
           display: flex;
-          gap: 40px;
+          gap: 32px;
           list-style: none;
+          margin: 0;
+          padding: 0;
         }
 
-        .home-navbar-link {
-          font-size: 11px;
-          letter-spacing: 0.15em;
-          text-transform: uppercase;
-          color: var(--white);
-          opacity: 0.6;
-          text-decoration: none;
-          transition: opacity 0.2s;
-        }
-
-        .home-navbar-link:hover {
-          opacity: 1;
-        }
-
-        /* Hero */
-        .home-hero {
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          padding: 0 40px 100px;
-          background: var(--black);
-        }
-
-        .home-hero-content {
-          max-width: 900px;
-        }
-
-        .home-hero-pretitle {
-          font-size: 10px;
-          letter-spacing: 0.4em;
-          text-transform: uppercase;
-          color: var(--gray);
-          margin-bottom: 30px;
-        }
-
-        .home-hero h1 {
-          font-family: var(--font-serif);
-          font-size: clamp(48px, 9vw, 110px);
-          font-weight: 400;
-          line-height: 0.95;
-          color: var(--white);
-          margin-bottom: 40px;
-        }
-
-        .home-hero h1 em {
-          font-style: italic;
-        }
-
-        .home-hero-subtitle {
-          font-size: 18px;
-          line-height: 1.8;
-          color: var(--gray);
-          max-width: 550px;
-          margin-bottom: 50px;
-        }
-
-        .home-hero-subtitle strong {
-          color: var(--white);
-        }
-
-        .home-hero-cta {
-          display: flex;
-          gap: 20px;
-        }
-
-        .home-btn {
-          font-size: 11px;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          padding: 18px 35px;
-          border: 1px solid var(--white);
-          background: transparent;
-          color: var(--white);
-          cursor: pointer;
-          transition: all 0.3s;
-          text-decoration: none;
-        }
-
-        .home-btn:hover {
-          background: var(--white);
-          color: var(--black);
-        }
-
-        .home-btn-solid {
-          background: var(--white);
-          color: var(--black);
-        }
-
-        .home-btn-solid:hover {
-          background: transparent;
-          color: var(--white);
-        }
-
-        /* Logos */
-        .home-logos {
-          padding: 80px 40px;
-          border-top: 1px solid #111;
-          background: var(--black);
-        }
-
-        .home-logos-title {
-          font-size: 10px;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: #444;
-          text-align: center;
-          margin-bottom: 40px;
-        }
-
-        .home-logos-grid {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 60px;
-          flex-wrap: wrap;
-          max-width: 900px;
-          margin: 0 auto;
-        }
-
-        .home-logo-item {
-          height: 40px;
-          opacity: 0.4;
-          filter: grayscale(1) brightness(2);
-          transition: all 0.3s;
-        }
-
-        .home-logo-item:hover {
-          opacity: 0.8;
-        }
-
-        /* Statement */
-        .home-statement {
-          background: var(--white);
-          color: var(--black);
-          padding: 150px 40px;
-        }
-
-        .home-statement-container {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        .home-statement-label {
-          font-size: 10px;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: var(--gray);
-          margin-bottom: 30px;
-        }
-
-        .home-statement h2 {
-          font-family: var(--font-serif);
-          font-size: clamp(36px, 5vw, 56px);
-          font-weight: 400;
-          line-height: 1.1;
-          margin-bottom: 40px;
-        }
-
-        .home-statement-text {
-          font-size: 17px;
-          line-height: 1.9;
-          color: #555;
-          margin-bottom: 25px;
-          max-width: 600px;
-        }
-
-        .home-statement-text strong {
-          color: var(--black);
-        }
-
-        /* Services */
-        .home-services {
-          background: var(--black);
-          padding: 120px 40px;
-        }
-
-        .home-services-container {
-          max-width: 1000px;
-          margin: 0 auto;
-        }
-
-        .home-services-header {
-          margin-bottom: 80px;
-        }
-
-        .home-services-label {
-          font-size: 10px;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: var(--gray);
-          margin-bottom: 20px;
-        }
-
-        .home-services h2 {
-          font-family: var(--font-serif);
-          font-size: clamp(36px, 5vw, 56px);
-          font-weight: 400;
-          color: var(--white);
-        }
-
-        .home-services-grid {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .home-service-item {
-          display: grid;
-          grid-template-columns: 80px 1fr 1.2fr;
-          gap: 40px;
-          padding: 50px 0;
-          border-bottom: 1px solid #222;
-          align-items: start;
-        }
-
-        .home-service-item:first-child {
-          border-top: 1px solid #222;
-        }
-
-        .home-service-num {
-          font-family: var(--font-serif);
-          font-size: 24px;
-          color: var(--gray);
-        }
-
-        .home-service-item h3 {
-          font-family: var(--font-serif);
-          font-size: 28px;
-          font-weight: 400;
-          color: var(--white);
-        }
-
-        .home-service-item p {
-          font-size: 15px;
-          line-height: 1.8;
-          color: var(--gray);
-        }
-
-        .home-service-link {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          margin-top: 15px;
-          font-size: 12px;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--white);
-          text-decoration: none;
-          opacity: 0.6;
-          transition: opacity 0.2s;
-        }
-
-        .home-service-link:hover {
-          opacity: 1;
-        }
-
-        /* Image Section */
-        .home-image-section {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          min-height: 80vh;
-        }
-
-        .home-image-left {
-          position: relative;
-        }
-
-        .home-image-left img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          filter: grayscale(1);
-        }
-
-        .home-image-right {
-          background: var(--white);
-          color: var(--black);
-          padding: 80px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .home-image-right-label {
-          font-size: 10px;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: var(--gray);
-          margin-bottom: 25px;
-        }
-
-        .home-image-right h2 {
-          font-family: var(--font-serif);
-          font-size: clamp(32px, 4vw, 48px);
-          font-weight: 400;
-          line-height: 1.1;
-          margin-bottom: 30px;
-        }
-
-        .home-image-right p {
-          font-size: 16px;
-          line-height: 1.9;
-          color: #555;
-          margin-bottom: 20px;
-        }
-
-        .home-image-right p strong {
-          color: var(--black);
-        }
-
-        .home-image-stats {
-          display: flex;
-          gap: 50px;
-          margin: 40px 0;
-        }
-
-        .home-stat {
-          text-align: left;
-        }
-
-        .home-stat-value {
-          font-family: var(--font-serif);
-          font-size: 32px;
-          font-weight: 400;
-          color: var(--black);
-          margin-bottom: 5px;
-        }
-
-        .home-stat-label {
-          font-size: 11px;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          color: var(--gray);
-        }
-
-        .home-image-right .home-btn {
-          border-color: var(--black);
-          color: var(--black);
-          width: fit-content;
-        }
-
-        .home-image-right .home-btn:hover {
-          background: var(--black);
-          color: var(--white);
-        }
-
-        /* About */
-        .home-about {
-          background: var(--black);
-          padding: 150px 40px;
-        }
-
-        .home-about-container {
-          display: grid;
-          grid-template-columns: 1fr 450px;
-          gap: 100px;
-          max-width: 1200px;
-          margin: 0 auto;
-          align-items: end;
-        }
-
-        .home-about-content-label {
-          font-size: 10px;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: var(--gray);
-          margin-bottom: 30px;
-        }
-
-        .home-about h2 {
-          font-family: var(--font-serif);
-          font-size: clamp(40px, 6vw, 70px);
-          font-weight: 400;
-          line-height: 1;
-          color: var(--white);
-          margin-bottom: 50px;
-        }
-
-        .home-about p {
-          font-size: 16px;
-          line-height: 1.9;
-          color: var(--gray);
-          margin-bottom: 20px;
-          max-width: 500px;
-        }
-
-        .home-about p strong {
-          color: var(--white);
-        }
-
-        .home-about .home-btn {
-          margin-top: 30px;
-        }
-
-        .home-about-image img {
-          width: 100%;
-          filter: grayscale(1);
-        }
-
-        /* CTA Section */
-        .home-cta {
-          background: var(--white);
-          color: var(--black);
-          padding: 150px 40px;
-          text-align: center;
-        }
-
-        .home-cta-container {
-          max-width: 700px;
-          margin: 0 auto;
-        }
-
-        .home-cta h2 {
-          font-family: var(--font-serif);
-          font-size: clamp(48px, 8vw, 100px);
-          font-weight: 400;
-          line-height: 0.95;
-          margin-bottom: 40px;
-        }
-
-        .home-cta p {
-          font-size: 17px;
-          line-height: 1.8;
-          color: #555;
-          margin-bottom: 50px;
-        }
-
-        .home-cta .home-btn {
-          border-color: var(--black);
-          color: var(--black);
-        }
-
-        .home-cta .home-btn:hover {
-          background: var(--black);
-          color: var(--white);
-        }
-
-        /* Footer */
-        .home-footer {
-          background: var(--black);
-          padding: 60px 40px;
-          border-top: 1px solid #111;
-        }
-
-        .home-footer-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-
-        .home-footer-logo {
-          font-family: var(--font-serif);
-          font-size: 14px;
-          letter-spacing: 0.2em;
-          color: var(--white);
-          text-transform: uppercase;
-          margin-bottom: 10px;
-        }
-
-        .home-footer-tagline {
-          font-size: 12px;
-          color: var(--gray);
-        }
-
-        .home-footer-copyright {
-          font-size: 11px;
-          color: #333;
-          margin-top: 15px;
-        }
-
-        .home-footer-links {
-          display: flex;
-          gap: 30px;
-        }
-
-        .home-footer-link {
-          font-size: 11px;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
+        .navbar-link {
+          font-size: 13px;
           color: var(--gray);
           text-decoration: none;
           transition: color 0.2s;
         }
 
-        .home-footer-link:hover {
+        .navbar-link:hover {
+          color: var(--black);
+        }
+
+        @media (max-width: 768px) {
+          .navbar-links {
+            display: none;
+          }
+        }
+
+        /* Hero */
+        .hero {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 120px 24px 80px;
+          background: var(--white);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero::before {
+          content: '';
+          position: absolute;
+          top: 20%;
+          right: 0;
+          width: 500px;
+          height: 500px;
+          background: var(--brand-soft);
+          border-radius: 50%;
+          filter: blur(100px);
+          pointer-events: none;
+        }
+
+        .hero-content {
+          max-width: 800px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .hero h1 {
+          font-family: var(--font-serif);
+          font-size: clamp(32px, 5vw, 48px);
+          font-weight: 400;
+          line-height: 1.2;
+          color: var(--black);
+          margin: 0 0 24px;
+        }
+
+        .hero-subtitle {
+          font-size: 18px;
+          line-height: 1.7;
+          color: var(--gray);
+          max-width: 650px;
+          margin: 0 auto 16px;
+        }
+
+        .hero-highlight {
+          font-size: 15px;
+          line-height: 1.7;
+          color: var(--gray-dark);
+          max-width: 600px;
+          margin: 0 auto 40px;
+        }
+
+        .btn-primary {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: var(--black);
+          color: var(--white);
+          padding: 16px 32px;
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: none;
+          border-radius: 8px;
+          transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+          background: var(--gray-dark);
+          transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: transparent;
+          color: var(--gray);
+          padding: 16px 32px;
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: none;
+          border: 1px solid var(--line);
+          border-radius: 8px;
+          transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+          border-color: var(--black);
+          color: var(--black);
+        }
+
+        /* Photo Carousel - Infinite Scroll */
+        .carousel-section {
+          padding: 60px 0;
+          background: var(--black);
+          overflow: hidden;
+        }
+
+        .carousel-track-wrapper {
+          overflow: hidden;
+          width: 100%;
+        }
+
+        .carousel-track {
+          display: flex;
+          gap: 20px;
+          animation: scroll 30s linear infinite;
+          width: max-content;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .carousel-image {
+          position: relative;
+          width: 350px;
+          height: 250px;
+          border-radius: 12px;
+          overflow: hidden;
+          flex-shrink: 0;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease;
+        }
+
+        .carousel-image:hover {
+          transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+          .carousel-image {
+            width: 280px;
+            height: 200px;
+          }
+
+          .carousel-track {
+            gap: 16px;
+            animation-duration: 25s;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .carousel-image {
+            width: 220px;
+            height: 160px;
+          }
+        }
+
+        /* Section base */
+        .section {
+          padding: 100px 24px;
+        }
+
+        .section-gray {
+          background: var(--gray-muted);
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .container-narrow {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        /* Problem section */
+        .problem-section {
+          padding: 100px 24px;
+          background: var(--gray-muted);
+        }
+
+        .problem-content {
+          max-width: 700px;
+          margin: 0 auto;
+        }
+
+        .problem-title {
+          font-family: var(--font-serif);
+          font-size: clamp(28px, 4vw, 36px);
+          font-weight: 400;
+          color: var(--black);
+          margin: 0 0 32px;
+          line-height: 1.3;
+        }
+
+        .problem-text {
+          font-size: 17px;
+          line-height: 1.8;
+          color: var(--gray);
+          margin-bottom: 24px;
+        }
+
+        .problem-text strong {
+          color: var(--black);
+        }
+
+        .problem-highlight {
+          font-size: 17px;
+          line-height: 1.8;
+          color: var(--black);
+          font-weight: 500;
+          padding: 24px;
+          background: var(--white);
+          border-left: 3px solid var(--brand);
+          margin-top: 32px;
+        }
+
+        /* Services section */
+        .services-section {
+          padding: 100px 24px;
+        }
+
+        .services-header {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+
+        .services-eyebrow {
+          font-size: 11px;
+          letter-spacing: 0.3em;
+          text-transform: uppercase;
+          color: var(--gray);
+          margin-bottom: 16px;
+        }
+
+        .services-title {
+          font-family: var(--font-serif);
+          font-size: clamp(28px, 4vw, 40px);
+          font-weight: 400;
+          color: var(--black);
+          margin: 0;
+        }
+
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 40px;
+        }
+
+        @media (max-width: 500px) {
+          .services-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .service-card {
+          padding: 40px;
+          background: var(--white);
+          border: 1px solid var(--line);
+          border-radius: 16px;
+          transition: border-color 0.2s;
+        }
+
+        .service-card:hover {
+          border-color: rgba(0, 0, 0, 0.12);
+        }
+
+        .service-label {
+          font-size: 11px;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--brand);
+          font-weight: 600;
+          margin-bottom: 16px;
+        }
+
+        .service-title {
+          font-family: var(--font-serif);
+          font-size: 24px;
+          font-weight: 400;
+          color: var(--black);
+          margin: 0 0 16px;
+        }
+
+        .service-desc {
+          font-size: 16px;
+          line-height: 1.7;
+          color: var(--gray);
+          margin: 0 0 24px;
+        }
+
+        .service-subtitle {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--black);
+          margin: 0 0 16px;
+        }
+
+        .service-list {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 24px;
+        }
+
+        .service-list li {
+          font-size: 15px;
+          color: var(--gray);
+          padding: 8px 0;
+          border-bottom: 1px solid var(--line);
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .service-list li:last-child {
+          border-bottom: none;
+        }
+
+        .service-list li::before {
+          content: '→';
+          color: var(--brand);
+          font-weight: 600;
+        }
+
+        .service-goal {
+          font-size: 14px;
+          color: var(--gray-dark);
+          font-style: italic;
+          margin: 24px 0;
+          padding-top: 16px;
+          border-top: 1px solid var(--line);
+        }
+
+        .service-goal strong {
+          color: var(--black);
+          font-style: normal;
+        }
+
+        /* Value section */
+        .value-section {
+          padding: 100px 24px;
+          background: var(--black);
           color: var(--white);
         }
 
-        @media (max-width: 900px) {
-          .home-navbar-container {
-            padding: 20px;
-          }
-          .home-navbar-links {
-            display: none;
-          }
-          .home-hero {
-            padding: 0 20px 80px;
-            justify-content: center;
-            padding-top: 120px;
-          }
-          .home-hero-cta {
-            flex-direction: column;
-          }
-          .home-btn {
+        .value-content {
+          max-width: 800px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .value-title {
+          font-family: var(--font-serif);
+          font-size: clamp(28px, 4vw, 36px);
+          font-weight: 400;
+          margin: 0 0 32px;
+          line-height: 1.3;
+        }
+
+        .value-text {
+          font-size: 17px;
+          line-height: 1.8;
+          color: rgba(255, 255, 255, 0.7);
+          margin-bottom: 24px;
+        }
+
+        .value-props {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin: 48px 0;
+          text-align: left;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .value-prop {
+          font-size: 18px;
+          color: var(--white);
+        }
+
+        .value-prop strong {
+          color: var(--brand);
+        }
+
+        .value-closing {
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.6);
+          margin-top: 40px;
+          font-style: italic;
+        }
+
+        /* Process section */
+        .process-section {
+          padding: 100px 24px;
+          background: var(--gray-muted);
+        }
+
+        .process-header {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+
+        .process-eyebrow {
+          font-size: 11px;
+          letter-spacing: 0.3em;
+          text-transform: uppercase;
+          color: var(--gray);
+          margin-bottom: 16px;
+        }
+
+        .process-title {
+          font-family: var(--font-serif);
+          font-size: clamp(28px, 4vw, 40px);
+          font-weight: 400;
+          color: var(--black);
+          margin: 0;
+        }
+
+        .process-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 32px;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        .process-card {
+          padding: 40px;
+          background: var(--white);
+          border: 1px solid var(--line);
+          border-radius: 16px;
+        }
+
+        .process-number {
+          font-size: 48px;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 0.06);
+          margin-bottom: 16px;
+        }
+
+        .process-card-title {
+          font-size: 20px;
+          font-weight: 600;
+          color: var(--black);
+          margin: 0 0 12px;
+        }
+
+        .process-desc {
+          font-size: 15px;
+          color: var(--gray);
+          line-height: 1.7;
+          margin: 0;
+        }
+
+        .process-closing {
+          text-align: center;
+          max-width: 700px;
+          margin: 60px auto 0;
+        }
+
+        .process-closing p {
+          font-size: 17px;
+          color: var(--gray-dark);
+          line-height: 1.7;
+          margin: 0 0 32px;
+        }
+
+        .process-closing p strong {
+          color: var(--black);
+        }
+
+        /* Founder section */
+        .founder-section {
+          padding: 100px 24px;
+        }
+
+        .founder-content {
+          display: grid;
+          grid-template-columns: 280px 1fr;
+          gap: 60px;
+          align-items: start;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+          .founder-content {
+            grid-template-columns: 1fr;
             text-align: center;
           }
-          .home-logos {
-            padding: 60px 20px;
+        }
+
+        .founder-photo {
+          position: relative;
+          width: 280px;
+          height: 350px;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+          .founder-photo {
+            margin: 0 auto;
+            width: 240px;
+            height: 300px;
           }
-          .home-logos-grid {
-            gap: 30px;
-          }
-          .home-statement {
-            padding: 100px 20px;
-          }
-          .home-services {
-            padding: 80px 20px;
-          }
-          .home-service-item {
-            grid-template-columns: 1fr;
-            gap: 15px;
-            padding: 40px 0;
-          }
-          .home-service-num {
-            font-size: 18px;
-          }
-          .home-service-item h3 {
-            font-size: 22px;
-          }
-          .home-image-section {
-            grid-template-columns: 1fr;
-          }
-          .home-image-left {
-            height: 50vh;
-          }
-          .home-image-right {
-            padding: 60px 20px;
-          }
-          .home-image-stats {
-            gap: 30px;
-          }
-          .home-about {
-            padding: 80px 20px;
-          }
-          .home-about-container {
-            grid-template-columns: 1fr;
-            gap: 50px;
-          }
-          .home-about-image {
-            order: -1;
-            max-width: 350px;
-          }
-          .home-cta {
-            padding: 100px 20px;
-          }
-          .home-footer {
-            padding: 50px 20px;
-          }
-          .home-footer-container {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 40px;
-          }
+        }
+
+        .founder-name {
+          font-family: var(--font-serif);
+          font-size: 32px;
+          font-weight: 400;
+          color: var(--black);
+          margin: 0 0 8px;
+        }
+
+        .founder-role {
+          font-size: 14px;
+          color: var(--brand);
+          font-weight: 600;
+          margin: 0 0 24px;
+        }
+
+        .founder-bio {
+          font-size: 16px;
+          color: var(--gray);
+          line-height: 1.8;
+          margin: 0 0 16px;
+        }
+
+        .founder-bio strong {
+          color: var(--black);
+        }
+
+        .founder-highlight {
+          font-size: 16px;
+          color: var(--black);
+          font-weight: 500;
+          margin-top: 24px;
+          padding-top: 24px;
+          border-top: 1px solid var(--line);
+        }
+
+        /* CTA section */
+        .cta-section {
+          padding: 100px 24px;
+          background: linear-gradient(180deg, var(--gray-muted) 0%, var(--white) 100%);
+        }
+
+        .cta-content {
+          max-width: 700px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .cta-title {
+          font-family: var(--font-serif);
+          font-size: clamp(28px, 4vw, 36px);
+          font-weight: 400;
+          color: var(--black);
+          margin: 0 0 24px;
+          line-height: 1.3;
+        }
+
+        .cta-text {
+          font-size: 17px;
+          line-height: 1.8;
+          color: var(--gray);
+          margin-bottom: 16px;
+        }
+
+        .cta-highlight {
+          font-size: 17px;
+          color: var(--black);
+          font-weight: 500;
+          margin: 32px 0;
+        }
+
+        .cta-buttons {
+          display: flex;
+          gap: 16px;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 40px;
+        }
+
+        .btn-whatsapp {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: var(--brand);
+          color: white;
+          padding: 16px 32px;
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: none;
+          border-radius: 8px;
+          transition: all 0.2s;
+        }
+
+        .btn-whatsapp:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+          padding: 40px 24px;
+          text-align: center;
+          border-top: 1px solid var(--line);
+        }
+
+        .footer p {
+          font-size: 13px;
+          color: var(--gray);
+          margin: 0;
+        }
+
+        .footer a {
+          color: var(--black);
+          text-decoration: none;
+        }
+
+        .footer a:hover {
+          text-decoration: underline;
         }
       `}</style>
 
-      <nav className="home-navbar">
-        <div className="home-navbar-container">
-          <Link href="/" className="home-navbar-logo">Anwar</Link>
-          <ul className="home-navbar-links">
-            <li><a href="#servicios" className="home-navbar-link">Servicios</a></li>
-            <li><a href="#sobre-mi" className="home-navbar-link">Sobre mí</a></li>
-            <li><Link href="/crecimiento-digital" className="home-navbar-link">Crecimiento Digital</Link></li>
-            <li><a href="https://wa.me/50683335408" target="_blank" rel="noopener noreferrer" className="home-navbar-link">Contacto</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div>
+        {/* Navbar */}
+        <nav className="navbar">
+          <div className="navbar-container">
+            <Link href="/" className="navbar-logo">Anwar Sánchez</Link>
+            <ul className="navbar-links">
+              <li><Link href="/casos-de-exito" className="navbar-link">Casos</Link></li>
+              <li><Link href="/presencia-digital" className="navbar-link">Servicios</Link></li>
+              <li><a href="#contacto" className="navbar-link">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
 
-      <main>
         {/* Hero */}
-        <section className="home-hero">
-          <div className="home-hero-content">
-            <p className="home-hero-pretitle">Software · IA · Marca Personal</p>
+        <section className="hero">
+          <div className="hero-content">
             <h1>
-              Construyo sistemas.<br />
-              Construyo <em>confianza</em>.
+              Tu reputación abre puertas.<br />
+              Tu presencia digital debería hacer lo mismo.
             </h1>
-            <p className="home-hero-subtitle">
-              La mayoría persigue métricas de vanidad. Yo construyo cosas que realmente funcionan:
-              <strong> software que escala, IA que automatiza, y marcas que convierten.</strong>
+            <p className="hero-subtitle">
+              Ayudo a profesionales y empresas a construir una presencia digital que genere confianza, fortalezca su autoridad y abra nuevas oportunidades de negocio.
             </p>
-            <div className="home-hero-cta">
-              <a href="https://wa.me/50683335408" target="_blank" rel="noopener noreferrer" className="home-btn home-btn-solid">
-                Hablemos →
-              </a>
-              <a href="#servicios" className="home-btn">
-                Ver qué hago →
-              </a>
+            <p className="hero-highlight">
+              Combinamos estrategia, marketing, tecnología e inteligencia artificial para impulsar tu crecimiento.
+            </p>
+            <a href="#contacto" className="btn-primary">
+              Potenciemos tu presencia digital →
+            </a>
+          </div>
+        </section>
+
+        {/* Photo Carousel - Infinite */}
+        <section className="carousel-section">
+          <div className="carousel-track-wrapper">
+            <div className="carousel-track">
+              {/* First set of images */}
+              {carouselImages.map((image, index) => (
+                <div key={index} className="carousel-image">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    priority={index === 0}
+                  />
+                </div>
+              ))}
+              {/* Duplicate for infinite scroll effect */}
+              {carouselImages.map((image, index) => (
+                <div key={`dup-${index}`} className="carousel-image">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Logos */}
-        <section className="home-logos">
-          <p className="home-logos-title">Empresas que confían en mi trabajo</p>
-          <div className="home-logos-grid">
-            {logos.map((logo, i) => (
-              <Image
-                key={i}
-                src={logo.src}
-                alt={logo.alt}
-                width={120}
-                height={40}
-                className="home-logo-item"
-                style={{ width: 'auto', height: '40px' }}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* Statement */}
-        <section className="home-statement">
-          <div className="home-statement-container">
-            <p className="home-statement-label">Mi filosofía</p>
-            <h2>La confianza se acumula. Las visitas no.</h2>
-            <p className="home-statement-text">
-              Todo el mundo habla de "volverse viral". Eso está fundamentalmente mal.
-              <strong> Si optimizas solo para visitas, el día que cambie el algoritmo, nadie te buscará.</strong>
+        {/* Problem */}
+        <section className="problem-section">
+          <div className="problem-content">
+            <h2 className="problem-title">
+              Podés ser excelente en lo que hacés. Pero si nadie lo sabe, estás perdiendo oportunidades.
+            </h2>
+            <p className="problem-text">
+              Pensá en esto.
             </p>
-            <p className="home-statement-text">
-              Pero si construyes algo con credibilidad real — software que funciona,
-              una marca que genera confianza — tu audiencia te encontrará.
+            <p className="problem-text">
+              Antes de contratar a un profesional o elegir una empresa, ¿qué es lo primero que hacés?
             </p>
-            <p className="home-statement-text">
-              <strong>Esa es la diferencia entre atención prestada y confianza ganada.</strong>
+            <p className="problem-text">
+              Probablemente buscás en Google, revisás su sitio web o explorás sus redes sociales.
             </p>
+            <p className="problem-text">
+              Tus potenciales clientes hacen exactamente lo mismo.
+            </p>
+            <p className="problem-text">
+              Y en esos primeros segundos, tu presencia digital puede generar confianza o hacerte perder una oportunidad.
+            </p>
+            <div className="problem-highlight">
+              No se trata de aparentar algo que no sos. Se trata de mostrar el verdadero valor de lo que ya construiste.
+            </div>
           </div>
         </section>
 
         {/* Services */}
-        <section id="servicios" className="home-services">
-          <div className="home-services-container">
-            <div className="home-services-header">
-              <p className="home-services-label">Servicios</p>
-              <h2>Lo que construyo</h2>
+        <section className="services-section section-gray">
+          <div className="container">
+            <div className="services-header">
+              <div className="services-eyebrow">Servicios</div>
+              <h2 className="services-title">En qué puedo ayudarte</h2>
             </div>
+            <div className="services-grid">
+              {/* For Professionals */}
+              <div className="service-card">
+                <div className="service-label">Para Profesionales</div>
+                <h3 className="service-title">Tu experiencia merece ser reconocida.</h3>
+                <p className="service-desc">
+                  Has invertido años en desarrollar tus conocimientos, construir tu carrera y ganar experiencia. Tu presencia digital debería reflejarlo.
+                </p>
+                <p className="service-desc">
+                  Te ayudo a construir una marca profesional que transmita confianza, te diferencie y te conecte con las personas correctas.
+                </p>
+                <p className="service-subtitle">Qué podemos hacer juntos:</p>
+                <ul className="service-list">
+                  {professionalServices.map((service, index) => (
+                    <li key={index}>{service}</li>
+                  ))}
+                </ul>
+                <p className="service-goal">
+                  <strong>El objetivo:</strong> que cuando alguien investigue quién sos, encuentre razones para confiar en vos.
+                </p>
+                <a href="#contacto" className="btn-primary">
+                  Potenciar mi marca profesional →
+                </a>
+              </div>
 
-            <div className="home-services-grid">
-              <div className="home-service-item">
-                <div className="home-service-num">01</div>
-                <h3>Software a medida</h3>
-                <div>
-                  <p>Desarrollo sistemas que automatizan lo repetitivo y escalan con tu negocio. Sin código innecesario, sin complejidad artificial.</p>
-                  <a href="https://wa.me/50683335408?text=Hola%2C%20me%20interesa%20saber%20más%20sobre%20desarrollo%20de%20software." target="_blank" rel="noopener noreferrer" className="home-service-link">Saber más →</a>
-                </div>
-              </div>
-              <div className="home-service-item">
-                <div className="home-service-num">02</div>
-                <h3>Inteligencia Artificial</h3>
-                <div>
-                  <p>Implemento IA que realmente funciona: procesa datos, genera contenido, toma decisiones. No buzzwords, resultados.</p>
-                  <a href="https://wa.me/50683335408?text=Hola%2C%20me%20interesa%20saber%20más%20sobre%20soluciones%20de%20IA." target="_blank" rel="noopener noreferrer" className="home-service-link">Saber más →</a>
-                </div>
-              </div>
-              <div className="home-service-item">
-                <div className="home-service-num">03</div>
-                <h3>Crecimiento Digital</h3>
-                <div>
-                  <p>Construyo presencia digital que genera confianza y convierte. Sitios web, SEO, estrategia — todo enfocado en resultados reales.</p>
-                  <Link href="/crecimiento-digital" className="home-service-link">Ver más →</Link>
-                </div>
+              {/* For Businesses */}
+              <div className="service-card">
+                <div className="service-label">Para Empresas</div>
+                <h3 className="service-title">Tu empresa necesita más que una página web.</h3>
+                <p className="service-desc">
+                  Una buena presencia digital es el comienzo. El verdadero potencial aparece cuando conectamos marketing, procesos y tecnología.
+                </p>
+                <p className="service-desc">
+                  Te ayudo a identificar oportunidades e implementar soluciones que fortalezcan tu negocio.
+                </p>
+                <p className="service-subtitle">Qué podemos hacer juntos:</p>
+                <ul className="service-list">
+                  {businessServices.map((service, index) => (
+                    <li key={index}>{service}</li>
+                  ))}
+                </ul>
+                <p className="service-goal">
+                  <strong>El objetivo:</strong> construir una presencia digital que atraiga clientes, genere confianza y contribuya al crecimiento de tu empresa.
+                </p>
+                <a href="#contacto" className="btn-primary">
+                  Potenciar mi empresa →
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Image + Text */}
-        <section className="home-image-section">
-          <div className="home-image-left">
-            <Image
-              src="/assets/yieldge/anwar/MFS_5814.jpg"
-              alt="Anwar trabajando"
-              fill
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-          <div className="home-image-right">
-            <p className="home-image-right-label">Resultados reales</p>
-            <h2>Trabajo que habla por sí mismo.</h2>
-            <p>
-              No tengo cientos de clientes. Tengo pocos, pero con resultados medibles.
-              <strong> Prefiero rechazar proyectos que hacer trabajo mediocre.</strong>
+        {/* Value Proposition */}
+        <section className="value-section">
+          <div className="value-content">
+            <h2 className="value-title">
+              Tu presencia digital no debería ser un gasto. Debería ser un activo.
+            </h2>
+            <p className="value-text">
+              Un sitio web no es solamente una colección de páginas.
             </p>
-            <p>
-              Ejemplo: Gastromedical CR pasó de depender de referidos a recibir la mitad de sus pacientes desde Google. En 4 meses. Sin publicidad pagada.
+            <p className="value-text">
+              Una marca personal no es solamente un perfil atractivo.
             </p>
-            <div className="home-image-stats">
-              <div className="home-stat">
-                <div className="home-stat-value">+180%</div>
-                <div className="home-stat-label">Consultas web</div>
-              </div>
-              <div className="home-stat">
-                <div className="home-stat-value">15+</div>
-                <div className="home-stat-label">Años experiencia</div>
-              </div>
+            <p className="value-text">
+              Y la inteligencia artificial no es solamente una tendencia.
+            </p>
+            <p className="value-text">
+              Cuando existe una estrategia detrás, cada elemento tiene un propósito.
+            </p>
+            <div className="value-props">
+              {valueProps.map((prop, index) => (
+                <div key={index} className="value-prop">
+                  <strong>{prop.bold}</strong> {prop.text}
+                </div>
+              ))}
             </div>
-            <Link href="/presencia-digital" className="home-btn">
-              Ver caso completo →
-            </Link>
+            <p className="value-closing">
+              No se trata de implementar más herramientas. Se trata de aprovechar las correctas para alcanzar tus objetivos.
+            </p>
           </div>
         </section>
 
-        {/* About */}
-        <section id="sobre-mi" className="home-about">
-          <div className="home-about-container">
-            <div className="home-about-content">
-              <p className="home-about-content-label">Sobre mí</p>
-              <h2>Anwar Sánchez</h2>
+        {/* Process */}
+        <section className="process-section">
+          <div className="container">
+            <div className="process-header">
+              <div className="process-eyebrow">Proceso</div>
+              <h2 className="process-title">Cómo vamos a trabajar juntos</h2>
+            </div>
+            <div className="process-grid">
+              {processSteps.map((step, index) => (
+                <div key={index} className="process-card">
+                  <div className="process-number">{step.number}</div>
+                  <h3 className="process-card-title">{step.title}</h3>
+                  <p className="process-desc">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="process-closing">
               <p>
-                Ingeniero de software con más de 15 años de experiencia. He trabajado con startups,
-                corporativos y emprendedores en todo tipo de proyectos.
+                <strong>Tu negocio tiene objetivos.</strong> Mi trabajo es ayudarte a alcanzarlos con tecnología y estrategia.
               </p>
-              <p>
-                <strong>No soy una agencia.</strong> Trabajo directamente contigo, sin intermediarios.
-                Eso significa mejor comunicación, más flexibilidad, y generalmente mejor resultado.
-              </p>
-              <p>
-                Si estás buscando a alguien que te diga lo que quieres escuchar, no soy esa persona.
-                Si quieres honestidad y trabajo bien hecho, hablemos.
-              </p>
-              <a href="https://wa.me/50683335408" target="_blank" rel="noopener noreferrer" className="home-btn">
-                Contactar →
+              <a href="#contacto" className="btn-primary">
+                Hablemos de tu proyecto →
               </a>
             </div>
-            <div className="home-about-image">
+          </div>
+        </section>
+
+        {/* Founder */}
+        <section className="founder-section">
+          <div className="founder-content">
+            <div className="founder-photo">
               <Image
-                src="/assets/yieldge/anwar/anwar-founder.jpg"
+                src="/assets/yieldge/anwar/MFS_5810.jpg"
                 alt="Anwar Sánchez"
-                width={450}
-                height={600}
-                style={{ width: '100%', height: 'auto' }}
+                fill
+                style={{ objectFit: 'cover' }}
               />
+            </div>
+            <div>
+              <h2 className="founder-name">Soy Anwar Sánchez</h2>
+              <p className="founder-role">Ingeniero de Software. Emprendedor. Partner tecnológico.</p>
+              <p className="founder-bio">
+                Mi trabajo conecta dos mundos que muchas veces se manejan por separado: <strong>los negocios y la tecnología.</strong>
+              </p>
+              <p className="founder-bio">
+                A lo largo de mi carrera he desarrollado soluciones digitales y trabajado con diferentes tecnologías para resolver problemas reales.
+              </p>
+              <p className="founder-bio">
+                Hoy utilizo esa experiencia para ayudar a profesionales y empresas a construir una presencia digital más sólida, aprovechar nuevas oportunidades y desarrollar soluciones que impulsen su crecimiento.
+              </p>
+              <p className="founder-bio">
+                No me interesa venderte una herramienta porque esté de moda. Me interesa entender qué necesitás, identificar dónde está la oportunidad y construir algo que realmente aporte valor.
+              </p>
+              <p className="founder-highlight">
+                Porque la tecnología es el medio. El crecimiento de tu negocio es el objetivo.
+              </p>
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="home-cta">
-          <div className="home-cta-container">
-            <h2>¿Hablamos?</h2>
-            <p>
-              Sin pitch de ventas. Solo una conversación para ver si puedo ayudarte.
-              Si no soy la persona correcta para tu proyecto, te lo digo.
+        <section id="contacto" className="cta-section">
+          <div className="cta-content">
+            <h2 className="cta-title">
+              Tu próxima oportunidad puede comenzar con una búsqueda en Google.
+            </h2>
+            <p className="cta-text">
+              Cuando un potencial cliente, socio comercial o empresa te investiga, ¿qué encuentra?
             </p>
-            <a href="https://wa.me/50683335408" target="_blank" rel="noopener noreferrer" className="home-btn">
-              Escribirme por WhatsApp →
-            </a>
+            <p className="cta-text">
+              ¿Una presencia digital improvisada o una marca que transmite confianza, experiencia y profesionalismo?
+            </p>
+            <p className="cta-text">
+              No necesitás hacer más ruido. Necesitás que las personas correctas te encuentren y confíen en vos.
+            </p>
+            <p className="cta-highlight">
+              Construyamos una presencia digital a la altura de tus objetivos.
+            </p>
+            <div className="cta-buttons">
+              <a
+                href="https://wa.me/50670724236?text=Hola%20Anwar%2C%20quiero%20potenciar%20mi%20presencia%20digital"
+                className="btn-whatsapp"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Conversemos sobre tu proyecto
+              </a>
+            </div>
           </div>
         </section>
-      </main>
 
-      {/* Footer */}
-      <footer className="home-footer">
-        <div className="home-footer-container">
-          <div>
-            <div className="home-footer-logo">Anwar Sánchez</div>
-            <div className="home-footer-tagline">Software · IA · Crecimiento Digital</div>
-            <div className="home-footer-copyright">© 2025</div>
-          </div>
-          <div className="home-footer-links">
-            <Link href="/crecimiento-digital" className="home-footer-link">Crecimiento Digital</Link>
-            <Link href="/presencia-digital" className="home-footer-link">Sitios para Clínicas</Link>
-            <a href="https://wa.me/50683335408" target="_blank" rel="noopener noreferrer" className="home-footer-link">WhatsApp</a>
-          </div>
-        </div>
-      </footer>
+        {/* Footer */}
+        <footer className="footer">
+          <p>
+            © {new Date().getFullYear()} <Link href="/">Anwar Sánchez</Link>.
+            Construyendo presencia digital que genera resultados.
+          </p>
+        </footer>
+      </div>
     </>
   );
 }
