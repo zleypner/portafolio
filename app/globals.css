@@ -659,3 +659,42 @@ body {
     gap: 40px;
   }
 }
+
+/* ============================================
+   PRESENCIA DIGITAL - Yieldge Style
+   ============================================ */
+
+/* Design tokens */
+:root {
+  --pd-brand: #1F5CFF;
+  --pd-brand-hover: #1a4edb;
+  --pd-brand-soft: #eff4ff;
+  --pd-whatsapp: #25D366;
+  --pd-whatsapp-hover: #20bd5a;
+  --pd-ink: #1d1d1f;
+  --pd-ink-muted: #424245;
+  --pd-ink-subtle: #6e6e73;
+  --pd-surface: #ffffff;
+  --pd-surface-muted: #f5f5f7;
+}
+
+/* Animations */
+@keyframes pd-scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
+@keyframes pd-ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.pd-animate-scroll-logos {
+  animation: pd-scroll-logos 20s linear infinite;
+}
+
+.pd-animate-ping {
+  animation: pd-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
