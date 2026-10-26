@@ -48,7 +48,6 @@ const logos = [
   { name: 'Gastromedical CR', logo: '/assets/yieldge/logos/drzuniga-logo.png', large: true },
   { name: 'Physical Care', logo: '/assets/yieldge/logos/phyclogo-removedbg.png' },
   { name: 'BNG Group', logo: '/assets/yieldge/logos/bnggroup.PNG' },
-  { name: 'Construrack', logo: '/assets/yieldge/logos/construrack.png' },
   { name: '3M', logo: '/assets/yieldge/logos/3m.png' },
 ];
 

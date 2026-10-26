@@ -12,22 +12,22 @@ function getWhatsAppUrl(message: string = WHATSAPP_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
 }
 
-// Logo data
+// Logo data - WebP format for better performance
 const LOGOS = [
-  { name: '3M', logo: '/assets/yieldge/logos/3m.png', large: false },
-  { name: 'Gastromedical CR', logo: '/assets/yieldge/logos/drzuniga-logo.png', large: true },
-  { name: 'PHYC', logo: '/assets/yieldge/logos/phyclogo-removedbg.png', large: false },
-  { name: 'HS', logo: '/assets/yieldge/logos/hslogo.png', large: false },
-  { name: 'Construrack', logo: '/assets/yieldge/logos/construrack.png', large: false },
-  { name: 'Quant Energy', logo: '/assets/yieldge/logos/quant_energy.png', large: false },
+  { name: '3M', logo: '/assets/yieldge/logos/3m.webp', large: false },
+  { name: 'Gastromedical CR', logo: '/assets/yieldge/logos/drzuniga-logo.webp', large: true },
+  { name: 'PHYC', logo: '/assets/yieldge/logos/phyclogo-removedbg.webp', large: false },
+  { name: 'HS', logo: '/assets/yieldge/logos/hslogo.webp', large: false },
+  { name: 'Construrack', logo: '/assets/yieldge/logos/construrack.webp', large: false },
+  { name: 'Quant Energy', logo: '/assets/yieldge/logos/quant_energy.webp', large: false },
 ];
 
-// Images
+// Images - WebP format for better performance
 const IMAGES = {
   heroMockup: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
-  testimonialAvatar: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
-  founderPortrait: '/assets/yieldge/anwar/anwar-founder.jpg',
-  founderWorking: '/assets/yieldge/anwar/MFS_5817.jpg',
+  testimonialAvatar: '/assets/yieldge/cases/gastro-hero-2.webp',
+  founderPortrait: '/assets/yieldge/anwar/anwar-founder.webp',
+  founderWorking: '/assets/yieldge/anwar/MFS_5817.webp',
 };
 
 export default function PresenciaDigitalPage() {
@@ -123,7 +123,7 @@ export default function PresenciaDigitalPage() {
     },
     {
       name: 'Physical Care',
-      image: '/assets/yieldge/cases/image.png',
+      image: '/assets/yieldge/cases/image.webp',
       result: '+120%',
       resultLabel: 'más pacientes',
       tag: 'Fisioterapia',
@@ -131,7 +131,7 @@ export default function PresenciaDigitalPage() {
     },
     {
       name: 'BNG Group',
-      image: '/assets/yieldge/cases/Perfil fundador 2.png',
+      image: '/assets/yieldge/cases/Perfil fundador 2.webp',
       result: '2x',
       resultLabel: 'leads calificados',
       tag: 'Retail',
@@ -178,9 +178,11 @@ export default function PresenciaDigitalPage() {
         }
 
         .pd-navbar-logo {
+          font-family: var(--font-playfair), serif;
           font-size: 14px;
-          font-weight: 600;
-          letter-spacing: -0.01em;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
           color: #1d1d1f;
           text-decoration: none;
         }
@@ -1408,8 +1410,8 @@ export default function PresenciaDigitalPage() {
 
         /* Footer */
         .pd-footer {
-          background: white;
-          border-top: 1px solid #f3f4f6;
+          background: #111827;
+          border-top: 1px solid #1f2937;
           padding: 32px 24px;
         }
 
@@ -1424,7 +1426,7 @@ export default function PresenciaDigitalPage() {
 
         .pd-footer-copy {
           font-size: 14px;
-          color: #6b7280;
+          color: white;
         }
 
         .pd-footer-links {
@@ -1435,13 +1437,13 @@ export default function PresenciaDigitalPage() {
 
         .pd-footer-links a {
           font-size: 14px;
-          color: #6b7280;
+          color: #9ca3af;
           text-decoration: none;
           transition: color 0.2s ease;
         }
 
         .pd-footer-links a:hover {
-          color: #374151;
+          color: white;
         }
 
         /* Responsive */
@@ -1585,7 +1587,7 @@ export default function PresenciaDigitalPage() {
         {/* Navbar */}
         <nav className={`pd-navbar ${scrolled ? 'scrolled' : ''}`}>
           <div className="pd-navbar-container">
-            <Link href="/" className="pd-navbar-logo">Yieldge</Link>
+            <Link href="/" className="pd-navbar-logo">Anwar Sánchez</Link>
 
             <ul className="pd-navbar-links">
               {[
@@ -1738,6 +1740,7 @@ export default function PresenciaDigitalPage() {
                         alt={`${company.name} logo`}
                         width={company.large ? 280 : 220}
                         height={90}
+                        loading="lazy"
                         style={{ maxHeight: company.large ? '96px' : '80px', width: 'auto', objectFit: 'contain' }}
                       />
                     </div>
@@ -1775,6 +1778,7 @@ export default function PresenciaDigitalPage() {
                       alt={caseItem.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
                       style={{ objectFit: 'cover', objectPosition: caseItem.objectPosition || 'center' }}
                     />
                     <span className="pd-case-tag">{caseItem.tag}</span>
@@ -1882,6 +1886,7 @@ export default function PresenciaDigitalPage() {
                   alt="Dr. Daniel Zúñiga"
                   fill
                   sizes="96px"
+                  loading="lazy"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
@@ -1982,6 +1987,7 @@ export default function PresenciaDigitalPage() {
                   alt="Anwar Sánchez trabajando"
                   width={600}
                   height={500}
+                  loading="lazy"
                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                 />
               </div>
@@ -2054,6 +2060,7 @@ export default function PresenciaDigitalPage() {
                 alt="Anwar Sánchez"
                 fill
                 sizes="256px"
+                loading="lazy"
                 style={{ objectFit: 'cover' }}
               />
             </div>
@@ -2091,7 +2098,7 @@ export default function PresenciaDigitalPage() {
         {/* Footer */}
         <footer className="pd-footer">
           <div className="pd-footer-content">
-            <p className="pd-footer-copy">© {new Date().getFullYear()} Yieldge. Todos los derechos reservados.</p>
+            <p className="pd-footer-copy">© {new Date().getFullYear()} Anwar Sánchez. Todos los derechos reservados.</p>
             <div className="pd-footer-links">
               <Link href="/privacy">Privacidad</Link>
               <Link href="/">Inicio</Link>
