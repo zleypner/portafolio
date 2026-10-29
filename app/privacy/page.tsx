@@ -28,7 +28,7 @@ export default function Privacy() {
 
         <div style={{ lineHeight: '1.8', color: 'rgba(255,255,255,0.85)' }}>
           <p style={{ marginBottom: '1.5rem' }}>
-            El presente Política de Privacidad establece los términos en que Yieldge Corp usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios.
+            El presente Política de Privacidad establece los términos en que Anwar Sánchez Digital usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios.
           </p>
 
           <p style={{ marginBottom: '1.5rem' }}>
@@ -66,7 +66,7 @@ export default function Privacy() {
           </p>
 
           <p style={{ marginBottom: '2.5rem' }}>
-            Yieldge Corp está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.
+            Anwar Sánchez Digital está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.
           </p>
 
           <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#ffffff' }}>
@@ -103,7 +103,7 @@ export default function Privacy() {
           </p>
 
           <p style={{ marginBottom: '1.5rem' }}>
-            Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial. Yieldge Corp Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
+            Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial. Anwar Sánchez Digital Se reserva el derecho de cambiar los términos de la presente Política de Privacidad en cualquier momento.
           </p>
         </div>
 
