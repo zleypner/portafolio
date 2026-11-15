@@ -543,24 +543,24 @@ export default function Home() {
         }
 
         .pd-hero-image {
-          display: none;
+          display: flex;
           position: absolute;
-          top: 0;
-          right: 5%;
           bottom: 0;
-          width: 50%;
-          justify-content: center;
-          align-items: flex-start;
+          right: -5%;
+          width: 55%;
+          height: 50%;
+          justify-content: flex-end;
+          align-items: flex-end;
           pointer-events: none;
-          z-index: 5;
+          z-index: 1;
+          opacity: 0.35;
         }
 
         .pd-hero-image-wrapper {
           position: relative;
           width: 100%;
-          max-width: 500px;
-          height: 110%;
-          margin-top: -5%;
+          max-width: 280px;
+          height: 100%;
         }
 
         .pd-hero-image-wrapper img {
@@ -1824,14 +1824,20 @@ export default function Home() {
           }
 
           .pd-hero-image {
-            display: flex;
+            top: 0;
+            bottom: 0;
             right: 8%;
             width: 45%;
+            height: auto;
+            opacity: 1;
+            z-index: 5;
+            align-items: flex-start;
           }
 
           .pd-hero-image-wrapper {
             max-width: 500px;
             height: 115%;
+            margin-top: -5%;
           }
 
           .pd-hero-bg-logo {
