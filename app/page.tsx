@@ -519,27 +519,29 @@ export default function Home() {
         }
 
         .pd-hero-image {
-          position: relative;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
           display: flex;
-          justify-content: center;
-          align-items: flex-end;
+          justify-content: flex-end;
+          align-items: flex-start;
+          pointer-events: none;
         }
 
         .pd-hero-image-wrapper {
           position: relative;
           width: 100%;
-          max-width: 380px;
-          aspect-ratio: 2/3;
-          margin: 0 auto;
-          border-radius: 0;
-          overflow: visible;
+          max-width: 450px;
+          height: 120%;
+          margin-top: -10%;
         }
 
         .pd-hero-image-wrapper img {
           width: 100%;
           height: 100%;
           object-fit: contain;
-          object-position: bottom center;
+          object-position: top center;
         }
 
         .pd-hero-image-wrapper::before {
@@ -1762,12 +1764,11 @@ export default function Home() {
           }
 
           .pd-hero-image {
-            justify-content: flex-end;
+            right: 5%;
           }
 
           .pd-hero-image-wrapper {
-            max-width: 500px;
-            aspect-ratio: 2/3;
+            max-width: 550px;
           }
 
           .pd-hero-bg-logo {
@@ -1869,7 +1870,7 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 580px;
+            max-width: 620px;
           }
 
           .pd-hero-bg-logo {
@@ -1877,10 +1878,6 @@ export default function Home() {
             height: 600px;
             right: 0;
             opacity: 0.08;
-          }
-
-          .pd-hero-image-gradient-left {
-            width: 120px;
           }
         }
 
@@ -1918,7 +1915,7 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 650px;
+            max-width: 700px;
           }
 
           .pd-hero-bg-logo {
@@ -1943,7 +1940,7 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 750px;
+            max-width: 800px;
           }
         }
       `}</style>
