@@ -369,18 +369,19 @@ export default function Home() {
           max-width: 1280px;
           margin: 0 auto;
           width: 100%;
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 40px;
-          align-items: start;
-          padding-top: 80px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-top: 0;
+          height: 100%;
         }
 
         .pd-hero-content {
-          text-align: left;
+          text-align: center;
           padding-right: 0;
-          padding-top: 5vh;
-          align-self: flex-start;
+          padding-top: 0;
+          max-width: 480px;
         }
 
         .pd-hero h1 {
@@ -466,7 +467,7 @@ export default function Home() {
         .pd-hero-cta-row {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
           gap: 16px;
           margin-bottom: 0;
         }
@@ -542,12 +543,12 @@ export default function Home() {
         }
 
         .pd-hero-image {
+          display: none;
           position: absolute;
           top: 0;
           right: 5%;
           bottom: 0;
           width: 50%;
-          display: flex;
           justify-content: center;
           align-items: flex-start;
           pointer-events: none;
@@ -1774,6 +1775,7 @@ export default function Home() {
         @media (min-width: 640px) {
           .pd-hero-cta-row {
             flex-direction: row;
+            align-items: flex-start;
           }
 
           .pd-cta-primary {
@@ -1815,33 +1817,39 @@ export default function Home() {
 
           .pd-hero {
             padding: 0 48px;
-            min-height: 100vh;
           }
 
           .pd-hero-container {
-            grid-template-columns: 1.2fr 1fr;
-            gap: 32px;
+            display: block;
+            padding-top: 100px;
+            height: auto;
           }
 
           .pd-hero-content {
-            padding-right: 24px;
+            text-align: left;
+            padding-right: 0;
+            max-width: 600px;
           }
 
           .pd-hero h1 {
-            font-size: 2.75rem;
-            line-height: 1.1;
+            font-size: 3.25rem;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
           }
 
-          .pd-hero-subtitle {
+          .pd-hero-benefits li {
             font-size: 18px;
           }
 
           .pd-hero-image {
-            right: 5%;
+            display: flex;
+            right: 8%;
+            width: 45%;
           }
 
           .pd-hero-image-wrapper {
-            max-width: 550px;
+            max-width: 500px;
+            height: 115%;
           }
 
           .pd-hero-bg-logo {
@@ -1852,11 +1860,30 @@ export default function Home() {
           }
 
           .pd-cases {
-            padding: 80px 40px;
+            padding: 60px 48px;
           }
 
           .pd-cases-grid {
             grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+          }
+
+          .pd-section-title {
+            font-size: 2.5rem;
+          }
+
+          .pd-problem-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+          }
+
+          .pd-problem-card {
+            padding: 28px 20px;
+          }
+
+          .pd-problem-icon {
+            width: 56px;
+            height: 56px;
           }
 
           .pd-casestudy-grid {
@@ -1884,10 +1911,25 @@ export default function Home() {
 
           .pd-offer-grid {
             grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+          }
+
+          .pd-offer-card {
+            padding: 32px 20px;
+          }
+
+          .pd-offer-icon {
+            width: 64px;
+            height: 64px;
+          }
+
+          .pd-offer-card h3 {
+            font-size: 18px;
           }
 
           .pd-process-grid {
             grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
           }
 
           .pd-founder-grid {
@@ -1924,26 +1966,38 @@ export default function Home() {
 
           .pd-hero-container {
             max-width: 1400px;
-            grid-template-columns: 1.1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 48px;
+            padding-top: 120px;
           }
 
           .pd-hero-content {
-            padding-right: 40px;
+            max-width: 650px;
           }
 
           .pd-hero h1 {
-            font-size: 3.25rem;
+            font-size: 3.75rem;
             letter-spacing: -0.03em;
           }
 
-          .pd-hero-subtitle {
-            font-size: 19px;
-            max-width: 520px;
+          .pd-hero-benefits li {
+            font-size: 20px;
+            gap: 16px;
+          }
+
+          .pd-hero-benefits li::before {
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+          }
+
+          .pd-hero-image {
+            width: 50%;
           }
 
           .pd-hero-image-wrapper {
-            max-width: 620px;
+            max-width: 600px;
+            height: 120%;
           }
 
           .pd-hero-bg-logo {
@@ -1951,6 +2005,23 @@ export default function Home() {
             height: 600px;
             right: 0;
             opacity: 0.08;
+          }
+
+          .pd-cta-hero {
+            padding: 18px 40px;
+            font-size: 16px;
+          }
+
+          .pd-section-title {
+            font-size: 2.75rem;
+          }
+
+          .pd-problem h2 {
+            font-size: 2.5rem;
+          }
+
+          .pd-offer h2 {
+            font-size: 2.5rem;
           }
         }
 
@@ -1961,29 +2032,30 @@ export default function Home() {
 
           .pd-hero-container {
             max-width: 1500px;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
+            padding-top: 100px;
           }
 
           .pd-hero-content {
-            padding-right: 60px;
+            max-width: 700px;
           }
 
           .pd-hero h1 {
-            font-size: 3.75rem;
+            font-size: 4.25rem;
             line-height: 1.05;
             margin-bottom: 32px;
           }
 
-          .pd-hero-subtitle {
-            font-size: 21px;
-            line-height: 1.65;
-            max-width: 580px;
+          .pd-hero-benefits {
+            gap: 16px;
             margin-bottom: 40px;
           }
 
+          .pd-hero-benefits li {
+            font-size: 21px;
+          }
+
           .pd-cta-hero {
-            padding: 20px 44px;
+            padding: 20px 48px;
             font-size: 17px;
           }
 
@@ -1997,23 +2069,47 @@ export default function Home() {
             right: -5%;
             opacity: 0.09;
           }
+
+          .pd-section-title {
+            font-size: 3rem;
+          }
         }
 
         @media (min-width: 1536px) {
           .pd-hero-container {
-            max-width: 1600px;
+            max-width: 1700px;
+          }
+
+          .pd-hero-content {
+            max-width: 800px;
           }
 
           .pd-hero h1 {
-            font-size: 4rem;
+            font-size: 4.75rem;
           }
 
-          .pd-hero-subtitle {
+          .pd-hero-benefits li {
             font-size: 22px;
           }
 
           .pd-hero-image-wrapper {
             max-width: 800px;
+          }
+
+          .pd-section-title {
+            font-size: 3.25rem;
+          }
+
+          .pd-cases-grid {
+            gap: 32px;
+          }
+
+          .pd-stat-card {
+            padding: 32px 24px;
+          }
+
+          .pd-stat-value {
+            font-size: 2.5rem;
           }
         }
       `}</style>
