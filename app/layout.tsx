@@ -20,52 +20,48 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://anwarsanchez.com'),
   title: {
-    default: 'Diseño Web para Clínicas y Negocios en Costa Rica | Anwar Sánchez',
+    default: 'Anwar Sánchez | Partner Digital y Estrategia de Crecimiento',
     template: '%s | Anwar Sánchez',
   },
-  description: 'Creo sitios web profesionales que aparecen en Google y convierten visitas en clientes por WhatsApp. +180% más consultas. Entrega en 2-3 semanas. Especializado en clínicas, médicos y negocios en Costa Rica.',
+  description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para fortalecer tu marca, atraer mejores clientes y hacer crecer tu negocio con el Método SEMILLA.',
 
   keywords: [
-    // Primary keywords - Diseño Web
-    'diseño web Costa Rica',
-    'diseño web para clínicas',
-    'sitio web para médicos',
-    'página web para negocios',
-    'desarrollo web San José',
-    'diseñador web Costa Rica',
-    // Long-tail keywords - Especialidades médicas
-    'diseño web para consultorio médico',
-    'página web para dentistas Costa Rica',
-    'sitio web para dermatólogos',
-    'diseño web para gastroenterólogos',
-    'web para especialistas médicos',
-    'página web para fisioterapeutas',
-    'sitio web para psicólogos Costa Rica',
-    'diseño web para nutricionistas',
+    // Primary keywords - Partner Digital
+    'Partner Digital',
+    'Partner Digital Costa Rica',
+    'consultoría de crecimiento digital',
+    'estrategia digital para empresas',
+    'marketing digital para profesionales',
+    // Posicionamiento y marca
+    'posicionamiento de marca',
+    'captación de clientes',
+    'estrategia de contenido',
+    'automatización empresarial',
+    'tecnología para negocios',
+    'crecimiento empresarial Costa Rica',
+    // Método SEMILLA
+    'Método SEMILLA',
+    'metodología de crecimiento',
+    'estrategia de negocios',
+    // Servicios
+    'consultoría digital',
+    'marketing estratégico',
+    'desarrollo web Costa Rica',
+    'presencia digital',
+    'conversión digital',
     // SEO & Marketing
-    'SEO para clínicas Costa Rica',
-    'SEO local San José',
-    'posicionamiento web médicos',
-    'marketing digital para doctores',
-    'Google My Business clínicas',
-    // Intent keywords
-    'cuánto cuesta página web clínica',
-    'mejor diseñador web para médicos',
-    'cómo aparecer en Google clínica',
-    'página web profesional precio',
-    // Services
-    'diseño web responsive',
-    'sitio web con WhatsApp',
-    'landing page Costa Rica',
-    'tienda online Costa Rica',
+    'SEO Costa Rica',
+    'marketing digital Costa Rica',
+    'estrategia de marketing',
+    'atracción de clientes',
     // Brand
     'Anwar Sánchez',
-    'Anwar Sánchez desarrollador',
+    'Anwar Sánchez Partner Digital',
     'Anwar Sánchez Costa Rica',
     // Software & Tech
     'desarrollo de software Costa Rica',
     'software a la medida',
-    'automatización empresarial',
+    'automatización de procesos',
     'inteligencia artificial negocios',
   ],
 
@@ -78,15 +74,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_CR',
     url: 'https://anwarsanchez.com',
-    siteName: 'Anwar Sánchez - Diseño Web Costa Rica',
-    title: 'Diseño Web para Clínicas y Negocios | +180% Más Clientes',
-    description: 'Sitios web que aparecen en Google y generan clientes reales. Especializado en clínicas y negocios. WhatsApp integrado. Entrega en 2-3 semanas. Costa Rica.',
+    siteName: 'Anwar Sánchez - Partner Digital',
+    title: 'Partner Digital | Estrategia de Crecimiento con el Método SEMILLA',
+    description: 'Ayudo a profesionales y empresas a atraer mejores clientes, fortalecer su marca y convertir su presencia digital en oportunidades de negocio. Costa Rica.',
     images: [
       {
         url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         width: 1200,
         height: 630,
-        alt: 'Anwar Sánchez - Diseño Web para Clínicas y Negocios en Costa Rica',
+        alt: 'Anwar Sánchez - Partner Digital en Costa Rica',
         type: 'image/webp',
       },
     ],
@@ -97,11 +93,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@anwarsanchez',
     creator: '@anwarsanchez',
-    title: 'Diseño Web para Clínicas | +180% Más Clientes',
-    description: 'Sitios web que aparecen en Google y generan clientes. SEO local, WhatsApp integrado, diseño premium. Costa Rica.',
+    title: 'Partner Digital | Método SEMILLA',
+    description: 'Estrategia, marketing y tecnología para hacer crecer tu negocio. Método SEMILLA. Costa Rica.',
     images: {
       url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
-      alt: 'Anwar Sánchez - Diseño Web Costa Rica',
+      alt: 'Anwar Sánchez - Partner Digital Costa Rica',
     },
   },
 
@@ -213,7 +209,7 @@ const structuredData = {
       '@id': 'https://anwarsanchez.com/#website',
       url: 'https://anwarsanchez.com',
       name: 'Anwar Sánchez',
-      description: 'Diseño Web, Software e IA para Clínicas y Negocios en Costa Rica',
+      description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para hacer crecer tu negocio con el Método SEMILLA.',
       publisher: { '@id': 'https://anwarsanchez.com/#person' },
       inLanguage: 'es',
       potentialAction: {
@@ -231,8 +227,8 @@ const structuredData = {
       '@type': 'WebPage',
       '@id': 'https://anwarsanchez.com/#webpage',
       url: 'https://anwarsanchez.com',
-      name: 'Diseño Web para Clínicas y Negocios en Costa Rica | Anwar Sánchez',
-      description: 'Creo sitios web profesionales que aparecen en Google y generan clientes. +180% más consultas en 4 meses.',
+      name: 'Anwar Sánchez | Partner Digital y Estrategia de Crecimiento',
+      description: 'Ayudo a profesionales y empresas a atraer mejores clientes, fortalecer su marca y convertir su presencia digital en oportunidades de negocio con el Método SEMILLA.',
       inLanguage: 'es',
       isPartOf: { '@id': 'https://anwarsanchez.com/#website' },
       about: { '@id': 'https://anwarsanchez.com/#service' },
@@ -277,37 +273,37 @@ const structuredData = {
         url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         width: 800,
         height: 800,
-        caption: 'Anwar Sánchez - Desarrollador Web y Consultor Digital',
+        caption: 'Anwar Sánchez - Partner Digital y Estratega de Crecimiento',
       },
-      description: 'Desarrollador web y consultor de marketing digital con más de 15 años de experiencia. Especializado en crear sitios web para clínicas, negocios y profesionales que generan clientes reales a través de Google.',
+      description: 'Ingeniero de software, empresario y Partner Digital con más de 10 años de experiencia en tecnología. Creador del Método SEMILLA. Ayudo a profesionales y empresas a atraer mejores clientes, fortalecer su marca y convertir su presencia digital en oportunidades de negocio.',
       sameAs: [
         'https://www.linkedin.com/in/anwarsanchez',
         'https://github.com/anwarsanchez',
         'https://twitter.com/anwarsanchez',
         'https://wa.me/50683335408',
       ],
-      jobTitle: 'Desarrollador Web & Consultor de Marketing Digital',
+      jobTitle: 'Partner Digital & Estratega de Crecimiento',
       alumniOf: {
         '@type': 'Organization',
         name: 'Universidad de Costa Rica',
       },
       worksFor: {
         '@type': 'Organization',
-        name: 'Anwar Sánchez Digital',
+        name: 'Anwar Sánchez - Partner Digital',
         url: 'https://anwarsanchez.com',
       },
       knowsAbout: [
-        'Diseño Web',
+        'Estrategia Digital',
         'Desarrollo de Software',
-        'SEO Local',
         'Marketing Digital',
+        'Posicionamiento de Marca',
+        'Método SEMILLA',
+        'Automatización Empresarial',
         'Inteligencia Artificial',
-        'UX/UI Design',
         'Next.js',
         'React',
         'TypeScript',
-        'Diseño Web para Clínicas',
-        'Google My Business',
+        'Captación de Clientes',
         'Optimización de Conversiones',
       ],
       knowsLanguage: ['es', 'en'],
@@ -315,21 +311,21 @@ const structuredData = {
         '@type': 'Country',
         name: 'Costa Rica',
       },
-      award: '+100 proyectos completados',
+      award: '+10 años de experiencia en tecnología',
     },
 
     // ProfessionalService / LocalBusiness Schema
     {
       '@type': 'ProfessionalService',
       '@id': 'https://anwarsanchez.com/#business',
-      name: 'Anwar Sánchez - Diseño Web y Marketing Digital',
-      alternateName: 'Anwar Sánchez Digital',
+      name: 'Anwar Sánchez - Partner Digital',
+      alternateName: 'Método SEMILLA',
       image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
       logo: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
       url: 'https://anwarsanchez.com',
       telephone: '+50683335408',
       email: 'hola@anwarsanchez.com',
-      description: 'Servicios de diseño web, desarrollo de software y marketing digital para clínicas, médicos y negocios en Costa Rica. Sitios web que aparecen en Google y generan clientes reales.',
+      description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para fortalecer tu marca, atraer mejores clientes y hacer crecer tu negocio con el Método SEMILLA.',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'San José',
@@ -406,7 +402,7 @@ const structuredData = {
         },
         result: {
           '@type': 'Reservation',
-          name: 'Consulta gratuita de diseño web',
+          name: 'Consulta sobre crecimiento digital',
         },
       },
     },
@@ -415,19 +411,19 @@ const structuredData = {
     {
       '@type': 'Service',
       '@id': 'https://anwarsanchez.com/#service',
-      name: 'Diseño Web para Clínicas y Negocios',
-      alternateName: 'Páginas Web Profesionales',
-      description: 'Servicio completo de diseño y desarrollo de sitios web profesionales para clínicas, médicos, negocios y profesionales. Incluye SEO local para aparecer en Google, integración con WhatsApp, diseño responsive optimizado para móviles, y entrega en 2-3 semanas.',
+      name: 'Partner Digital - Método SEMILLA',
+      alternateName: 'Estrategia de Crecimiento Digital',
+      description: 'Servicio integral de estrategia digital para profesionales y empresas. Incluye diagnóstico de negocio, posicionamiento de marca, estrategias de contenido y marketing, optimización de conversión y tecnología aplicada al crecimiento.',
       provider: { '@id': 'https://anwarsanchez.com/#business' },
-      serviceType: 'Diseño y Desarrollo Web',
-      serviceOutput: 'Sitio web profesional optimizado para SEO',
+      serviceType: 'Consultoría de Crecimiento Digital',
+      serviceOutput: 'Estrategia personalizada de crecimiento',
       areaServed: [
         { '@type': 'Country', name: 'Costa Rica' },
         { '@type': 'City', name: 'San José' },
       ],
       audience: {
         '@type': 'Audience',
-        audienceType: 'Clínicas, médicos, negocios, profesionales independientes',
+        audienceType: 'Profesionales independientes, empresas de servicios, negocios en crecimiento',
       },
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -439,54 +435,38 @@ const structuredData = {
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Servicios de Diseño Web',
+        name: 'Servicios del Método SEMILLA',
         itemListElement: [
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Diseño Premium Personalizado',
-              description: 'Diseño único desde cero, sin plantillas genéricas. Cada sitio refleja la identidad y nivel profesional del negocio.',
+              name: 'Estrategia y Posicionamiento',
+              description: 'Definimos una dirección clara para fortalecer tu marca, diferenciarte de la competencia y conectar con los clientes correctos.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Página por Servicio/Especialidad',
-              description: 'Cada servicio o tratamiento tiene su propia página optimizada para posicionar en Google.',
+              name: 'Contenido y Marketing',
+              description: 'Desarrollamos estrategias de comunicación y atracción para generar confianza y nuevas oportunidades comerciales.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'SEO Local Incluido',
-              description: 'Configuración técnica completa para aparecer cuando busquen su servicio en su zona.',
+              name: 'Conversión y Crecimiento',
+              description: 'Mejoramos los canales y procesos que conectan a tus clientes potenciales con tu negocio.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'WhatsApp Integrado',
-              description: 'Botón de contacto directo para que los clientes contacten con un solo clic.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Versión en Inglés',
-              description: 'Opción de sitio bilingüe para atraer clientes internacionales.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Optimizado para Móvil',
-              description: 'Diseño responsive que funciona perfectamente en celulares, donde más del 70% de los usuarios buscan.',
+              name: 'Tecnología y Automatización',
+              description: 'Implementamos soluciones digitales que simplifican procesos, ahorran tiempo y mejoran la eficiencia.',
             },
           },
         ],
@@ -516,105 +496,95 @@ const structuredData = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: '¿Cuánto cuesta un sitio web en Costa Rica?',
+          name: '¿Qué es un Partner Digital?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'El precio varía según las páginas y funcionalidades que necesite. No manejamos paquetes genéricos porque cada negocio es diferente. Después de una llamada de 15 minutos, proporcionamos un precio exacto sin sorpresas ni costos ocultos. El sitio es 100% propiedad del cliente.',
+            text: 'Un Partner Digital es más que un proveedor de servicios. Es un socio estratégico que entiende tu negocio, identifica oportunidades de crecimiento y conecta estrategia, marketing y tecnología para que cada acción tenga un propósito claro.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Cuánto tiempo toma crear un sitio web profesional?',
+          name: '¿Qué es el Método SEMILLA?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Una landing page toma aproximadamente 1 semana. Un sitio completo de 5 o más páginas toma entre 2 y 3 semanas. Siempre proporcionamos una fecha de entrega clara antes de comenzar el proyecto.',
+            text: 'Es una metodología de cuatro etapas que desarrollé para ayudar a profesionales y empresas a construir las bases de un crecimiento sostenible: Estrategia, Posicionamiento, Atracción y Conversión.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Garantizan que mi negocio aparecerá primero en Google?',
+          name: '¿Para qué tipo de negocios trabaja Anwar Sánchez?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Nadie puede garantizar el primer puesto en Google honestamente. Lo que sí garantizamos es que el sitio estará técnicamente optimizado para SEO, con contenido relevante para cada servicio, estructura correcta, velocidad de carga óptima y configuración de Google Business Profile.',
+            text: 'Trabajo con profesionales independientes, clínicas, empresas de servicios y negocios que quieren atraer mejores clientes, fortalecer su posicionamiento y convertir su presencia digital en oportunidades reales de negocio.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Qué pasa si no me gusta el diseño del sitio web?',
+          name: '¿Cómo es el proceso de trabajo?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Rehacemos el diseño hasta que quede completamente satisfecho. No publicamos nada que el cliente no apruebe. Trabajamos con revisiones ilimitadas en la fase de diseño.',
+            text: 'Comenzamos con una conversación para entender tu negocio, tus objetivos y tus desafíos. A partir de ahí, definimos una estrategia personalizada y trabajamos juntos en su implementación.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Necesito pagar mantenimiento mensual por mi página web?',
+          name: '¿Garantiza resultados específicos?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No es obligatorio. El sitio web es 100% propiedad del cliente incluyendo código, diseño y dominio. Ofrecemos un plan opcional de mantenimiento para hosting y actualizaciones, pero el cliente puede manejarlo por su cuenta si lo prefiere.',
+            text: 'No prometo resultados garantizados porque cada negocio es diferente. Lo que sí garantizo es un trabajo estratégico, profesional y orientado a generar valor real para tu negocio.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Por qué contratar a Anwar Sánchez en lugar de una agencia?',
+          name: '¿Por qué trabajar con Anwar Sánchez en lugar de una agencia?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trabajas directamente conmigo, sin vendedores, account managers ni intermediarios. Esto significa comunicación directa, entregas más rápidas, mejor calidad y generalmente mejor precio. Tengo más de 15 años de experiencia en desarrollo de software y más de 100 proyectos completados.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué resultados puedo esperar con un nuevo sitio web?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nuestros clientes han visto incrementos de hasta 180% en consultas en 4 meses. Por ejemplo, Gastromedical CR pasó de recibir clientes principalmente por referidos a obtener la mitad de sus consultas desde Google, sin publicidad pagada.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: '¿El sitio web incluye integración con WhatsApp?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sí, todos nuestros sitios incluyen botón de WhatsApp integrado. Los clientes pueden contactar con un solo clic, sin formularios complicados. Es la forma más efectiva de convertir visitas en contactos reales.',
+            text: 'Conmigo trabajás directo. Sin vendedores, sin intermediarios. Eso significa mejor comunicación, mayor compromiso con tu proyecto y una visión integrada de estrategia, marketing y tecnología.',
           },
         },
       ],
     },
 
-    // HowTo Schema for Featured Snippets
+    // HowTo Schema for Featured Snippets - Método SEMILLA
     {
       '@type': 'HowTo',
       '@id': 'https://anwarsanchez.com/#howto',
-      name: 'Cómo obtener un sitio web profesional para tu negocio',
-      description: 'Proceso simple de 3 pasos para obtener un sitio web que aparece en Google y genera clientes reales.',
-      totalTime: 'P3W',
+      name: 'Cómo hacer crecer tu negocio con el Método SEMILLA',
+      description: 'Metodología de 4 etapas para construir las bases de un crecimiento digital sostenible.',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Llamada de diagnóstico gratuita',
-          text: 'Agendamos una llamada de 15 minutos donde hablamos de tu negocio, tus clientes ideales y qué necesitas. Sin pitch de ventas, solo entender tu situación.',
-          url: 'https://wa.me/50683335408',
+          name: 'Sembrar - Estrategia',
+          text: 'Analizamos tu negocio y definimos una estrategia clara para conectar tu valor con los clientes correctos.',
+          url: 'https://anwarsanchez.com/#metodo',
           image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Propuesta de diseño personalizada',
-          text: 'Te muestro exactamente cómo se vería tu sitio web con un mockup personalizado. Apruebas el diseño o pedimos los cambios necesarios antes de continuar.',
+          name: 'Cultivar - Posicionamiento',
+          text: 'Fortalecemos tu propuesta de valor, diferenciación y comunicación para que las personas correctas te elijan.',
           image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Publicación y optimización',
-          text: 'Tu sitio sale al aire completamente optimizado para Google en 1-3 semanas. Configuramos analytics, Google Business Profile y empiezas a recibir consultas.',
+          name: 'Crecer - Atracción',
+          text: 'Desarrollamos estrategias de contenido, marketing y tecnología para aumentar tu visibilidad y generar confianza.',
+          image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: 'Cosechar - Conversión',
+          text: 'Optimizamos tus canales digitales para convertir la atención en oportunidades comerciales reales.',
           image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         },
       ],
       tool: [
         { '@type': 'HowToTool', name: 'WhatsApp' },
-        { '@type': 'HowToTool', name: 'Llamada de video' },
+        { '@type': 'HowToTool', name: 'Consulta estratégica' },
       ],
     },
 
@@ -622,8 +592,8 @@ const structuredData = {
     {
       '@type': 'ItemList',
       '@id': 'https://anwarsanchez.com/#cases',
-      name: 'Casos de Éxito - Diseño Web',
-      description: 'Resultados reales de clínicas y negocios que han trabajado con Anwar Sánchez',
+      name: 'Casos de Éxito - Partner Digital',
+      description: 'Resultados reales de profesionales y empresas que han aplicado estrategia y tecnología para fortalecer su presencia digital',
       numberOfItems: 3,
       itemListElement: [
         {
@@ -691,7 +661,7 @@ const structuredData = {
     {
       '@type': 'Organization',
       '@id': 'https://anwarsanchez.com/#organization',
-      name: 'Anwar Sánchez Digital',
+      name: 'Anwar Sánchez - Partner Digital',
       url: 'https://anwarsanchez.com',
       logo: {
         '@type': 'ImageObject',

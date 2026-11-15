@@ -6,7 +6,8 @@ import Image from 'next/image';
 
 // Constants
 const WHATSAPP_PHONE = '50683335408';
-const WHATSAPP_MESSAGE = 'Hola Anwar, vi su página de sitios web para clínicas. Me interesa solicitar la auditoría gratuita.';
+const WHATSAPP_MESSAGE = 'Hola Anwar, estuve revisando tu sitio web y me gustaría conversar sobre cómo hacer crecer mi negocio.';
+const WHATSAPP_MESSAGE_SEMILLA = 'Hola Anwar, me gustaría conocer cómo podríamos aplicar el Método SEMILLA en mi negocio.';
 
 function getWhatsAppUrl(message: string = WHATSAPP_MESSAGE): string {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
@@ -57,59 +58,59 @@ export default function Home() {
 
   const faqItems = [
     {
-      question: '¿Cuánto cuesta un sitio web?',
-      answer: 'Depende de cuántas páginas y funcionalidades necesite. No tengo paquetes genéricos porque cada clínica es diferente. Después de hablar, le doy un precio exacto sin sorpresas.',
+      question: '¿Qué es un Partner Digital?',
+      answer: 'Un Partner Digital es más que un proveedor de servicios. Es un socio estratégico que entiende tu negocio, identifica oportunidades de crecimiento y conecta estrategia, marketing y tecnología para que cada acción tenga un propósito claro.',
     },
     {
-      question: '¿Cuánto tiempo toma?',
-      answer: 'Una landing page: aproximadamente 1 semana. Sitio completo de 5+ páginas: 2-3 semanas. Siempre le doy una fecha clara antes de empezar.',
+      question: '¿Qué es el Método SEMILLA?',
+      answer: 'Es una metodología de cuatro etapas que desarrollé para ayudar a profesionales y empresas a construir las bases de un crecimiento sostenible: Estrategia, Posicionamiento, Atracción y Conversión.',
     },
     {
-      question: '¿Garantizan que apareceré primero en Google?',
-      answer: 'No. Nadie puede garantizar eso honestamente. Lo que sí garantizo: su sitio estará técnicamente optimizado para SEO, con contenido relevante para cada tratamiento que ofrece.',
+      question: '¿Para qué tipo de negocios trabaja?',
+      answer: 'Trabajo con profesionales independientes, clínicas, empresas de servicios y negocios que quieren atraer mejores clientes, fortalecer su posicionamiento y convertir su presencia digital en oportunidades reales de negocio.',
     },
     {
-      question: '¿Qué pasa si no me gusta el diseño?',
-      answer: 'Lo rehacemos hasta que quede satisfecho. No publicamos nada que no apruebe. Así de simple.',
+      question: '¿Cómo es el proceso de trabajo?',
+      answer: 'Comenzamos con una conversación para entender tu negocio, tus objetivos y tus desafíos. A partir de ahí, definimos una estrategia personalizada y trabajamos juntos en su implementación.',
     },
     {
-      question: '¿Necesito pagar mantenimiento mensual?',
-      answer: 'No es obligatorio. El sitio es 100% suyo. Si quiere que me encargue del hosting y actualizaciones, ofrezco un plan opcional. Pero puede manejarlo usted mismo.',
+      question: '¿Garantiza resultados específicos?',
+      answer: 'No prometo resultados garantizados porque cada negocio es diferente. Lo que sí garantizo es un trabajo estratégico, profesional y orientado a generar valor real para tu negocio.',
     },
     {
-      question: '¿Por qué trabajar con usted y no con una agencia?',
-      answer: 'Conmigo trabaja directo. Sin vendedores, sin account managers, sin intermediarios. Eso significa mejor comunicación, entregas más rápidas y generalmente mejor precio.',
+      question: '¿Por qué trabajar con vos y no con una agencia?',
+      answer: 'Conmigo trabajás directo. Sin vendedores, sin intermediarios. Eso significa mejor comunicación, mayor compromiso con tu proyecto y una visión integrada de estrategia, marketing y tecnología.',
     },
   ];
 
   const stats = [
-    { value: '+180%', label: 'Consultas en Gastromedical' },
-    { value: '2-3 sem', label: 'Tiempo de entrega' },
-    { value: '15+ años', label: 'Experiencia en tecnología' },
-    { value: '100%', label: 'Propiedad para usted' },
+    { value: '+10', label: 'Años de experiencia' },
+    { value: '+180%', label: 'Crecimiento en consultas' },
+    { value: '100%', label: 'Estrategia personalizada' },
+    { value: '4', label: 'Etapas del Método SEMILLA' },
   ];
 
   const problems = [
-    'Su sitio actual no aparece cuando buscan su especialidad',
-    'Los pacientes llegan por referidos, pero no desde Google',
-    'El diseño se ve anticuado y no refleja la calidad de su clínica',
-    'No tiene forma fácil de que le contacten por WhatsApp',
+    'Trabajás mucho, pero el crecimiento no refleja tu esfuerzo',
+    'Tenés un excelente servicio, pero poca visibilidad',
+    'Publicás contenido, pero no recibes consultas comerciales',
+    'Dependés demasiado de recomendaciones para conseguir clientes',
+    'Invertís en marketing sin saber qué está funcionando',
+    'No tenés una estrategia clara para crecer',
   ];
 
   const offerItems = [
-    { title: 'Diseño premium personalizado', description: 'No plantillas. Cada sitio se diseña desde cero para reflejar el nivel de su clínica.' },
-    { title: 'Página por especialidad', description: 'Cada servicio tiene su propia página optimizada para Google.' },
-    { title: 'SEO local incluido', description: 'Configuración técnica para que aparezca cuando busquen su especialidad en su zona.' },
-    { title: 'WhatsApp integrado', description: 'Los pacientes contactan con un clic. Sin formularios complicados.' },
-    { title: 'Versión en inglés (opcional)', description: 'Ideal para turismo médico. Atraiga pacientes internacionales.' },
-    { title: 'Optimizado para móvil', description: 'Más del 70% de las visitas son desde celular. Su sitio funciona perfecto.' },
-    { title: '100% suyo', description: 'El código, el diseño, el dominio — todo es de su propiedad.' },
+    { title: 'Estrategia y Posicionamiento', description: 'Definimos una dirección clara para fortalecer tu marca, diferenciarte y conectar con los clientes correctos.' },
+    { title: 'Contenido y Marketing', description: 'Desarrollamos estrategias de comunicación y atracción para generar confianza y nuevas oportunidades.' },
+    { title: 'Conversión y Crecimiento', description: 'Mejoramos los canales y procesos que conectan a tus clientes potenciales con tu negocio.' },
+    { title: 'Tecnología y Automatización', description: 'Implementamos soluciones digitales que simplifican procesos, ahorran tiempo y mejoran la eficiencia.' },
   ];
 
   const steps = [
-    { num: '01', title: 'Llamada de 15 minutos', description: 'Hablamos de su clínica, sus pacientes y qué necesita. Sin pitch de ventas.' },
-    { num: '02', title: 'Propuesta de diseño', description: 'Le muestro cómo se vería su sitio. Usted aprueba o pedimos cambios.' },
-    { num: '03', title: 'Publicación en 1-3 semanas', description: 'Su sitio sale al aire optimizado para Google. Empieza a recibir consultas.' },
+    { num: '01', title: 'Sembrar', subtitle: 'Estrategia', description: 'Analizamos tu negocio y definimos una estrategia clara para conectar tu valor con los clientes correctos.' },
+    { num: '02', title: 'Cultivar', subtitle: 'Posicionamiento', description: 'Fortalecemos tu propuesta de valor, diferenciación y comunicación para que las personas correctas te elijan.' },
+    { num: '03', title: 'Crecer', subtitle: 'Atracción', description: 'Desarrollamos estrategias de contenido, marketing y tecnología para aumentar tu visibilidad y generar confianza.' },
+    { num: '04', title: 'Cosechar', subtitle: 'Conversión', description: 'Optimizamos tus canales digitales para convertir la atención en oportunidades comerciales reales.' },
   ];
 
   const cases = [
@@ -384,6 +385,44 @@ export default function Home() {
           font-weight: 700;
         }
 
+        .pd-hero-tag {
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.7);
+          margin-bottom: 20px;
+          padding: 8px 16px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 4px;
+        }
+
+        .pd-cta-secondary-hero {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 15px;
+          font-weight: 500;
+          text-decoration: none;
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .pd-cta-secondary-hero:hover {
+          color: #ffffff;
+          border-bottom-color: #ffffff;
+        }
+
+        .pd-hero-microcopy {
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.5);
+          margin-top: 24px;
+          font-style: italic;
+        }
+
         .pd-hero-cta-row {
           display: flex;
           flex-direction: column;
@@ -602,6 +641,14 @@ export default function Home() {
           margin-bottom: 16px;
         }
 
+        .pd-section-description {
+          font-size: 16px;
+          color: #6b7280;
+          line-height: 1.6;
+          max-width: 640px;
+          margin: 0 auto;
+        }
+
         .pd-cases-grid {
           display: grid;
           gap: 24px;
@@ -775,7 +822,20 @@ export default function Home() {
           color: #4b5563;
           line-height: 1.6;
           text-align: center;
+          margin-bottom: 16px;
+        }
+
+        .pd-problem-highlight {
+          font-size: 18px;
+          color: #111827;
+          line-height: 1.6;
+          text-align: center;
           margin-bottom: 32px;
+          font-weight: 600;
+          padding: 20px;
+          background: rgba(31, 92, 255, 0.05);
+          border-radius: 12px;
+          border-left: 4px solid #1F5CFF;
         }
 
         .pd-problem-list {
@@ -1207,6 +1267,72 @@ export default function Home() {
           line-height: 1.6;
         }
 
+        .pd-process-subtitle {
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #1F5CFF;
+          margin-bottom: 4px;
+        }
+
+        .pd-method-header {
+          text-align: center;
+          margin-bottom: 48px;
+        }
+
+        .pd-method-tag {
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: #1F5CFF;
+          margin-bottom: 16px;
+          padding: 8px 20px;
+          background: rgba(31, 92, 255, 0.1);
+          border-radius: 4px;
+        }
+
+        .pd-method-header h2 {
+          font-size: clamp(1.875rem, 4vw, 3rem);
+          font-weight: 600;
+          letter-spacing: -0.02em;
+          line-height: 1.1;
+          color: #111827;
+          margin-bottom: 24px;
+        }
+
+        .pd-method-intro {
+          font-size: 18px;
+          color: #6b7280;
+          line-height: 1.6;
+          max-width: 768px;
+          margin: 0 auto;
+        }
+
+        .pd-method-cta {
+          display: flex;
+          justify-content: center;
+          margin-top: 48px;
+        }
+
+        .pd-process-grid-4 {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        @media (min-width: 640px) {
+          .pd-process-grid-4 {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .pd-process-grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+
         /* Founder Section */
         .pd-founder {
           padding: 80px 24px;
@@ -1269,6 +1395,56 @@ export default function Home() {
           font-size: 18px;
           color: #6b7280;
           line-height: 1.6;
+        }
+
+        .pd-founder-highlight {
+          font-weight: 600;
+          color: #111827;
+          font-style: italic;
+        }
+
+        /* Differentiation Section */
+        .pd-differentiation {
+          padding: 80px 24px;
+          background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
+          position: relative;
+        }
+
+        .pd-differentiation h2 {
+          font-size: clamp(1.875rem, 4vw, 2.5rem);
+          font-weight: 600;
+          letter-spacing: -0.02em;
+          line-height: 1.1;
+          color: #ffffff;
+          text-align: center;
+          margin-bottom: 32px;
+        }
+
+        .pd-differentiation-content {
+          max-width: 768px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .pd-differentiation-content p {
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 1.6;
+          margin-bottom: 12px;
+        }
+
+        .pd-differentiation-question {
+          font-size: 20px;
+          color: #ffffff;
+          font-weight: 600;
+          margin-top: 24px;
+          margin-bottom: 16px;
+        }
+
+        .pd-differentiation-answer {
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.9);
+          line-height: 1.7;
         }
 
         /* FAQ Section */
@@ -1429,6 +1605,17 @@ export default function Home() {
 
         .pd-final-cta-content > p:last-of-type {
           margin-bottom: 24px;
+        }
+
+        .pd-final-cta-highlight {
+          font-weight: 600;
+          color: #111827;
+        }
+
+        .pd-final-cta-tagline {
+          font-style: italic;
+          color: #1F5CFF;
+          font-weight: 500;
         }
 
         .pd-final-cta-benefits {
@@ -1763,9 +1950,9 @@ export default function Home() {
 
             <ul className="pd-navbar-links">
               {[
+                { label: 'Método SEMILLA', href: '#metodo' },
                 { label: 'Resultados', href: '#resultados' },
-                { label: 'Paquetes', href: '#paquetes' },
-                { label: 'Cómo funciona', href: '#como-funciona' },
+                { label: 'Servicios', href: '#servicios' },
                 { label: 'Preguntas', href: '#preguntas' },
               ].map((link) => (
                 <li key={link.href}>
@@ -1789,7 +1976,7 @@ export default function Home() {
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
-              Solicitar auditoría
+              Hablemos
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -1816,9 +2003,9 @@ export default function Home() {
             <div className="pd-mobile-menu">
               <ul>
                 {[
+                  { label: 'Método SEMILLA', href: '#metodo' },
                   { label: 'Resultados', href: '#resultados' },
-                  { label: 'Paquetes', href: '#paquetes' },
-                  { label: 'Cómo funciona', href: '#como-funciona' },
+                  { label: 'Servicios', href: '#servicios' },
                   { label: 'Preguntas', href: '#preguntas' },
                 ].map((link) => (
                   <li key={link.href}>
@@ -1840,7 +2027,7 @@ export default function Home() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                Solicitar auditoría
+                Hablemos de tu negocio
               </a>
             </div>
           )}
@@ -1862,19 +2049,24 @@ export default function Home() {
 
           <div className="pd-hero-container">
             <div className="pd-hero-content">
+              <p className="pd-hero-tag">ANWAR SÁNCHEZ · PARTNER DIGITAL</p>
               <h1>
-                Si quieres que el 2026 sea el año en que vendas todos los días desde tus redes sociales...
+                Tu negocio tiene potencial. Hagamos que ese potencial se convierta en crecimiento.
               </h1>
 
               <p className="pd-hero-subtitle">
-                Estás en el único lugar donde te enseñan a hacerlo con un sistema <strong>Symple</strong> que convierte la atención en ventas.
+                Trabajás todos los días para ofrecer lo mejor, pero conseguir nuevos clientes no debería depender solamente de recomendaciones o publicaciones que no generan resultados. Te ayudo a construir una estrategia para atraer mejores clientes, fortalecer tu marca y convertir tu presencia digital en oportunidades reales de negocio.
               </p>
 
               <div className="pd-hero-cta-row">
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-hero">
-                  Contacta con mi equipo
+                  Hablemos de tu negocio
+                </a>
+                <a href="#metodo" onClick={(e) => handleAnchorClick(e, '#metodo')} className="pd-cta-secondary-hero">
+                  Conocé el Método SEMILLA
                 </a>
               </div>
+              <p className="pd-hero-microcopy">Primero entendemos tu negocio. Después construimos la estrategia.</p>
             </div>
 
             {/* Hero Image */}
@@ -1904,7 +2096,8 @@ export default function Home() {
                 Casos de éxito
                 <span className="pd-section-tag-dot">·</span>
               </div>
-              <h2 className="pd-section-title">Resultados reales para negocios reales</h2>
+              <h2 className="pd-section-title">Los resultados no se prometen. Se construyen.</h2>
+              <p className="pd-section-description">Cada negocio tiene desafíos diferentes, pero todos necesitan lo mismo: entender qué está frenando su crecimiento y tomar decisiones que generen valor.</p>
             </div>
 
             <div className="pd-cases-grid">
@@ -1963,12 +2156,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Problem Section */}
+        {/* Emotional Connection Section */}
         <section id="problema" className="pd-problem">
           <div className="pd-problem-content">
-            <h2>¿Su sitio web le está costando pacientes?</h2>
+            <h2>Hacés un excelente trabajo. Pero eso no significa que todos lo sepan.</h2>
             <p className="pd-problem-text">
-              Cada día, personas buscan en Google médicos y especialistas. Si no aparece — o si su sitio no genera confianza — eligen a la competencia.
+              Has dedicado años a construir tu experiencia, mejorar tus servicios y ganarte la confianza de tus clientes. Pero mientras estás concentrado en hacer bien tu trabajo, otras empresas están captando la atención de las personas que podrían necesitar lo que ofrecés.
+            </p>
+            <p className="pd-problem-text">
+              Quizás publicás contenido, tenés una página web o incluso has invertido en publicidad. Pero seguís preguntándote por qué esas acciones no se convierten en suficientes oportunidades comerciales.
+            </p>
+            <p className="pd-problem-highlight">
+              El problema no siempre es lo que ofrecés. Muchas veces es la falta de una estrategia que conecte tu valor con los clientes correctos.
             </p>
             <div className="pd-problem-list">
               {problems.map((problem) => (
@@ -2058,12 +2257,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Offer Section */}
-        <section id="paquetes" className="pd-offer">
+        {/* Services Section */}
+        <section id="servicios" className="pd-offer">
           <div className="pd-container">
-            <h2>Todo lo que incluye</h2>
+            <h2>Tu negocio no necesita todas las herramientas. Necesita las correctas.</h2>
             <p className="pd-offer-subtitle">
-              Sin paquetes confusos ni extras innecesarios. Esto es lo que construimos para cada clínica.
+              Cada empresa tiene objetivos y desafíos diferentes. Por eso no comienzo ofreciéndote un paquete de servicios. Primero entendemos tu negocio y después definimos qué soluciones pueden generar mayor impacto.
             </p>
 
             <div className="pd-offer-grid">
@@ -2090,33 +2289,48 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <h3>Garantía de diseño</h3>
-                <p>Si no le gusta el diseño, lo rehacemos. No publicamos nada hasta que esté satisfecho.</p>
+                <h3>Estrategia personalizada</h3>
+                <p>No aplicamos fórmulas genéricas. Cada proyecto comienza con un diagnóstico de tu negocio.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* How It Works Section */}
-        <section id="como-funciona" className="pd-process">
+        {/* Método SEMILLA Section */}
+        <section id="metodo" className="pd-process">
           <div className="pd-container">
-            <h2>Así de simple funciona</h2>
+            <div className="pd-method-header">
+              <span className="pd-method-tag">MÉTODO SEMILLA</span>
+              <h2>Todo gran crecimiento comienza con una buena semilla.</h2>
+              <p className="pd-method-intro">Un negocio no crece solamente por tener presencia digital. Necesita bases sólidas, una estrategia clara y acciones que trabajen juntas. Por eso estructuré el Método SEMILLA: una metodología de cuatro etapas que conecta estrategia, posicionamiento, marketing y tecnología para construir las condiciones que favorecen el crecimiento.</p>
+            </div>
 
-            <div className="pd-process-grid">
+            <div className="pd-process-grid pd-process-grid-4">
               {steps.map((step, index) => (
                 <div key={step.title} className="pd-process-card">
-                  <div className="pd-process-num">{String(index + 1).padStart(2, '0')}</div>
+                  <div className="pd-process-num">{step.num}</div>
                   <div className="pd-process-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      {index === 0 && <><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></>}
-                      {index === 1 && <><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></>}
-                      {index === 2 && <><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></>}
+                      {index === 0 && <><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 22 4-10 4 10"/></>}
+                      {index === 1 && <><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 12V2"/><path d="M12 22c5.5 0 10-4.5 10-10"/></>}
+                      {index === 2 && <><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></>}
+                      {index === 3 && <><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></>}
                     </svg>
                   </div>
+                  <span className="pd-process-subtitle">{step.subtitle}</span>
                   <h3>{step.title}</h3>
                   <p>{step.description}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="pd-method-cta">
+              <a href={getWhatsAppUrl(WHATSAPP_MESSAGE_SEMILLA)} target="_blank" rel="noopener noreferrer" className="pd-cta-primary" style={{ width: 'auto', display: 'inline-flex' }}>
+                Descubrí el Método SEMILLA
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
             </div>
           </div>
         </section>
@@ -2139,27 +2353,43 @@ export default function Home() {
               <div>
                 <div className="pd-founder-tag">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-                    <polyline points="17 6 23 6 23 12"/>
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
                   </svg>
-                  +180% más consultas en 4 meses
+                  Partner Digital
                 </div>
-                <h2>Hola, soy Anwar Sánchez</h2>
+                <h2>Soy Anwar Sánchez. Y entiendo que detrás de cada negocio hay mucho más que números.</h2>
                 <div className="pd-founder-text">
-                  <p>Llevo más de 15 años desarrollando tecnología. He trabajado con startups, corporaciones y clínicas en Costa Rica, Estados Unidos y Latinoamérica.</p>
-                  <p>Me especializo en crear sitios web que no solo se ven bien, sino que generan resultados medibles: más consultas, más pacientes, más crecimiento.</p>
-                  <p>Cada proyecto lo manejo personalmente. Sin intermediarios, sin vendedores. Usted habla directo conmigo.</p>
+                  <p>Hay años de esfuerzo, decisiones difíciles y una visión que querés convertir en realidad.</p>
+                  <p>Soy ingeniero de software, empresario y Partner Digital, con más de diez años de experiencia en tecnología. Mi trayectoria me ha enseñado a resolver problemas, construir soluciones y pensar estratégicamente.</p>
+                  <p>Pero emprender también me enseñó algo importante: podés tener un excelente servicio y aun así enfrentar dificultades para hacerlo crecer.</p>
+                  <p>Por eso hoy combino tecnología, marketing y estrategia de negocios para ayudar a profesionales y empresas a identificar oportunidades y construir una presencia digital que contribuya a sus objetivos comerciales.</p>
+                  <p className="pd-founder-highlight">No quiero ser simplemente otro proveedor. Quiero entender tu visión y trabajar contigo para hacerla avanzar.</p>
                 </div>
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-primary" style={{ width: 'auto', display: 'inline-flex' }}>
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
-                  Hablemos de su proyecto
+                  Conocé mi historia
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Differentiation Section */}
+        <section className="pd-differentiation">
+          <div className="pd-container">
+            <h2>No necesitás otro proveedor. Necesitás un socio que entienda tu negocio.</h2>
+            <div className="pd-differentiation-content">
+              <p>Una agencia puede encargarse de tus publicaciones.</p>
+              <p>Un desarrollador puede construir tu página web.</p>
+              <p>Un especialista puede configurar tus campañas.</p>
+              <p className="pd-differentiation-question">Pero, ¿quién se asegura de que todo trabaje en la misma dirección?</p>
+              <p className="pd-differentiation-answer">Como Partner Digital, mi trabajo es conectar estrategia, marketing y tecnología con tus objetivos comerciales. Para que cada acción tenga un propósito. Y cada inversión responda a una necesidad real.</p>
             </div>
           </div>
         </section>
@@ -2210,22 +2440,24 @@ export default function Home() {
             </div>
 
             <div className="pd-final-cta-content">
-              <h2>¿Listo para más pacientes?</h2>
-              <p>Hablemos 15 minutos. Le cuento cómo podemos ayudarle y si tiene sentido trabajar juntos.</p>
-              <p>Sin compromiso. Si no soy la persona correcta para su proyecto, se lo digo.</p>
+              <h2>Has trabajado demasiado para que tu negocio pase desapercibido.</h2>
+              <p>Has dedicado tiempo, esfuerzo y recursos a construir algo en lo que creés. Ahora imaginá lo que podrías conseguir si más personas entendieran el valor de lo que ofrecés.</p>
+              <p>Si tu presencia digital transmitiera la confianza que tus clientes actuales ya tienen en vos. Y si cada acción que ejecutás tuviera una dirección clara.</p>
+              <p className="pd-final-cta-highlight">No necesitás hacerlo todo solo. Hablemos de tu negocio y descubramos qué oportunidades podemos desarrollar juntos.</p>
+              <p className="pd-final-cta-tagline">Porque todo gran crecimiento comienza con una buena semilla.</p>
 
               <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-primary" style={{ width: 'auto', display: 'inline-flex' }}>
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                Solicitar auditoría gratuita
+                Hablemos de tu negocio
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </a>
 
               <div className="pd-final-cta-benefits">
-                {['Sin compromiso', 'Respuesta en 24h', 'Diagnóstico gratuito'].map((benefit) => (
+                {['Sin compromiso', 'Conversación personalizada', 'Estrategia clara'].map((benefit) => (
                   <div key={benefit} className="pd-final-cta-benefit">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
