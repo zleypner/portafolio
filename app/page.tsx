@@ -310,15 +310,15 @@ export default function Home() {
           align-items: center;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 50%, #0a1f1a 100%);
           overflow: hidden;
-          padding: 80px 24px 40px;
+          padding: 100px 24px 40px;
         }
 
         .pd-hero::before {
           content: '';
           position: absolute;
           inset: 0;
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-          opacity: 0.03;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+          opacity: 0.04;
           pointer-events: none;
         }
 
@@ -332,11 +332,11 @@ export default function Home() {
         .pd-hero-bg-logo {
           position: absolute;
           top: 50%;
-          right: 5%;
+          right: 10%;
           transform: translateY(-50%);
-          width: 500px;
-          height: 500px;
-          opacity: 0.08;
+          width: 400px;
+          height: 400px;
+          opacity: 0.06;
         }
 
         .pd-hero-bg-logo svg {
@@ -359,28 +359,29 @@ export default function Home() {
 
         .pd-hero-content {
           text-align: left;
+          padding-right: 0;
         }
 
         .pd-hero h1 {
           font-size: clamp(2rem, 5vw, 3.5rem);
           font-weight: 700;
-          letter-spacing: -0.02em;
-          line-height: 1.1;
+          letter-spacing: -0.03em;
+          line-height: 1.08;
           color: #ffffff;
-          margin-bottom: 24px;
+          margin-bottom: 28px;
         }
 
         .pd-hero-subtitle {
           font-size: clamp(16px, 2vw, 20px);
-          color: rgba(255, 255, 255, 0.8);
-          line-height: 1.6;
-          margin-bottom: 32px;
+          color: rgba(255, 255, 255, 0.75);
+          line-height: 1.7;
+          margin-bottom: 36px;
           max-width: 560px;
         }
 
         .pd-hero-subtitle strong {
           color: #ffffff;
-          font-weight: 600;
+          font-weight: 700;
         }
 
         .pd-hero-cta-row {
@@ -396,21 +397,21 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           gap: 10px;
-          padding: 16px 32px;
-          border-radius: 8px;
+          padding: 18px 36px;
+          border-radius: 6px;
           background: #f5f0e6;
           color: #1a1a1a;
           font-size: 16px;
           font-weight: 600;
           text-decoration: none;
           transition: all 0.3s ease;
-          border: 2px solid transparent;
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .pd-cta-hero:hover {
           background: #ffffff;
           transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
         }
 
         .pd-cta-primary {
@@ -1546,16 +1547,37 @@ export default function Home() {
           }
 
           .pd-hero-container {
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 32px;
+          }
+
+          .pd-hero-content {
+            padding-right: 24px;
           }
 
           .pd-hero h1 {
-            font-size: clamp(2.5rem, 4vw, 3.2rem);
+            font-size: 2.75rem;
+            line-height: 1.1;
+          }
+
+          .pd-hero-subtitle {
+            font-size: 18px;
+          }
+
+          .pd-hero-image {
+            justify-content: flex-end;
           }
 
           .pd-hero-image-wrapper {
-            max-width: 500px;
+            max-width: 420px;
+            aspect-ratio: 3/4;
+          }
+
+          .pd-hero-bg-logo {
+            width: 500px;
+            height: 500px;
+            right: 5%;
+            opacity: 0.07;
           }
 
           .pd-cases {
@@ -1631,15 +1653,104 @@ export default function Home() {
 
           .pd-hero-container {
             max-width: 1400px;
-            gap: 64px;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 48px;
+          }
+
+          .pd-hero-content {
+            padding-right: 40px;
           }
 
           .pd-hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.25rem;
+            letter-spacing: -0.03em;
+          }
+
+          .pd-hero-subtitle {
+            font-size: 19px;
+            max-width: 520px;
           }
 
           .pd-hero-image-wrapper {
-            max-width: 550px;
+            max-width: 480px;
+          }
+
+          .pd-hero-bg-logo {
+            width: 600px;
+            height: 600px;
+            right: 0;
+            opacity: 0.08;
+          }
+
+          .pd-hero-image-gradient-left {
+            width: 120px;
+          }
+        }
+
+        @media (min-width: 1280px) {
+          .pd-hero {
+            padding: 0 80px;
+          }
+
+          .pd-hero-container {
+            max-width: 1500px;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+          }
+
+          .pd-hero-content {
+            padding-right: 60px;
+          }
+
+          .pd-hero h1 {
+            font-size: 3.75rem;
+            line-height: 1.05;
+            margin-bottom: 32px;
+          }
+
+          .pd-hero-subtitle {
+            font-size: 21px;
+            line-height: 1.65;
+            max-width: 580px;
+            margin-bottom: 40px;
+          }
+
+          .pd-cta-hero {
+            padding: 20px 44px;
+            font-size: 17px;
+          }
+
+          .pd-hero-image-wrapper {
+            max-width: 520px;
+          }
+
+          .pd-hero-bg-logo {
+            width: 700px;
+            height: 700px;
+            right: -5%;
+            opacity: 0.09;
+          }
+
+          .pd-hero-image-gradient-left {
+            width: 150px;
+          }
+        }
+
+        @media (min-width: 1536px) {
+          .pd-hero-container {
+            max-width: 1600px;
+          }
+
+          .pd-hero h1 {
+            font-size: 4rem;
+          }
+
+          .pd-hero-subtitle {
+            font-size: 22px;
+          }
+
+          .pd-hero-image-wrapper {
+            max-width: 580px;
           }
         }
       `}</style>
