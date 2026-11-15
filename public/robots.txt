@@ -1,7 +1,75 @@
+# robots.txt for anwarsanchez.com
+# Optimized for SEO - Allowing all major search engines
+
+# Allow all crawlers
 User-agent: *
 Allow: /
 
+# Disallow non-public pages
 Disallow: /blockchain
 Disallow: /blockchain/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /whatsapp
 
+# Allow important assets
+Allow: /assets/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Disallow: /blockchain
+Disallow: /api/
+
+# Googlebot Image
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /blockchain
+Disallow: /api/
+
+# Social Media Crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# AI Crawlers - Allow for visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap location
 Sitemap: https://anwarsanchez.com/sitemap.xml
+
+# Host
+Host: https://anwarsanchez.com
