@@ -28,7 +28,7 @@ const IMAGES = {
   heroMockup: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
   testimonialAvatar: '/assets/yieldge/cases/gastro-hero-2.webp',
   founderPortrait: '/assets/headshots/no-bg/Bearded Man in White Shirt Cutout.png',
-  founderWorking: '/assets/yieldge/anwar/MFS_5817.webp',
+  founderWorking: '/assets/headshots/no-bg/Smiling Bearded Man Pointing Forward.png',
 };
 
 export default function Home() {
@@ -528,11 +528,11 @@ export default function Home() {
         .pd-hero-image-wrapper {
           position: relative;
           width: 100%;
-          max-width: 280px;
-          aspect-ratio: 3/4;
+          max-width: 380px;
+          aspect-ratio: 2/3;
           margin: 0 auto;
-          border-radius: 16px;
-          overflow: hidden;
+          border-radius: 0;
+          overflow: visible;
         }
 
         .pd-hero-image-wrapper img {
@@ -1766,9 +1766,8 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 380px;
-            aspect-ratio: 3/4;
-            border-radius: 20px;
+            max-width: 500px;
+            aspect-ratio: 2/3;
           }
 
           .pd-hero-bg-logo {
@@ -1870,8 +1869,7 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 440px;
-            border-radius: 24px;
+            max-width: 580px;
           }
 
           .pd-hero-bg-logo {
@@ -1920,8 +1918,7 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 500px;
-            border-radius: 24px;
+            max-width: 650px;
           }
 
           .pd-hero-bg-logo {
@@ -1929,10 +1926,6 @@ export default function Home() {
             height: 700px;
             right: -5%;
             opacity: 0.09;
-          }
-
-          .pd-hero-image-gradient-left {
-            width: 150px;
           }
         }
 
@@ -1950,8 +1943,7 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 560px;
-            border-radius: 28px;
+            max-width: 750px;
           }
         }
       `}</style>
