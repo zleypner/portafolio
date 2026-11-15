@@ -27,7 +27,7 @@ const LOGOS = [
 const IMAGES = {
   heroMockup: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
   testimonialAvatar: '/assets/yieldge/cases/gastro-hero-2.webp',
-  founderPortrait: '/assets/yieldge/anwar/anwar-founder.webp',
+  founderPortrait: '/assets/headshots/no-bg/Bearded Man in White Shirt Cutout.png',
   founderWorking: '/assets/yieldge/anwar/MFS_5817.webp',
 };
 
@@ -538,19 +538,12 @@ export default function Home() {
         .pd-hero-image-wrapper img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          object-position: top center;
-          filter: grayscale(20%);
+          object-fit: contain;
+          object-position: bottom center;
         }
 
         .pd-hero-image-wrapper::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(135deg, rgba(13, 41, 34, 0.4) 0%, rgba(20, 61, 51, 0.2) 50%, transparent 100%);
-          z-index: 1;
-          pointer-events: none;
-          mix-blend-mode: multiply;
+          display: none;
         }
 
         .pd-hero-image-gradient {
@@ -558,21 +551,14 @@ export default function Home() {
           bottom: 0;
           left: 0;
           right: 0;
-          height: 150px;
-          background: linear-gradient(to top, #0d2922 0%, rgba(13, 41, 34, 0.8) 40%, transparent 100%);
+          height: 80px;
+          background: linear-gradient(to top, #0d2922 0%, transparent 100%);
           pointer-events: none;
           z-index: 2;
         }
 
         .pd-hero-image-gradient-left {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          width: 100px;
-          background: linear-gradient(to right, #0d2922 0%, transparent 100%);
-          pointer-events: none;
-          z-index: 2;
+          display: none;
         }
 
         /* Logo Carousel */
@@ -2102,7 +2088,7 @@ export default function Home() {
                   alt="Anwar Sánchez"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover', objectPosition: 'top center' }}
+                  style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
                   priority
                 />
                 <div className="pd-hero-image-gradient" />

@@ -17,7 +17,7 @@ const milestonesData = [
       'Experienced transformative learning in blockchain technology',
     ],
     techStack: ['Blockchain', 'Web3', 'Ethereum'],
-    image: '/ethpuravida.jpg',
+    image: '/assets/portafolio/ethpuravida.jpg',
     link: 'https://www.linkedin.com/posts/anwardev_ethpuravida-web3-blockchain-activity-7294917650604785664-LkCU',
   },
   {
@@ -33,7 +33,7 @@ const milestonesData = [
       "Contributed to technical discussions on Ethereum's roadmap",
     ],
     techStack: ['Ethereum', 'PeerDAS', 'Verkle Trees', 'Layer 2'],
-    image: '/nov2024.jpg',
+    image: '/assets/portafolio/nov2024.jpg',
     link: 'https://www.linkedin.com/posts/anwardev_a-couple-of-months-ago-i-had-the-privilege-activity-7281353038961762306-vwMb',
   },
   {
@@ -49,7 +49,7 @@ const milestonesData = [
       'Contributed insights on building high-performance development environments',
     ],
     techStack: ['Leadership', 'Team Building', 'Emotional Intelligence'],
-    image: '/mar2025.jpg',
+    image: '/assets/portafolio/mar2025.jpg',
     link: 'https://www.linkedin.com/posts/anwardev_teamdevelopment-allhandsmeetings-orlando-activity-7309420377867243520-gtnq',
   },
   {
@@ -65,7 +65,7 @@ const milestonesData = [
       'Evaluated innovative projects addressing real-world problems',
     ],
     techStack: ['Starknet', 'Web3', 'AI', 'Smart Contracts'],
-    image: '/may2025.jpg',
+    image: '/assets/portafolio/may2025.jpg',
     link: 'https://www.linkedin.com/posts/anwardev_hackathon-mentorship-web3-activity-7335720422899937282-M_00',
   },
   {
@@ -82,7 +82,7 @@ const milestonesData = [
       'Contributed to the local and regional startup ecosystem',
     ],
     techStack: ['Startup', 'Innovation', 'Collaboration'],
-    image: '/nosarastartup.jpg',
+    image: '/assets/portafolio/nosarastartup.jpg',
     link: 'https://www.linkedin.com/posts/anwardev_i-had-the-privilege-of-spending-a-full-week-activity-7369182869656711169-iVeO',
   },
   {
@@ -99,7 +99,7 @@ const milestonesData = [
       'Strengthened local collaborations and inspired new builders to join the ecosystem',
     ],
     techStack: ['Stellar', 'Blockchain', 'Education', 'Community'],
-    image: '/Stellar.jpg',
+    image: '/assets/portafolio/Stellar.jpg',
     link: 'https://x.com/anwar_zlcr/status/1974647108054434260',
   },
   {
@@ -115,8 +115,8 @@ const milestonesData = [
       'Contributed to discussions on blockchain adoption in LATAM',
     ],
     techStack: ['Blockchain', 'Web3', 'DeFi', 'NFTs'],
-    image: '/IMG_2267.jpg',
-    video: '/videoBJ.MP4',
+    image: '/assets/portafolio/IMG_2267.jpg',
+    video: '/assets/me/videoBJ.MP4',
     link: 'https://www.linkedin.com/posts/anwardev_last-november-i-had-the-opportunity-to-speak-activity-7419909210324238336-33pf?utm_source=share&utm_medium=member_desktop&rcm=ACoAADqiwowBuMywTok_I-3zvuR4oARA8wxa3q4',
   },
   {
