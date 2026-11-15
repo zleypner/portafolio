@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { TrendingDown, Ghost, Smartphone, Target, Megaphone, DollarSign, Zap } from 'lucide-react';
 
 // Constants
 const WHATSAPP_PHONE = '50670724236';
@@ -91,19 +92,17 @@ export default function Home() {
   ];
 
   const problems = [
-    'Trabajás mucho, pero el crecimiento no refleja tu esfuerzo',
-    'Tenés un excelente servicio, pero poca visibilidad',
-    'Publicás contenido, pero no recibes consultas comerciales',
-    'Dependés demasiado de recomendaciones para conseguir clientes',
-    'Invertís en marketing sin saber qué está funcionando',
-    'No tenés una estrategia clara para crecer',
+    { icon: TrendingDown, text: 'Mucho esfuerzo, poco crecimiento' },
+    { icon: Ghost, text: 'Buen servicio, poca visibilidad' },
+    { icon: Smartphone, text: 'Contenido sin conversiones' },
+    { icon: Target, text: 'Sin estrategia clara' },
   ];
 
   const offerItems = [
-    { title: 'Estrategia y Posicionamiento', description: 'Definimos una dirección clara para fortalecer tu marca, diferenciarte y conectar con los clientes correctos.' },
-    { title: 'Contenido y Marketing', description: 'Desarrollamos estrategias de comunicación y atracción para generar confianza y nuevas oportunidades.' },
-    { title: 'Conversión y Crecimiento', description: 'Mejoramos los canales y procesos que conectan a tus clientes potenciales con tu negocio.' },
-    { title: 'Tecnología y Automatización', description: 'Implementamos soluciones digitales que simplifican procesos, ahorran tiempo y mejoran la eficiencia.' },
+    { icon: Target, title: 'Estrategia', description: 'Dirección clara para crecer' },
+    { icon: Megaphone, title: 'Marketing', description: 'Atracción de clientes ideales' },
+    { icon: DollarSign, title: 'Conversión', description: 'Visitantes a clientes' },
+    { icon: Zap, title: 'Automatización', description: 'Procesos que escalan' },
   ];
 
   const steps = [
@@ -323,7 +322,8 @@ export default function Home() {
         /* Hero Section */
         .pd-hero {
           position: relative;
-          min-height: 100svh;
+          height: 100vh;
+          max-height: 100vh;
           display: flex;
           align-items: center;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 50%, #0a1f1a 100%);
@@ -372,12 +372,15 @@ export default function Home() {
           display: grid;
           grid-template-columns: 1fr;
           gap: 40px;
-          align-items: center;
+          align-items: start;
+          padding-top: 80px;
         }
 
         .pd-hero-content {
           text-align: left;
           padding-right: 0;
+          padding-top: 5vh;
+          align-self: flex-start;
         }
 
         .pd-hero h1 {
@@ -389,17 +392,37 @@ export default function Home() {
           margin-bottom: 20px;
         }
 
-        .pd-hero-subtitle {
-          font-size: 15px;
-          color: rgba(255, 255, 255, 0.8);
-          line-height: 1.65;
-          margin-bottom: 28px;
-          max-width: 560px;
+        .pd-hero-benefits {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 32px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
         }
 
-        .pd-hero-subtitle strong {
-          color: #ffffff;
+        .pd-hero-benefits li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.9);
+          font-weight: 500;
+        }
+
+        .pd-hero-benefits li::before {
+          content: '✓';
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          background: rgba(37, 211, 102, 0.2);
+          color: #25D366;
+          border-radius: 50%;
+          font-size: 12px;
           font-weight: 700;
+          flex-shrink: 0;
         }
 
         .pd-hero-tag {
@@ -521,20 +544,22 @@ export default function Home() {
         .pd-hero-image {
           position: absolute;
           top: 0;
-          right: 0;
+          right: 5%;
           bottom: 0;
+          width: 50%;
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           align-items: flex-start;
           pointer-events: none;
+          z-index: 5;
         }
 
         .pd-hero-image-wrapper {
           position: relative;
           width: 100%;
-          max-width: 450px;
-          height: 120%;
-          margin-top: -10%;
+          max-width: 500px;
+          height: 110%;
+          margin-top: -5%;
         }
 
         .pd-hero-image-wrapper img {
@@ -612,8 +637,14 @@ export default function Home() {
 
         /* Success Cases Section */
         .pd-cases {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 48px 20px;
           background: #f9fafb;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-container {
@@ -759,48 +790,58 @@ export default function Home() {
           text-decoration: underline;
         }
 
-        /* Stats Section */
-        .pd-stats {
-          padding: 40px 20px;
-          background: white;
-        }
-
+        /* Stats Grid (inside cases section) */
         .pd-stats-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 12px;
+          margin-top: 24px;
+        }
+
+        @media (min-width: 768px) {
+          .pd-stats-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+          }
         }
 
         .pd-stat-card {
           text-align: center;
-          padding: 20px 16px;
-          border-radius: 14px;
-          background: linear-gradient(to bottom right, white, #f9fafb);
-          border: 1px solid rgba(229, 231, 235, 0.6);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+          padding: 24px 16px;
+          border-radius: 16px;
+          background: white;
+          border: 1px solid rgba(229, 231, 235, 0.8);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .pd-stat-value {
-          font-size: clamp(1.25rem, 4vw, 1.875rem);
+          font-size: clamp(1.5rem, 4vw, 2.25rem);
           font-weight: 700;
           background: linear-gradient(to right, #1F5CFF, #3b82f6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          margin-bottom: 2px;
+          margin-bottom: 4px;
         }
 
         .pd-stat-label {
-          font-size: 12px;
+          font-size: 13px;
           color: #6b7280;
           line-height: 1.3;
         }
 
         /* Problem Section - Dark */
         .pd-problem {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-problem::before {
@@ -843,46 +884,53 @@ export default function Home() {
           border-left: 4px solid rgba(255, 255, 255, 0.5);
         }
 
-        .pd-problem-list {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+        .pd-problem-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+          margin-top: 24px;
         }
 
-        .pd-problem-item {
+        .pd-problem-card {
           display: flex;
-          align-items: flex-start;
-          gap: 12px;
-          padding: 14px;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 8px;
+          padding: 20px 16px;
           border-radius: 10px;
           background: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .pd-problem-icon {
-          flex-shrink: 0;
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background: rgba(239, 68, 68, 0.2);
-          color: #f87171;
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          background: rgba(239, 68, 68, 0.15);
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 12px;
-          font-weight: 700;
+          color: #f87171;
         }
 
-        .pd-problem-item span {
+        .pd-problem-card span:last-child {
           color: rgba(255, 255, 255, 0.9);
           font-size: 14px;
-          line-height: 1.5;
+          font-weight: 500;
+          line-height: 1.4;
         }
 
         /* Case Study Section */
         .pd-casestudy {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-casestudy-header {
@@ -1054,9 +1102,15 @@ export default function Home() {
 
         /* Offer Section - Dark Green */
         .pd-offer {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-offer::before {
@@ -1090,56 +1144,52 @@ export default function Home() {
 
         .pd-offer-grid {
           display: grid;
-          gap: 12px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
           margin-bottom: 32px;
         }
 
-        .pd-offer-item {
+        .pd-offer-card {
           display: flex;
-          align-items: flex-start;
-          gap: 14px;
-          padding: 16px;
-          border-radius: 12px;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 24px 16px;
+          border-radius: 16px;
           background: rgba(255, 255, 255, 0.08);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
         }
 
-        .pd-offer-item:hover {
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        .pd-offer-card:hover {
           background: rgba(255, 255, 255, 0.12);
           border-color: rgba(255, 255, 255, 0.2);
+          transform: translateY(-2px);
         }
 
         .pd-offer-icon {
-          flex-shrink: 0;
-          width: 40px;
-          height: 40px;
-          border-radius: 12px;
-          background: rgba(37, 211, 102, 0.2);
+          width: 56px;
+          height: 56px;
+          border-radius: 14px;
+          background: rgba(37, 211, 102, 0.15);
           display: flex;
           align-items: center;
           justify-content: center;
           color: #25D366;
+          margin-bottom: 12px;
         }
 
-        .pd-offer-icon svg {
-          width: 20px;
-          height: 20px;
-        }
-
-        .pd-offer-item h3 {
-          font-size: 15px;
+        .pd-offer-card h3 {
+          font-size: 16px;
           font-weight: 600;
           color: #ffffff;
-          margin-bottom: 4px;
+          margin-bottom: 6px;
         }
 
-        .pd-offer-item p {
+        .pd-offer-card p {
           font-size: 13px;
           color: rgba(255, 255, 255, 0.7);
-          line-height: 1.5;
+          line-height: 1.4;
         }
 
         /* Guarantee Block */
@@ -1186,9 +1236,15 @@ export default function Home() {
 
         /* How It Works Section - White */
         .pd-process {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: #ffffff;
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-process::before {
@@ -1339,8 +1395,14 @@ export default function Home() {
 
         /* Founder Section - Dark */
         .pd-founder {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-founder-grid {
@@ -1409,9 +1471,15 @@ export default function Home() {
 
         /* Differentiation Section - White */
         .pd-differentiation {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: #ffffff;
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-differentiation h2 {
@@ -1453,8 +1521,14 @@ export default function Home() {
 
         /* FAQ Section - Dark Green */
         .pd-faq {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-faq h2 {
@@ -1551,9 +1625,15 @@ export default function Home() {
 
         /* Final CTA Section */
         .pd-final-cta {
+          height: 100vh;
+          max-height: 100vh;
+          overflow: hidden;
           padding: 56px 20px;
           background: #f9fafb;
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         .pd-final-cta::before {
@@ -1709,13 +1789,6 @@ export default function Home() {
             max-height: 80px;
           }
 
-          .pd-stats-grid {
-            grid-template-columns: repeat(4, 1fr);
-          }
-
-          .pd-offer-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
         }
 
         @media (min-width: 768px) {
@@ -1810,11 +1883,11 @@ export default function Home() {
           }
 
           .pd-offer-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
           }
 
           .pd-process-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
           }
 
           .pd-founder-grid {
@@ -2052,21 +2125,22 @@ export default function Home() {
 
           <div className="pd-hero-container">
             <div className="pd-hero-content">
-              <p className="pd-hero-tag">ANWAR SÁNCHEZ · PARTNER DIGITAL</p>
+              <p className="pd-hero-tag">PARTNER DIGITAL</p>
               <h1>
-                Tu negocio tiene potencial. Hagamos que ese potencial se convierta en crecimiento.
+                Convertimos tu potencial en crecimiento real
               </h1>
 
-              <p className="pd-hero-subtitle">
-                Trabajás todos los días para ofrecer lo mejor, pero conseguir nuevos clientes no debería depender solamente de recomendaciones o publicaciones que no generan resultados. Te ayudo a construir una estrategia para atraer mejores clientes, fortalecer tu marca y convertir tu presencia digital en oportunidades reales de negocio.
-              </p>
+              <ul className="pd-hero-benefits">
+                <li>Estrategia clara para atraer clientes</li>
+                <li>Marca que genera confianza</li>
+                <li>Presencia digital que convierte</li>
+              </ul>
 
               <div className="pd-hero-cta-row">
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-hero">
-                  Hablemos de tu negocio
+                  Agenda una llamada
                 </a>
               </div>
-              <p className="pd-hero-microcopy">Primero entendemos tu negocio. Después construimos la estrategia.</p>
             </div>
 
             {/* Hero Image */}
@@ -2131,20 +2205,6 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="pd-cases-link">
-              <Link href="/casos-de-exito">
-                Ver todos los casos de éxito
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="pd-stats">
-          <div className="pd-container">
             <div className="pd-stats-grid">
               {stats.map((stat) => (
                 <div key={stat.label} className="pd-stat-card">
@@ -2169,11 +2229,13 @@ export default function Home() {
             <p className="pd-problem-highlight">
               El problema no siempre es lo que ofrecés. Muchas veces es la falta de una estrategia que conecte tu valor con los clientes correctos.
             </p>
-            <div className="pd-problem-list">
+            <div className="pd-problem-grid">
               {problems.map((problem) => (
-                <div key={problem} className="pd-problem-item">
-                  <span className="pd-problem-icon">✕</span>
-                  <span>{problem}</span>
+                <div key={problem.text} className="pd-problem-card">
+                  <div className="pd-problem-icon">
+                    <problem.icon size={24} strokeWidth={2} />
+                  </div>
+                  <span>{problem.text}</span>
                 </div>
               ))}
             </div>
@@ -2267,17 +2329,12 @@ export default function Home() {
 
             <div className="pd-offer-grid">
               {offerItems.map((item) => (
-                <div key={item.title} className="pd-offer-item">
+                <div key={item.title} className="pd-offer-card">
                   <div className="pd-offer-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                      <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
+                    <item.icon size={28} strokeWidth={1.5} />
                   </div>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
               ))}
             </div>
