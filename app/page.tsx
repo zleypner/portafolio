@@ -266,6 +266,7 @@ export default function Home() {
           padding: 20px;
           overflow-y: auto;
           -webkit-overflow-scrolling: touch;
+          z-index: 999;
         }
 
         .pd-mobile-menu ul {
@@ -322,12 +323,11 @@ export default function Home() {
         /* Hero Section */
         .pd-hero {
           position: relative;
-          height: 100vh;
-          max-height: 100vh;
+          min-height: 100vh;
           display: flex;
           align-items: center;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 50%, #0a1f1a 100%);
-          overflow: hidden;
+          overflow: visible;
           padding: 80px 20px 32px;
         }
 
@@ -638,9 +638,7 @@ export default function Home() {
 
         /* Success Cases Section */
         .pd-cases {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 48px 20px;
           background: #f9fafb;
           display: flex;
@@ -834,9 +832,7 @@ export default function Home() {
 
         /* Problem Section - Dark */
         .pd-problem {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           position: relative;
@@ -924,9 +920,7 @@ export default function Home() {
 
         /* Case Study Section */
         .pd-casestudy {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: white;
           display: flex;
@@ -1103,9 +1097,7 @@ export default function Home() {
 
         /* Offer Section - Dark Green */
         .pd-offer {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           position: relative;
@@ -1237,9 +1229,7 @@ export default function Home() {
 
         /* How It Works Section - White */
         .pd-process {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: #ffffff;
           position: relative;
@@ -1396,9 +1386,7 @@ export default function Home() {
 
         /* Founder Section - Dark */
         .pd-founder {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           display: flex;
@@ -1472,9 +1460,7 @@ export default function Home() {
 
         /* Differentiation Section - White */
         .pd-differentiation {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: #ffffff;
           position: relative;
@@ -1522,9 +1508,7 @@ export default function Home() {
 
         /* FAQ Section - Dark Green */
         .pd-faq {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           display: flex;
@@ -1626,9 +1610,7 @@ export default function Home() {
 
         /* Final CTA Section */
         .pd-final-cta {
-          height: 100vh;
-          max-height: 100vh;
-          overflow: hidden;
+          min-height: 100vh;
           padding: 56px 20px;
           background: #f9fafb;
           position: relative;
