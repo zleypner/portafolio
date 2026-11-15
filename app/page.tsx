@@ -305,101 +305,112 @@ export default function Home() {
         /* Hero Section */
         .pd-hero {
           position: relative;
-          min-height: calc(100vh - 52px);
+          min-height: 100vh;
           display: flex;
           align-items: center;
-          background: linear-gradient(to bottom, #eff4ff, white, white);
+          background: linear-gradient(135deg, #0d2922 0%, #143d33 50%, #0a1f1a 100%);
           overflow: hidden;
-          padding: 96px 24px 32px;
+          padding: 80px 24px 40px;
+        }
+
+        .pd-hero::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+          opacity: 0.03;
+          pointer-events: none;
         }
 
         .pd-hero-bg {
           position: absolute;
           inset: 0;
           pointer-events: none;
+          overflow: hidden;
         }
 
-        .pd-hero-bg-circle-1 {
+        .pd-hero-bg-logo {
           position: absolute;
           top: 50%;
-          right: 25%;
+          right: 5%;
           transform: translateY(-50%);
-          width: 800px;
-          height: 800px;
-          background: rgba(31, 92, 255, 0.08);
-          border-radius: 50%;
-          filter: blur(120px);
-        }
-
-        .pd-hero-bg-circle-2 {
-          position: absolute;
-          bottom: 0;
-          left: 0;
           width: 500px;
           height: 500px;
-          background: rgba(31, 92, 255, 0.05);
-          border-radius: 50%;
-          filter: blur(60px);
+          opacity: 0.08;
+        }
+
+        .pd-hero-bg-logo svg {
+          width: 100%;
+          height: 100%;
+          fill: #ffffff;
         }
 
         .pd-hero-container {
           position: relative;
           z-index: 10;
-          max-width: 768px;
+          max-width: 1280px;
           margin: 0 auto;
           width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 40px;
+          align-items: center;
         }
 
         .pd-hero-content {
-          text-align: center;
-        }
-
-        .pd-hero-avatar {
-          position: relative;
-          width: 180px;
-          height: 180px;
-          border-radius: 50%;
-          overflow: hidden;
-          margin: 0 auto 32px;
-          box-shadow: 0 8px 40px -8px rgba(0, 0, 0, 0.15);
-          border: 4px solid white;
-        }
-
-        .pd-hero-avatar img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          text-align: left;
         }
 
         .pd-hero h1 {
-          font-size: clamp(2.25rem, 4.2vw, 3.5rem);
-          font-weight: 600;
+          font-size: clamp(2rem, 5vw, 3.5rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.08;
-          color: #111827;
-          margin-bottom: 20px;
-        }
-
-        .pd-hero h1 span {
-          color: #1F5CFF;
+          line-height: 1.1;
+          color: #ffffff;
+          margin-bottom: 24px;
         }
 
         .pd-hero-subtitle {
-          font-size: 18px;
-          color: #4b5563;
+          font-size: clamp(16px, 2vw, 20px);
+          color: rgba(255, 255, 255, 0.8);
           line-height: 1.6;
           margin-bottom: 32px;
-          max-width: 540px;
-          margin-left: auto;
-          margin-right: auto;
+          max-width: 560px;
+        }
+
+        .pd-hero-subtitle strong {
+          color: #ffffff;
+          font-weight: 600;
         }
 
         .pd-hero-cta-row {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
           gap: 16px;
-          margin-bottom: 32px;
+          margin-bottom: 0;
+        }
+
+        .pd-cta-hero {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 16px 32px;
+          border-radius: 8px;
+          background: #f5f0e6;
+          color: #1a1a1a;
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          border: 2px solid transparent;
+        }
+
+        .pd-cta-hero:hover {
+          background: #ffffff;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
         .pd-cta-primary {
@@ -449,25 +460,58 @@ export default function Home() {
           height: 16px;
         }
 
-        .pd-hero-trust {
+        .pd-hero-image {
+          position: relative;
           display: flex;
-          align-items: center;
           justify-content: center;
-          gap: 12px;
-          font-size: 14px;
-          color: #6b7280;
+          align-items: flex-end;
         }
 
-        .pd-hero-trust span {
-          font-weight: 500;
-          color: #374151;
+        .pd-hero-image-wrapper {
+          position: relative;
+          width: 100%;
+          max-width: 400px;
+          aspect-ratio: 3/4;
         }
 
-        .pd-hero-trust-dot {
-          width: 4px;
-          height: 4px;
-          background: #d1d5db;
-          border-radius: 50%;
+        .pd-hero-image-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+          filter: grayscale(20%);
+        }
+
+        .pd-hero-image-wrapper::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(13, 41, 34, 0.4) 0%, rgba(20, 61, 51, 0.2) 50%, transparent 100%);
+          z-index: 1;
+          pointer-events: none;
+          mix-blend-mode: multiply;
+        }
+
+        .pd-hero-image-gradient {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 150px;
+          background: linear-gradient(to top, #0d2922 0%, rgba(13, 41, 34, 0.8) 40%, transparent 100%);
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .pd-hero-image-gradient-left {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 100px;
+          background: linear-gradient(to right, #0d2922 0%, transparent 100%);
+          pointer-events: none;
+          z-index: 2;
         }
 
         /* Logo Carousel */
@@ -1450,7 +1494,6 @@ export default function Home() {
         @media (min-width: 640px) {
           .pd-hero-cta-row {
             flex-direction: row;
-            justify-content: center;
           }
 
           .pd-cta-primary {
@@ -1497,17 +1540,22 @@ export default function Home() {
             display: inline-flex;
           }
 
-          .pd-hero-avatar {
-            width: 220px;
-            height: 220px;
-          }
-
           .pd-hero {
-            padding: 112px 40px 40px;
+            padding: 0 48px;
+            min-height: 100vh;
           }
 
-          .pd-hero-subtitle {
-            font-size: 19px;
+          .pd-hero-container {
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+          }
+
+          .pd-hero h1 {
+            font-size: clamp(2.5rem, 4vw, 3.2rem);
+          }
+
+          .pd-hero-image-wrapper {
+            max-width: 500px;
           }
 
           .pd-cases {
@@ -1578,7 +1626,20 @@ export default function Home() {
 
         @media (min-width: 1024px) {
           .pd-hero {
-            padding: 128px 48px 48px;
+            padding: 0 64px;
+          }
+
+          .pd-hero-container {
+            max-width: 1400px;
+            gap: 64px;
+          }
+
+          .pd-hero h1 {
+            font-size: 3.5rem;
+          }
+
+          .pd-hero-image-wrapper {
+            max-width: 550px;
           }
         }
       `}</style>
@@ -1677,75 +1738,47 @@ export default function Home() {
         {/* Hero Section */}
         <section className="pd-hero">
           <div className="pd-hero-bg">
-            <div className="pd-hero-bg-circle-1" />
-            <div className="pd-hero-bg-circle-2" />
+            {/* Background Logo Watermark */}
+            <div className="pd-hero-bg-logo">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="80" height="80" rx="16" opacity="0.6"/>
+                <rect x="110" y="20" width="70" height="35" rx="8" opacity="0.4"/>
+                <rect x="110" y="65" width="70" height="35" rx="8" opacity="0.3"/>
+                <rect x="20" y="110" width="160" height="70" rx="16" opacity="0.5"/>
+              </svg>
+            </div>
           </div>
 
           <div className="pd-hero-container">
             <div className="pd-hero-content">
-              {/* Hero Avatar */}
-              <div className="pd-hero-avatar">
+              <h1>
+                Si quieres que el 2026 sea el año en que vendas todos los días desde tus redes sociales...
+              </h1>
+
+              <p className="pd-hero-subtitle">
+                Estás en el único lugar donde te enseñan a hacerlo con un sistema <strong>Symple</strong> que convierte la atención en ventas.
+              </p>
+
+              <div className="pd-hero-cta-row">
+                <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-hero">
+                  Contacta con mi equipo
+                </a>
+              </div>
+            </div>
+
+            {/* Hero Image */}
+            <div className="pd-hero-image">
+              <div className="pd-hero-image-wrapper">
                 <Image
                   src={IMAGES.founderPortrait}
                   alt="Anwar Sánchez"
                   fill
-                  sizes="180px"
-                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover', objectPosition: 'top center' }}
                   priority
                 />
-              </div>
-
-              <h1>
-                Un sitio web que le trae <span>clientes</span>, no solo visitas
-              </h1>
-
-              <p className="pd-hero-subtitle">
-                Diseñamos sitios que aparecen en Google y convierten visitas en consultas, citas, reservaciones y cotizaciones por WhatsApp.
-              </p>
-
-              <div className="pd-hero-cta-row">
-                <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-primary">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                  Solicitar diagnóstico
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </a>
-                <a href="#casos" className="pd-cta-secondary">
-                  Ver casos de éxito
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </a>
-              </div>
-
-              <div className="pd-hero-trust">
-                <span>+100 proyectos</span>
-                <div className="pd-hero-trust-dot" />
-                <span>1-2 semanas</span>
-              </div>
-            </div>
-
-            {/* Logo carousel */}
-            <div className="pd-logos">
-              <p className="pd-logos-label">Negocios que ya confían en nosotros</p>
-              <div className="pd-logos-scroll">
-                <div className="pd-logos-track">
-                  {[...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS].map((company, index) => (
-                    <div key={`${company.name}-${index}`} className="pd-logo-item">
-                      <Image
-                        src={company.logo}
-                        alt={`${company.name} logo`}
-                        width={company.large ? 280 : 220}
-                        height={90}
-                        loading="lazy"
-                        style={{ maxHeight: company.large ? '96px' : '80px', width: 'auto', objectFit: 'contain' }}
-                      />
-                    </div>
-                  ))}
-                </div>
+                <div className="pd-hero-image-gradient" />
+                <div className="pd-hero-image-gradient-left" />
               </div>
             </div>
           </div>
