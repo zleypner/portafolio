@@ -2223,7 +2223,7 @@ export default function Home() {
 
             {/* Hero Image */}
             <div className="pd-hero-image">
-              <div className="pd-hero-image-wrapper">
+              <div className="pd-hero-image-wrapper" style={{ position: 'relative', minHeight: '400px' }}>
                 <Image
                   src={IMAGES.founderPortrait}
                   alt="Anwar Sánchez"
@@ -2261,7 +2261,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="pd-case-card"
                 >
-                  <div className="pd-case-image">
+                  <div className="pd-case-image" style={{ position: 'relative', aspectRatio: '4/3', minHeight: '180px' }}>
                     <Image
                       src={caseItem.image}
                       alt={caseItem.name}
@@ -2363,7 +2363,7 @@ export default function Home() {
 
             {/* Testimonial */}
             <div className="pd-testimonial">
-              <div className="pd-testimonial-avatar">
+              <div className="pd-testimonial-avatar" style={{ position: 'relative', width: '72px', height: '72px', minWidth: '72px', minHeight: '72px' }}>
                 <Image
                   src={IMAGES.testimonialAvatar}
                   alt="Dr. Daniel Zúñiga"
@@ -2563,7 +2563,7 @@ export default function Home() {
         {/* Final CTA Section */}
         <section className="pd-final-cta">
           <div className="pd-final-cta-grid">
-            <div className="pd-final-cta-avatar">
+            <div className="pd-final-cta-avatar" style={{ position: 'relative', width: '180px', height: '180px', minWidth: '180px', minHeight: '180px' }}>
               <Image
                 src={IMAGES.founderPortrait}
                 alt="Anwar Sánchez"
