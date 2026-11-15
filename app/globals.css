@@ -698,3 +698,41 @@ body {
 .pd-animate-ping {
   animation: pd-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+
+/* Critical link styles - prevent FOUC */
+.pd-navbar-link,
+.pd-mobile-menu a {
+  text-decoration: none;
+  color: #424245;
+}
+
+.pd-navbar-cta,
+.pd-cta-primary,
+.pd-mobile-cta {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.pd-cta-hero {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background: #f5f0e6;
+  color: #1a1a1a;
+  padding: 18px 36px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.pd-case-card,
+.pd-cta-secondary,
+.pd-cases-link a {
+  text-decoration: none;
+  color: inherit;
+}
