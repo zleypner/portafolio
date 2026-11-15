@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://anwarsanchez.com'),
   title: {
-    default: 'Anwar Sánchez | Partner Digital y Estrategia de Crecimiento',
+    default: 'Anwar Sánchez | Partner Digital & Estratega de Negocios',
     template: '%s | Anwar Sánchez',
   },
   description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para fortalecer tu marca, atraer mejores clientes y hacer crecer tu negocio con el Método SEMILLA.',
@@ -280,7 +280,7 @@ const structuredData = {
         'https://www.linkedin.com/in/anwarsanchez',
         'https://github.com/anwarsanchez',
         'https://twitter.com/anwarsanchez',
-        'https://wa.me/50683335408',
+        'https://wa.me/50670724236',
       ],
       jobTitle: 'Partner Digital & Estratega de Crecimiento',
       alumniOf: {
@@ -323,7 +323,7 @@ const structuredData = {
       image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
       logo: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
       url: 'https://anwarsanchez.com',
-      telephone: '+50683335408',
+      telephone: '+50670724236',
       email: 'hola@anwarsanchez.com',
       description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para fortalecer tu marca, atraer mejores clientes y hacer crecer tu negocio con el Método SEMILLA.',
       address: {
@@ -369,7 +369,7 @@ const structuredData = {
       sameAs: [
         'https://www.linkedin.com/in/anwarsanchez',
         'https://github.com/anwarsanchez',
-        'https://wa.me/50683335408',
+        'https://wa.me/50670724236',
       ],
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -381,7 +381,7 @@ const structuredData = {
       founder: { '@id': 'https://anwarsanchez.com/#person' },
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+50683335408',
+        telephone: '+50670724236',
         contactType: 'sales',
         availableLanguage: ['Spanish', 'English'],
         areaServed: 'CR',
@@ -391,7 +391,7 @@ const structuredData = {
         '@type': 'ReserveAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://wa.me/50683335408?text=Hola%20Anwar%2C%20me%20interesa%20un%20sitio%20web',
+          urlTemplate: 'https://wa.me/50670724236?text=Hola%20Anwar%2C%20me%20interesa%20un%20sitio%20web',
           inLanguage: 'es',
           actionPlatform: [
             'http://schema.org/DesktopWebPlatform',
@@ -476,7 +476,7 @@ const structuredData = {
         '@type': 'ReserveAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://wa.me/50683335408?text=Hola%20Anwar%2C%20me%20interesa%20un%20sitio%20web',
+          urlTemplate: 'https://wa.me/50670724236?text=Hola%20Anwar%2C%20me%20interesa%20un%20sitio%20web',
           actionPlatform: [
             'http://schema.org/DesktopWebPlatform',
             'http://schema.org/MobileWebPlatform',

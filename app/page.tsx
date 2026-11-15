@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // Constants
-const WHATSAPP_PHONE = '50683335408';
+const WHATSAPP_PHONE = '50670724236';
 const WHATSAPP_MESSAGE = 'Hola Anwar, estuve revisando tu sitio web y me gustaría conversar sobre cómo hacer crecer mi negocio.';
 const WHATSAPP_MESSAGE_SEMILLA = 'Hola Anwar, me gustaría conocer cómo podríamos aplicar el Método SEMILLA en mi negocio.';
 
@@ -264,8 +264,9 @@ export default function Home() {
           bottom: 0;
           background: white;
           border-top: 1px solid #f0f0f0;
-          padding: 16px;
+          padding: 20px;
           overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
         }
 
         .pd-mobile-menu ul {
@@ -278,40 +279,56 @@ export default function Home() {
           border-bottom: 1px solid #f0f0f0;
         }
 
+        .pd-mobile-menu li:last-child {
+          border-bottom: none;
+        }
+
         .pd-mobile-menu a {
-          display: block;
-          padding: 20px 0;
-          font-size: 20px;
+          display: flex;
+          align-items: center;
+          padding: 18px 0;
+          font-size: 17px;
           font-weight: 600;
           color: #1d1d1f;
           text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        .pd-mobile-menu a:active {
+          color: #6b7280;
         }
 
         .pd-mobile-cta {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 8px;
+          gap: 10px;
           width: 100%;
-          height: 48px;
-          margin-top: 24px;
-          border-radius: 8px;
+          height: 52px;
+          margin-top: 28px;
+          border-radius: 12px;
           background: #25D366;
           color: white;
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 600;
           text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+          box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+        }
+
+        .pd-mobile-cta:active {
+          transform: scale(0.98);
         }
 
         /* Hero Section */
         .pd-hero {
           position: relative;
-          min-height: 100vh;
+          min-height: 100svh;
           display: flex;
           align-items: center;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 50%, #0a1f1a 100%);
           overflow: hidden;
-          padding: 100px 24px 40px;
+          padding: 80px 20px 32px;
         }
 
         .pd-hero::before {
@@ -364,19 +381,19 @@ export default function Home() {
         }
 
         .pd-hero h1 {
-          font-size: clamp(2rem, 5vw, 3.5rem);
+          font-size: clamp(1.75rem, 6vw, 3.5rem);
           font-weight: 700;
-          letter-spacing: -0.03em;
-          line-height: 1.08;
+          letter-spacing: -0.02em;
+          line-height: 1.15;
           color: #ffffff;
-          margin-bottom: 28px;
+          margin-bottom: 20px;
         }
 
         .pd-hero-subtitle {
-          font-size: clamp(16px, 2vw, 20px);
-          color: rgba(255, 255, 255, 0.75);
-          line-height: 1.7;
-          margin-bottom: 36px;
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.65;
+          margin-bottom: 28px;
           max-width: 560px;
         }
 
@@ -387,13 +404,13 @@ export default function Home() {
 
         .pd-hero-tag {
           display: inline-block;
-          font-size: 12px;
+          font-size: 10px;
           font-weight: 600;
-          letter-spacing: 0.15em;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
           color: rgba(255, 255, 255, 0.7);
-          margin-bottom: 20px;
-          padding: 8px 16px;
+          margin-bottom: 16px;
+          padding: 6px 12px;
           background: rgba(255, 255, 255, 0.1);
           border-radius: 4px;
         }
@@ -458,17 +475,18 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           gap: 10px;
-          padding: 0 28px;
-          height: 52px;
-          border-radius: 8px;
+          padding: 0 24px;
+          height: 48px;
+          border-radius: 10px;
           background: #25D366;
           color: white;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 600;
           text-decoration: none;
           box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
           transition: all 0.3s ease;
           width: 100%;
+          -webkit-tap-highlight-color: transparent;
         }
 
         .pd-cta-primary:hover {
@@ -510,8 +528,11 @@ export default function Home() {
         .pd-hero-image-wrapper {
           position: relative;
           width: 100%;
-          max-width: 400px;
+          max-width: 280px;
           aspect-ratio: 3/4;
+          margin: 0 auto;
+          border-radius: 16px;
+          overflow: hidden;
         }
 
         .pd-hero-image-wrapper img {
@@ -556,18 +577,18 @@ export default function Home() {
 
         /* Logo Carousel */
         .pd-logos {
-          margin-top: 48px;
-          padding-top: 32px;
-          border-top: 1px solid rgba(209, 213, 219, 0.6);
+          margin-top: 36px;
+          padding-top: 24px;
+          border-top: 1px solid rgba(209, 213, 219, 0.4);
         }
 
         .pd-logos-label {
-          font-size: 11px;
-          letter-spacing: 0.15em;
+          font-size: 10px;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
           color: #9ca3af;
           text-align: center;
-          margin-bottom: 24px;
+          margin-bottom: 16px;
         }
 
         .pd-logos-scroll {
@@ -578,7 +599,7 @@ export default function Home() {
         .pd-logos-track {
           display: flex;
           width: max-content;
-          animation: pd-scroll-logos 30s linear infinite;
+          animation: pd-scroll-logos 25s linear infinite;
         }
 
         @keyframes pd-scroll-logos {
@@ -591,19 +612,19 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 112px;
-          padding: 0 40px;
+          height: 80px;
+          padding: 0 28px;
         }
 
         .pd-logo-item img {
-          max-height: 80px;
+          max-height: 56px;
           width: auto;
           object-fit: contain;
         }
 
         /* Success Cases Section */
         .pd-cases {
-          padding: 64px 24px;
+          padding: 48px 20px;
           background: #f9fafb;
         }
 
@@ -614,19 +635,19 @@ export default function Home() {
 
         .pd-section-header {
           text-align: center;
-          margin-bottom: 48px;
+          margin-bottom: 32px;
         }
 
         .pd-section-tag {
           display: inline-flex;
           align-items: center;
-          gap: 8px;
-          font-size: 12px;
-          font-weight: 500;
+          gap: 6px;
+          font-size: 11px;
+          font-weight: 600;
           text-transform: uppercase;
-          letter-spacing: 0.05em;
+          letter-spacing: 0.08em;
           color: #6b7280;
-          margin-bottom: 12px;
+          margin-bottom: 10px;
         }
 
         .pd-section-tag-dot {
@@ -634,15 +655,16 @@ export default function Home() {
         }
 
         .pd-section-title {
-          font-size: clamp(1.5rem, 3vw, 2.25rem);
-          font-weight: 600;
+          font-size: clamp(1.375rem, 5vw, 2.25rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
           color: #111827;
-          margin-bottom: 16px;
+          margin-bottom: 12px;
+          line-height: 1.2;
         }
 
         .pd-section-description {
-          font-size: 16px;
+          font-size: 15px;
           color: #6b7280;
           line-height: 1.6;
           max-width: 640px;
@@ -651,7 +673,7 @@ export default function Home() {
 
         .pd-cases-grid {
           display: grid;
-          gap: 24px;
+          gap: 16px;
         }
 
         .pd-case-card {
@@ -751,55 +773,50 @@ export default function Home() {
 
         /* Stats Section */
         .pd-stats {
-          padding: 48px 24px;
+          padding: 40px 20px;
           background: white;
         }
 
         .pd-stats-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
+          gap: 12px;
         }
 
         .pd-stat-card {
           text-align: center;
-          padding: 24px;
-          border-radius: 16px;
+          padding: 20px 16px;
+          border-radius: 14px;
           background: linear-gradient(to bottom right, white, #f9fafb);
           border: 1px solid rgba(229, 231, 235, 0.6);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
         .pd-stat-value {
-          font-size: clamp(1.5rem, 3vw, 1.875rem);
-          font-weight: 600;
+          font-size: clamp(1.25rem, 4vw, 1.875rem);
+          font-weight: 700;
           background: linear-gradient(to right, #1F5CFF, #3b82f6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          margin-bottom: 4px;
+          margin-bottom: 2px;
         }
 
         .pd-stat-label {
-          font-size: 14px;
+          font-size: 12px;
           color: #6b7280;
+          line-height: 1.3;
         }
 
-        /* Problem Section */
+        /* Problem Section - Dark */
         .pd-problem {
-          padding: 80px 24px;
-          background: #f9fafb;
+          padding: 56px 20px;
+          background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           position: relative;
         }
 
         .pd-problem::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(to right, transparent, rgba(31, 92, 255, 0.3), transparent);
+          display: none;
         }
 
         .pd-problem-content {
@@ -808,50 +825,50 @@ export default function Home() {
         }
 
         .pd-problem h2 {
-          font-size: clamp(1.875rem, 4vw, 3rem);
-          font-weight: 600;
+          font-size: clamp(1.5rem, 5vw, 3rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.1;
-          color: #111827;
-          margin-bottom: 24px;
+          line-height: 1.15;
+          color: #ffffff;
+          margin-bottom: 20px;
           text-align: center;
         }
 
         .pd-problem-text {
-          font-size: 18px;
-          color: #4b5563;
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.8);
           line-height: 1.6;
           text-align: center;
-          margin-bottom: 16px;
+          margin-bottom: 14px;
         }
 
         .pd-problem-highlight {
-          font-size: 18px;
-          color: #111827;
-          line-height: 1.6;
+          font-size: 15px;
+          color: #ffffff;
+          line-height: 1.5;
           text-align: center;
-          margin-bottom: 32px;
+          margin-bottom: 28px;
           font-weight: 600;
-          padding: 20px;
-          background: rgba(31, 92, 255, 0.05);
+          padding: 16px;
+          background: rgba(255, 255, 255, 0.1);
           border-radius: 12px;
-          border-left: 4px solid #1F5CFF;
+          border-left: 4px solid rgba(255, 255, 255, 0.5);
         }
 
         .pd-problem-list {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 10px;
         }
 
         .pd-problem-item {
           display: flex;
           align-items: flex-start;
           gap: 12px;
-          padding: 16px;
-          border-radius: 12px;
-          background: white;
-          border: 1px solid rgba(229, 231, 235, 0.8);
+          padding: 14px;
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .pd-problem-icon {
@@ -859,8 +876,8 @@ export default function Home() {
           width: 24px;
           height: 24px;
           border-radius: 50%;
-          background: #fef2f2;
-          color: #ef4444;
+          background: rgba(239, 68, 68, 0.2);
+          color: #f87171;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -869,18 +886,20 @@ export default function Home() {
         }
 
         .pd-problem-item span {
-          color: #374151;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 14px;
+          line-height: 1.5;
         }
 
         /* Case Study Section */
         .pd-casestudy {
-          padding: 80px 24px;
+          padding: 56px 20px;
           background: white;
         }
 
         .pd-casestudy-header {
           text-align: center;
-          margin-bottom: 48px;
+          margin-bottom: 32px;
         }
 
         .pd-casestudy-tag {
@@ -1045,10 +1064,10 @@ export default function Home() {
           color: #9ca3af;
         }
 
-        /* Offer Section */
+        /* Offer Section - Dark Green */
         .pd-offer {
-          padding: 80px 24px;
-          background: #f9fafb;
+          padding: 56px 20px;
+          background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
           position: relative;
         }
 
@@ -1059,48 +1078,50 @@ export default function Home() {
           left: 0;
           right: 0;
           height: 1px;
-          background: linear-gradient(to right, transparent, rgba(31, 92, 255, 0.3), transparent);
+          background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
         }
 
         .pd-offer h2 {
-          font-size: clamp(1.875rem, 4vw, 3rem);
-          font-weight: 600;
+          font-size: clamp(1.5rem, 5vw, 3rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.1;
-          color: #111827;
+          line-height: 1.15;
+          color: #ffffff;
           text-align: center;
-          margin-bottom: 16px;
+          margin-bottom: 12px;
         }
 
         .pd-offer-subtitle {
-          font-size: 18px;
-          color: #6b7280;
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.8);
           text-align: center;
           max-width: 640px;
-          margin: 0 auto 48px;
+          margin: 0 auto 36px;
+          line-height: 1.6;
         }
 
         .pd-offer-grid {
           display: grid;
-          gap: 16px;
-          margin-bottom: 40px;
+          gap: 12px;
+          margin-bottom: 32px;
         }
 
         .pd-offer-item {
           display: flex;
           align-items: flex-start;
-          gap: 16px;
-          padding: 20px;
+          gap: 14px;
+          padding: 16px;
           border-radius: 12px;
-          background: white;
-          border: 1px solid rgba(229, 231, 235, 0.8);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
         }
 
         .pd-offer-item:hover {
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-          border-color: rgba(191, 219, 254, 0.8);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          background: rgba(255, 255, 255, 0.12);
+          border-color: rgba(255, 255, 255, 0.2);
         }
 
         .pd-offer-icon {
@@ -1108,11 +1129,11 @@ export default function Home() {
           width: 40px;
           height: 40px;
           border-radius: 12px;
-          background: rgba(31, 92, 255, 0.1);
+          background: rgba(37, 211, 102, 0.2);
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #1F5CFF;
+          color: #25D366;
         }
 
         .pd-offer-icon svg {
@@ -1121,15 +1142,16 @@ export default function Home() {
         }
 
         .pd-offer-item h3 {
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 600;
-          color: #111827;
+          color: #ffffff;
           margin-bottom: 4px;
         }
 
         .pd-offer-item p {
-          font-size: 14px;
-          color: #6b7280;
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 1.5;
         }
 
         /* Guarantee Block */
@@ -1138,8 +1160,8 @@ export default function Home() {
           margin: 0 auto;
           padding: 24px;
           border-radius: 16px;
-          background: linear-gradient(to right, rgba(37, 211, 102, 0.1), #ecfdf5);
-          border: 1px solid rgba(37, 211, 102, 0.2);
+          background: rgba(37, 211, 102, 0.15);
+          border: 1px solid rgba(37, 211, 102, 0.3);
           display: flex;
           align-items: center;
           gap: 16px;
@@ -1150,7 +1172,7 @@ export default function Home() {
           width: 56px;
           height: 56px;
           border-radius: 12px;
-          background: rgba(37, 211, 102, 0.2);
+          background: rgba(37, 211, 102, 0.25);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1165,46 +1187,40 @@ export default function Home() {
         .pd-guarantee h3 {
           font-size: 16px;
           font-weight: 600;
-          color: #111827;
+          color: #ffffff;
           margin-bottom: 4px;
         }
 
         .pd-guarantee p {
           font-size: 14px;
-          color: #6b7280;
+          color: rgba(255, 255, 255, 0.8);
         }
 
-        /* How It Works Section */
+        /* How It Works Section - White */
         .pd-process {
-          padding: 80px 24px;
-          background: #f9fafb;
+          padding: 56px 20px;
+          background: #ffffff;
           position: relative;
         }
 
         .pd-process::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(to right, transparent, rgba(31, 92, 255, 0.3), transparent);
+          display: none;
         }
 
         .pd-process h2 {
-          font-size: clamp(1.875rem, 4vw, 3rem);
-          font-weight: 600;
+          font-size: clamp(1.5rem, 5vw, 3rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.1;
+          line-height: 1.15;
           color: #111827;
           text-align: center;
-          margin-bottom: 48px;
+          margin-bottom: 36px;
         }
 
         .pd-process-grid {
           display: grid;
-          gap: 24px;
-          max-width: 896px;
+          gap: 20px;
+          max-width: 1024px;
           margin: 0 auto;
         }
 
@@ -1216,7 +1232,7 @@ export default function Home() {
           text-align: center;
           padding: 24px;
           border-radius: 16px;
-          background: white;
+          background: #f9fafb;
           border: 1px solid rgba(229, 231, 235, 0.8);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
         }
@@ -1227,8 +1243,8 @@ export default function Home() {
           width: 32px;
           height: 32px;
           border-radius: 50%;
-          background: #1F5CFF;
-          color: white;
+          background: #0d2922;
+          color: #ffffff;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1240,11 +1256,11 @@ export default function Home() {
           width: 56px;
           height: 56px;
           border-radius: 16px;
-          background: rgba(31, 92, 255, 0.1);
+          background: rgba(13, 41, 34, 0.1);
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #1F5CFF;
+          color: #0d2922;
           margin-bottom: 16px;
           margin-top: 16px;
         }
@@ -1272,7 +1288,7 @@ export default function Home() {
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.1em;
-          color: #1F5CFF;
+          color: #6b7280;
           margin-bottom: 4px;
         }
 
@@ -1287,10 +1303,10 @@ export default function Home() {
           font-weight: 700;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: #1F5CFF;
+          color: #0d2922;
           margin-bottom: 16px;
           padding: 8px 20px;
-          background: rgba(31, 92, 255, 0.1);
+          background: rgba(13, 41, 34, 0.1);
           border-radius: 4px;
         }
 
@@ -1333,15 +1349,15 @@ export default function Home() {
           }
         }
 
-        /* Founder Section */
+        /* Founder Section - Dark */
         .pd-founder {
-          padding: 80px 24px;
-          background: white;
+          padding: 56px 20px;
+          background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
         }
 
         .pd-founder-grid {
           display: grid;
-          gap: 40px;
+          gap: 32px;
           align-items: center;
         }
 
@@ -1363,8 +1379,8 @@ export default function Home() {
           gap: 8px;
           padding: 4px 12px;
           border-radius: 20px;
-          background: rgba(37, 211, 102, 0.1);
-          color: #25D366;
+          background: rgba(255, 255, 255, 0.1);
+          color: #ffffff;
           font-size: 14px;
           font-weight: 600;
           margin-bottom: 16px;
@@ -1376,48 +1392,48 @@ export default function Home() {
         }
 
         .pd-founder h2 {
-          font-size: clamp(1.875rem, 4vw, 2.5rem);
-          font-weight: 600;
+          font-size: clamp(1.5rem, 5vw, 2.5rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.1;
-          color: #111827;
-          margin-bottom: 24px;
+          line-height: 1.15;
+          color: #ffffff;
+          margin-bottom: 20px;
         }
 
         .pd-founder-text {
           display: flex;
           flex-direction: column;
-          gap: 16px;
-          margin-bottom: 32px;
+          gap: 14px;
+          margin-bottom: 28px;
         }
 
         .pd-founder-text p {
-          font-size: 18px;
-          color: #6b7280;
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.8);
           line-height: 1.6;
         }
 
         .pd-founder-highlight {
           font-weight: 600;
-          color: #111827;
+          color: #ffffff;
           font-style: italic;
         }
 
-        /* Differentiation Section */
+        /* Differentiation Section - White */
         .pd-differentiation {
-          padding: 80px 24px;
-          background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
+          padding: 56px 20px;
+          background: #ffffff;
           position: relative;
         }
 
         .pd-differentiation h2 {
-          font-size: clamp(1.875rem, 4vw, 2.5rem);
-          font-weight: 600;
+          font-size: clamp(1.5rem, 5vw, 2.5rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.1;
-          color: #ffffff;
+          line-height: 1.15;
+          color: #111827;
           text-align: center;
-          margin-bottom: 32px;
+          margin-bottom: 24px;
         }
 
         .pd-differentiation-content {
@@ -1427,39 +1443,39 @@ export default function Home() {
         }
 
         .pd-differentiation-content p {
-          font-size: 18px;
-          color: rgba(255, 255, 255, 0.7);
+          font-size: 15px;
+          color: #6b7280;
           line-height: 1.6;
-          margin-bottom: 12px;
+          margin-bottom: 10px;
         }
 
         .pd-differentiation-question {
-          font-size: 20px;
-          color: #ffffff;
+          font-size: 17px;
+          color: #111827;
           font-weight: 600;
-          margin-top: 24px;
-          margin-bottom: 16px;
+          margin-top: 20px;
+          margin-bottom: 12px;
         }
 
         .pd-differentiation-answer {
-          font-size: 18px;
-          color: rgba(255, 255, 255, 0.9);
+          font-size: 15px;
+          color: #4b5563;
           line-height: 1.7;
         }
 
-        /* FAQ Section */
+        /* FAQ Section - Dark Green */
         .pd-faq {
-          padding: 80px 24px;
-          background: white;
+          padding: 56px 20px;
+          background: linear-gradient(135deg, #0d2922 0%, #143d33 100%);
         }
 
         .pd-faq h2 {
-          font-size: clamp(1.875rem, 4vw, 2.5rem);
-          font-weight: 600;
+          font-size: clamp(1.5rem, 5vw, 2.5rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          color: #111827;
+          color: #ffffff;
           text-align: center;
-          margin-bottom: 48px;
+          margin-bottom: 32px;
         }
 
         .pd-faq-list {
@@ -1467,19 +1483,20 @@ export default function Home() {
           margin: 0 auto;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 10px;
         }
 
         .pd-faq-item {
           border-radius: 12px;
-          border: 1px solid rgba(229, 231, 235, 0.8);
-          background: white;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: rgba(255, 255, 255, 0.05);
           transition: all 0.2s ease;
         }
 
         .pd-faq-item.active {
-          border-color: rgba(31, 92, 255, 0.2);
-          box-shadow: 0 2px 8px rgba(31, 92, 255, 0.08);
+          border-color: rgba(255, 255, 255, 0.2);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          background: rgba(255, 255, 255, 0.08);
         }
 
         .pd-faq-question {
@@ -1488,18 +1505,19 @@ export default function Home() {
           align-items: center;
           justify-content: space-between;
           gap: 12px;
-          padding: 20px;
+          padding: 16px;
           background: transparent;
           border: none;
           cursor: pointer;
           text-align: left;
           font-family: inherit;
+          -webkit-tap-highlight-color: transparent;
         }
 
         .pd-faq-question span {
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 600;
-          color: #111827;
+          color: #ffffff;
           line-height: 1.4;
         }
 
@@ -1511,13 +1529,13 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #f3f4f6;
-          color: #6b7280;
+          background: rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.7);
           transition: all 0.2s ease;
         }
 
         .pd-faq-item.active .pd-faq-toggle {
-          background: #1F5CFF;
+          background: #25D366;
           color: white;
         }
 
@@ -1533,9 +1551,10 @@ export default function Home() {
 
         .pd-faq-answer {
           display: none;
-          padding: 0 20px 20px;
-          color: #6b7280;
+          padding: 0 16px 16px;
+          color: rgba(255, 255, 255, 0.8);
           line-height: 1.6;
+          font-size: 14px;
         }
 
         .pd-faq-item.active .pd-faq-answer {
@@ -1544,7 +1563,7 @@ export default function Home() {
 
         /* Final CTA Section */
         .pd-final-cta {
-          padding: 80px 24px;
+          padding: 56px 20px;
           background: #f9fafb;
           position: relative;
         }
@@ -1561,7 +1580,7 @@ export default function Home() {
 
         .pd-final-cta-grid {
           display: grid;
-          gap: 40px;
+          gap: 32px;
           align-items: center;
           max-width: 896px;
           margin: 0 auto;
@@ -1569,8 +1588,8 @@ export default function Home() {
 
         .pd-final-cta-avatar {
           position: relative;
-          width: 192px;
-          height: 192px;
+          width: 160px;
+          height: 160px;
           border-radius: 50%;
           overflow: hidden;
           margin: 0 auto;
@@ -1589,22 +1608,23 @@ export default function Home() {
         }
 
         .pd-final-cta h2 {
-          font-size: clamp(1.875rem, 4vw, 2.5rem);
-          font-weight: 600;
+          font-size: clamp(1.5rem, 5vw, 2.5rem);
+          font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.1;
+          line-height: 1.15;
           color: #111827;
-          margin-bottom: 16px;
-        }
-
-        .pd-final-cta-content > p {
-          font-size: 18px;
-          color: #6b7280;
           margin-bottom: 12px;
         }
 
+        .pd-final-cta-content > p {
+          font-size: 15px;
+          color: #6b7280;
+          margin-bottom: 10px;
+          line-height: 1.6;
+        }
+
         .pd-final-cta-content > p:last-of-type {
-          margin-bottom: 24px;
+          margin-bottom: 20px;
         }
 
         .pd-final-cta-highlight {
@@ -1622,15 +1642,15 @@ export default function Home() {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 16px;
-          margin-top: 24px;
+          gap: 12px;
+          margin-top: 20px;
         }
 
         .pd-final-cta-benefit {
           display: flex;
           align-items: center;
-          gap: 8px;
-          font-size: 14px;
+          gap: 6px;
+          font-size: 13px;
           color: #6b7280;
         }
 
@@ -1644,34 +1664,38 @@ export default function Home() {
         .pd-footer {
           background: #111827;
           border-top: 1px solid #1f2937;
-          padding: 32px 24px;
+          padding: 28px 20px;
         }
 
         .pd-footer-content {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 16px;
+          gap: 14px;
           max-width: 980px;
           margin: 0 auto;
         }
 
         .pd-footer-copy {
-          font-size: 14px;
+          font-size: 13px;
           color: white;
+          text-align: center;
         }
 
         .pd-footer-links {
           display: flex;
           align-items: center;
-          gap: 24px;
+          gap: 20px;
+          flex-wrap: wrap;
+          justify-content: center;
         }
 
         .pd-footer-links a {
-          font-size: 14px;
+          font-size: 13px;
           color: #9ca3af;
           text-decoration: none;
           transition: color 0.2s ease;
+          -webkit-tap-highlight-color: transparent;
         }
 
         .pd-footer-links a:hover {
@@ -1689,12 +1713,12 @@ export default function Home() {
           }
 
           .pd-logo-item {
-            padding: 0 64px;
-            height: 144px;
+            padding: 0 48px;
+            height: 120px;
           }
 
           .pd-logo-item img {
-            max-height: 96px;
+            max-height: 80px;
           }
 
           .pd-stats-grid {
@@ -1756,8 +1780,9 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 420px;
+            max-width: 380px;
             aspect-ratio: 3/4;
+            border-radius: 20px;
           }
 
           .pd-hero-bg-logo {
@@ -1859,7 +1884,8 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 480px;
+            max-width: 440px;
+            border-radius: 24px;
           }
 
           .pd-hero-bg-logo {
@@ -1908,7 +1934,8 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 520px;
+            max-width: 500px;
+            border-radius: 24px;
           }
 
           .pd-hero-bg-logo {
@@ -1937,7 +1964,8 @@ export default function Home() {
           }
 
           .pd-hero-image-wrapper {
-            max-width: 580px;
+            max-width: 560px;
+            border-radius: 28px;
           }
         }
       `}</style>

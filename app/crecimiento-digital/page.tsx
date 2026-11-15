@@ -456,7 +456,7 @@ export default function CrecimientoDigitalPage() {
               <li><a href="#proceso" className="cd-navbar-link">Proceso</a></li>
               <li><a href="#resultados" className="cd-navbar-link">Resultados</a></li>
               <li><a href="#preguntas" className="cd-navbar-link">Preguntas</a></li>
-              <li><a href="https://wa.me/50683335408?text=Hola%2C%20vi%20tu%20página%20de%20crecimiento%20digital." target="_blank" rel="noopener noreferrer" className="cd-navbar-link">Contactar</a></li>
+              <li><a href="https://wa.me/50670724236?text=Hola%2C%20vi%20tu%20página%20de%20crecimiento%20digital." target="_blank" rel="noopener noreferrer" className="cd-navbar-link">Contactar</a></li>
             </ul>
           </div>
         </nav>
@@ -474,7 +474,7 @@ export default function CrecimientoDigitalPage() {
               <strong>La confianza se acumula. Las visitas no.</strong>
             </p>
             <div className="cd-cta-group">
-              <a href="https://wa.me/50683335408?text=Hola%2C%20vi%20tu%20página%20de%20crecimiento%20digital." target="_blank" rel="noopener noreferrer" className="cd-btn cd-btn-solid">Hablemos</a>
+              <a href="https://wa.me/50670724236?text=Hola%2C%20vi%20tu%20página%20de%20crecimiento%20digital." target="_blank" rel="noopener noreferrer" className="cd-btn cd-btn-solid">Hablemos</a>
               <a href="#proceso" className="cd-btn">Ver cómo trabajo</a>
             </div>
           </div>
@@ -659,7 +659,7 @@ export default function CrecimientoDigitalPage() {
               No hay pitch de ventas. Solo una conversación para ver si puedo ayudarte. Si no puedo, te lo digo.
             </p>
             <div className="cd-cta-group">
-              <a href="https://wa.me/50683335408?text=Hola%2C%20vi%20tu%20página%20de%20crecimiento%20digital." target="_blank" rel="noopener noreferrer" className="cd-btn cd-btn-solid">Hablemos por WhatsApp</a>
+              <a href="https://wa.me/50670724236?text=Hola%2C%20vi%20tu%20página%20de%20crecimiento%20digital." target="_blank" rel="noopener noreferrer" className="cd-btn cd-btn-solid">Hablemos por WhatsApp</a>
             </div>
           </div>
         </section>
