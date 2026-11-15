@@ -2090,9 +2090,6 @@ export default function Home() {
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-hero">
                   Hablemos de tu negocio
                 </a>
-                <a href="#metodo" onClick={(e) => handleAnchorClick(e, '#metodo')} className="pd-cta-secondary-hero">
-                  Conocé el Método SEMILLA
-                </a>
               </div>
               <p className="pd-hero-microcopy">Primero entendemos tu negocio. Después construimos la estrategia.</p>
             </div>
