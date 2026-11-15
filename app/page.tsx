@@ -175,6 +175,7 @@ export default function Home() {
           height: 64px;
           max-width: 1280px;
           margin: 0 auto;
+          position: relative;
         }
 
         .pd-navbar-logo {
@@ -241,13 +242,16 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 40px;
-          height: 40px;
+          width: 44px;
+          height: 44px;
           border: none;
           background: transparent;
-          border-radius: 20px;
+          border-radius: 22px;
           cursor: pointer;
           color: #1d1d1f;
+          position: relative;
+          z-index: 101;
+          -webkit-tap-highlight-color: transparent;
         }
 
         .pd-mobile-toggle:hover {
