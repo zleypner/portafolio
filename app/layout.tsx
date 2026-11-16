@@ -20,10 +20,10 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://anwarsanchez.com'),
   title: {
-    default: 'Anwar Sánchez | Partner Digital & Estratega de Negocios',
+    default: 'Anwar Sánchez | Partner Digital para Negocios en Costa Rica',
     template: '%s | Anwar Sánchez',
   },
-  description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para fortalecer tu marca, atraer mejores clientes y hacer crecer tu negocio con el Método SEMILLA.',
+  description: 'Ayudo a negocios y profesionales a crecer con estrategia digital, marketing, tecnología e inteligencia artificial. Conocé el Método SEMILLA.',
 
   keywords: [
     // Primary keywords - Partner Digital
@@ -75,8 +75,8 @@ export const metadata: Metadata = {
     locale: 'es_CR',
     url: 'https://anwarsanchez.com',
     siteName: 'Anwar Sánchez - Partner Digital',
-    title: 'Partner Digital | Estrategia de Crecimiento con el Método SEMILLA',
-    description: 'Ayudo a profesionales y empresas a atraer mejores clientes, fortalecer su marca y convertir su presencia digital en oportunidades de negocio. Costa Rica.',
+    title: 'Anwar Sánchez | Partner Digital para Negocios en Costa Rica',
+    description: 'Ayudo a negocios y profesionales a crecer con estrategia digital, marketing, tecnología e inteligencia artificial. Conocé el Método SEMILLA.',
     images: [
       {
         url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
@@ -93,8 +93,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@anwarsanchez',
     creator: '@anwarsanchez',
-    title: 'Partner Digital | Método SEMILLA',
-    description: 'Estrategia, marketing y tecnología para hacer crecer tu negocio. Método SEMILLA. Costa Rica.',
+    title: 'Anwar Sánchez | Partner Digital para Negocios',
+    description: 'Ayudo a negocios y profesionales a crecer con estrategia digital, marketing, tecnología e inteligencia artificial. Conocé el Método SEMILLA.',
     images: {
       url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
       alt: 'Anwar Sánchez - Partner Digital Costa Rica',

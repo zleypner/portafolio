@@ -92,10 +92,10 @@ export default function Home() {
   ];
 
   const problems = [
-    { icon: TrendingDown, text: 'Mucho esfuerzo, poco crecimiento' },
-    { icon: Ghost, text: 'Buen servicio, poca visibilidad' },
-    { icon: Smartphone, text: 'Contenido sin conversiones' },
-    { icon: Target, text: 'Sin estrategia clara' },
+    { icon: Ghost, text: 'Poca visibilidad: tus clientes no te encuentran' },
+    { icon: TrendingDown, text: 'Ventas inconsistentes: dependés de referidos' },
+    { icon: Smartphone, text: 'Oportunidades perdidas: consultas que no cierran' },
+    { icon: Target, text: 'Sin dirección: invertís sin estrategia clara' },
   ];
 
   const offerItems = [
@@ -106,10 +106,10 @@ export default function Home() {
   ];
 
   const steps = [
-    { num: '01', title: 'Sembrar', subtitle: 'Estrategia', description: 'Analizamos tu negocio y definimos una estrategia clara para conectar tu valor con los clientes correctos.' },
-    { num: '02', title: 'Cultivar', subtitle: 'Posicionamiento', description: 'Fortalecemos tu propuesta de valor, diferenciación y comunicación para que las personas correctas te elijan.' },
-    { num: '03', title: 'Crecer', subtitle: 'Atracción', description: 'Desarrollamos estrategias de contenido, marketing y tecnología para aumentar tu visibilidad y generar confianza.' },
-    { num: '04', title: 'Cosechar', subtitle: 'Conversión', description: 'Optimizamos tus canales digitales para convertir la atención en oportunidades comerciales reales.' },
+    { num: '01', title: 'Sembrar', subtitle: 'Estrategia', description: 'Analizamos tu negocio y definimos una estrategia clara para conectar tu valor con los clientes correctos.', image: '/assets/seed/seed1.webp' },
+    { num: '02', title: 'Cultivar', subtitle: 'Posicionamiento', description: 'Fortalecemos tu propuesta de valor, diferenciación y comunicación para que las personas correctas te elijan.', image: '/assets/seed/seed2.webp' },
+    { num: '03', title: 'Crecer', subtitle: 'Atracción', description: 'Desarrollamos estrategias de contenido, marketing y tecnología para aumentar tu visibilidad y generar confianza.', image: '/assets/seed/seed3.webp' },
+    { num: '04', title: 'Cosechar', subtitle: 'Conversión', description: 'Optimizamos tus canales digitales para convertir la atención en oportunidades comerciales reales.', image: '/assets/seed/seed4.webp' },
   ];
 
   const cases = [
@@ -125,7 +125,7 @@ export default function Home() {
       name: 'Physical Care',
       image: '/assets/yieldge/cases/image.webp',
       result: '+120%',
-      resultLabel: 'más pacientes',
+      resultLabel: 'más clientes',
       tag: 'Fisioterapia',
       url: 'https://www.physicalcarefisioterapia.com/',
     },
@@ -402,6 +402,13 @@ export default function Home() {
           letter-spacing: -0.02em;
           line-height: 1.2;
           color: #ffffff;
+          margin-bottom: 12px;
+        }
+
+        .pd-hero-subtitle {
+          font-size: 1rem;
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.5;
           margin-bottom: 20px;
         }
 
@@ -1268,6 +1275,20 @@ export default function Home() {
           height: 28px;
         }
 
+        .pd-process-image {
+          width: 100%;
+          max-width: 200px;
+          margin-bottom: 16px;
+          margin-top: 8px;
+          border-radius: 12px;
+          overflow: hidden;
+        }
+
+        .pd-process-image img {
+          width: 100%;
+          height: auto;
+        }
+
         .pd-process-card h3 {
           font-size: 16px;
           font-weight: 600;
@@ -1786,6 +1807,11 @@ export default function Home() {
             letter-spacing: -0.03em;
           }
 
+          .pd-hero-subtitle {
+            font-size: 1.25rem;
+            max-width: 500px;
+          }
+
           .pd-hero-benefits li {
             font-size: 18px;
           }
@@ -2200,18 +2226,27 @@ export default function Home() {
             <div className="pd-hero-content">
               <p className="pd-hero-tag">PARTNER DIGITAL</p>
               <h1>
-                Convertimos tu potencial en crecimiento real
+                Tu negocio tiene potencial. Hagamos que más personas lo descubran.
               </h1>
+              <p className="pd-hero-subtitle">
+                No necesitás hacer más de todo. Necesitás una estrategia que conecte tu negocio con los clientes correctos.
+              </p>
 
               <ul className="pd-hero-benefits">
                 <li>Estrategia clara para atraer clientes</li>
-                <li>Marca que genera confianza</li>
+                <li>Posicionamiento que genera confianza</li>
                 <li>Presencia digital que convierte</li>
               </ul>
 
               <div className="pd-hero-cta-row">
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-hero">
-                  Agenda una llamada
+                  Hablemos de tu negocio
+                </a>
+                <a href="#metodo" onClick={(e) => handleAnchorClick(e, '#metodo')} className="pd-cta-secondary-hero">
+                  Conocé el Método Semilla
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -2273,18 +2308,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Emotional Connection Section */}
+        {/* Problem Identification Section */}
         <section id="problema" className="pd-problem">
           <div className="pd-problem-content">
-            <h2>Hacés un excelente trabajo. Pero eso no significa que todos lo sepan.</h2>
+            <h2>Tu negocio es bueno en lo que hace. ¿Pero suficientes personas lo saben?</h2>
             <p className="pd-problem-text">
-              Has dedicado años a construir tu experiencia, mejorar tus servicios y ganarte la confianza de tus clientes. Pero mientras estás concentrado en hacer bien tu trabajo, otras empresas están captando la atención de las personas que podrían necesitar lo que ofrecés.
+              Has dedicado años a construir tu experiencia y ganarte la confianza de tus clientes. Pero mientras estás concentrado en hacer bien tu trabajo, otras empresas están captando la atención de las personas que podrían necesitar lo que ofrecés.
             </p>
             <p className="pd-problem-text">
               Quizás publicás contenido, tenés una página web o incluso has invertido en publicidad. Pero seguís preguntándote por qué esas acciones no se convierten en suficientes oportunidades comerciales.
             </p>
             <p className="pd-problem-highlight">
-              El problema no siempre es lo que ofrecés. Muchas veces es la falta de una estrategia que conecte tu valor con los clientes correctos.
+              No se trata de estar en todas partes. Se trata de estar donde tus clientes te buscan, comunicar tu valor y facilitar que te elijan.
             </p>
             <div className="pd-problem-grid">
               {problems.map((problem) => (
@@ -2367,7 +2402,7 @@ export default function Home() {
 
             <div className="pd-cases-link" style={{ marginTop: '32px' }}>
               <Link href="/casos-de-exito">
-                Ver todos los casos de éxito
+                Conocé los resultados
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -2420,17 +2455,18 @@ export default function Home() {
             </div>
 
             <div className="pd-process-grid pd-process-grid-4">
-              {steps.map((step, index) => (
+              {steps.map((step) => (
                 <div key={step.title} className="pd-process-card">
-                  <div className="pd-process-num">{step.num}</div>
-                  <div className="pd-process-icon">
-                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      {index === 0 && <><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 22 4-10 4 10"/></>}
-                      {index === 1 && <><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 12V2"/><path d="M12 22c5.5 0 10-4.5 10-10"/></>}
-                      {index === 2 && <><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></>}
-                      {index === 3 && <><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></>}
-                    </svg>
+                  <div className="pd-process-image">
+                    <Image
+                      src={step.image}
+                      alt={step.title}
+                      width={280}
+                      height={200}
+                      style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
+                    />
                   </div>
+                  <div className="pd-process-num">{step.num}</div>
                   <span className="pd-process-subtitle">{step.subtitle}</span>
                   <h3>{step.title}</h3>
                   <p>{step.description}</p>
@@ -2440,7 +2476,7 @@ export default function Home() {
 
             <div className="pd-method-cta">
               <a href={getWhatsAppUrl(WHATSAPP_MESSAGE_SEMILLA)} target="_blank" rel="noopener noreferrer" className="pd-cta-primary" style={{ width: 'auto', display: 'inline-flex' }}>
-                Descubrí el Método SEMILLA
+                Aplicá el Método SEMILLA
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -2472,19 +2508,19 @@ export default function Home() {
                   </svg>
                   Partner Digital
                 </div>
-                <h2>Soy Anwar Sánchez. Y entiendo que detrás de cada negocio hay mucho más que números.</h2>
+                <h2>Hola, soy Anwar Sánchez.</h2>
                 <div className="pd-founder-text">
-                  <p>Hay años de esfuerzo, decisiones difíciles y una visión que querés convertir en realidad.</p>
-                  <p>Soy ingeniero de software, empresario y Partner Digital, con más de diez años de experiencia en tecnología. Mi trayectoria me ha enseñado a resolver problemas, construir soluciones y pensar estratégicamente.</p>
-                  <p>Pero emprender también me enseñó algo importante: podés tener un excelente servicio y aun así enfrentar dificultades para hacerlo crecer.</p>
-                  <p>Por eso hoy combino tecnología, marketing y estrategia de negocios para ayudar a profesionales y empresas a identificar oportunidades y construir una presencia digital que contribuya a sus objetivos comerciales.</p>
+                  <p>Soy ingeniero de software, emprendedor y apasionado por encontrar formas más inteligentes de hacer crecer negocios.</p>
+                  <p>Mi experiencia en tecnología me enseñó algo importante: tener las mejores herramientas no sirve de mucho si no existe una estrategia detrás.</p>
+                  <p>Por eso combino tecnología, marketing e inteligencia artificial para ayudar a negocios y profesionales a crecer, atraer clientes y generar nuevas oportunidades.</p>
+                  <p>Mi trabajo comienza entendiendo tu negocio, identificando oportunidades y diseñando soluciones que tengan sentido para tus objetivos.</p>
                   <p className="pd-founder-highlight">No quiero ser simplemente otro proveedor. Quiero entender tu visión y trabajar contigo para hacerla avanzar.</p>
                 </div>
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-primary" style={{ width: 'auto', display: 'inline-flex' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
-                  Conocé mi historia
+                  Hablemos de tu negocio
                   <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
@@ -2564,7 +2600,7 @@ export default function Home() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                Hablemos de tu negocio
+                Empecemos a hacer crecer tu negocio
                 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
