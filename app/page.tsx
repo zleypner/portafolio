@@ -324,15 +324,15 @@ export default function Home() {
           transform: scale(0.98);
         }
 
-        /* Hero Section */
+        /* Hero Section - Mobile First */
         .pd-hero {
           position: relative;
-          min-height: 100vh;
+          min-height: auto;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           background: linear-gradient(135deg, #0d2922 0%, #143d33 50%, #0a1f1a 100%);
-          overflow: visible;
-          padding: 80px 20px 32px;
+          overflow: hidden;
+          padding: 72px 20px 40px;
         }
 
         .pd-hero::before {
@@ -345,26 +345,11 @@ export default function Home() {
         }
 
         .pd-hero-bg {
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          overflow: hidden;
+          display: none;
         }
 
         .pd-hero-bg-logo {
-          position: absolute;
-          top: 50%;
-          right: 10%;
-          transform: translateY(-50%);
-          width: 400px;
-          height: 400px;
-          opacity: 0.06;
-        }
-
-        .pd-hero-bg-logo svg {
-          width: 100%;
-          height: 100%;
-          fill: #ffffff;
+          display: none;
         }
 
         .pd-hero-container {
@@ -375,24 +360,47 @@ export default function Home() {
           width: 100%;
           display: flex;
           flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+
+        .pd-hero-image {
+          position: relative;
+          width: 100%;
+          max-width: 320px;
+          display: flex;
           justify-content: center;
           align-items: center;
-          padding-top: 0;
+          background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+          border-radius: 20px;
+          padding: 16px 16px 0;
+          overflow: hidden;
+        }
+
+        .pd-hero-image-wrapper {
+          position: relative;
+          width: 100%;
+          height: 280px;
+        }
+
+        .pd-hero-image-wrapper img {
+          width: 100%;
           height: 100%;
+          object-fit: contain;
+          object-position: bottom center;
         }
 
         .pd-hero-content {
           text-align: center;
-          padding-right: 0;
-          padding-top: 0;
-          max-width: 480px;
+          width: 100%;
+          max-width: 400px;
         }
 
         .pd-hero h1 {
-          font-size: clamp(1.75rem, 6vw, 3.5rem);
+          font-size: 1.75rem;
           font-weight: 700;
           letter-spacing: -0.02em;
-          line-height: 1.15;
+          line-height: 1.2;
           color: #ffffff;
           margin-bottom: 20px;
         }
@@ -400,17 +408,18 @@ export default function Home() {
         .pd-hero-benefits {
           list-style: none;
           padding: 0;
-          margin: 0 0 32px 0;
+          margin: 0 0 28px 0;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 14px;
+          text-align: left;
         }
 
         .pd-hero-benefits li {
           display: flex;
           align-items: center;
           gap: 12px;
-          font-size: 16px;
+          font-size: 15px;
           color: rgba(255, 255, 255, 0.9);
           font-weight: 500;
         }
@@ -420,27 +429,24 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 24px;
-          height: 24px;
+          width: 22px;
+          height: 22px;
           background: rgba(37, 211, 102, 0.2);
           color: #25D366;
           border-radius: 50%;
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 700;
           flex-shrink: 0;
         }
 
         .pd-hero-tag {
           display: inline-block;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.7);
-          margin-bottom: 16px;
-          padding: 6px 12px;
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 4px;
+          color: rgba(255, 255, 255, 0.6);
+          margin-bottom: 12px;
         }
 
         .pd-cta-secondary-hero {
@@ -544,53 +550,6 @@ export default function Home() {
         .pd-cta-secondary svg {
           width: 16px;
           height: 16px;
-        }
-
-        .pd-hero-image {
-          display: flex;
-          position: absolute;
-          bottom: 0;
-          right: -5%;
-          width: 55%;
-          height: 50%;
-          justify-content: flex-end;
-          align-items: flex-end;
-          pointer-events: none;
-          z-index: 1;
-          opacity: 0.35;
-        }
-
-        .pd-hero-image-wrapper {
-          position: relative;
-          width: 100%;
-          max-width: 280px;
-          height: 100%;
-        }
-
-        .pd-hero-image-wrapper img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          object-position: top center;
-        }
-
-        .pd-hero-image-wrapper::before {
-          display: none;
-        }
-
-        .pd-hero-image-gradient {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 80px;
-          background: linear-gradient(to top, #0d2922 0%, transparent 100%);
-          pointer-events: none;
-          z-index: 2;
-        }
-
-        .pd-hero-image-gradient-left {
-          display: none;
         }
 
         /* Logo Carousel */
@@ -1802,6 +1761,7 @@ export default function Home() {
           }
 
           .pd-hero {
+            min-height: 100vh;
             padding: 0 48px;
           }
 
@@ -1831,14 +1791,21 @@ export default function Home() {
           }
 
           .pd-hero-image {
+            position: absolute;
             top: 0;
             bottom: 0;
             right: 8%;
             width: 45%;
+            max-width: none;
             height: auto;
             opacity: 1;
             z-index: 5;
             align-items: flex-start;
+            justify-content: flex-end;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            pointer-events: none;
           }
 
           .pd-hero-image-wrapper {
@@ -2203,7 +2170,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="pd-hero">
           <div className="pd-hero-bg">
-            {/* Background Logo Watermark */}
+            {/* Background Logo Watermark - hidden on mobile */}
             <div className="pd-hero-bg-logo">
               <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <rect x="20" y="20" width="80" height="80" rx="16" opacity="0.6"/>
@@ -2215,6 +2182,21 @@ export default function Home() {
           </div>
 
           <div className="pd-hero-container">
+            {/* Hero Image - First on mobile */}
+            <div className="pd-hero-image">
+              <div className="pd-hero-image-wrapper">
+                <Image
+                  src={IMAGES.founderPortrait}
+                  alt="Anwar Sánchez"
+                  fill
+                  sizes="(max-width: 768px) 280px, 50vw"
+                  style={{ objectFit: 'contain', objectPosition: 'center' }}
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Hero Content - Below image on mobile */}
             <div className="pd-hero-content">
               <p className="pd-hero-tag">PARTNER DIGITAL</p>
               <h1>
@@ -2231,22 +2213,6 @@ export default function Home() {
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="pd-cta-hero">
                   Agenda una llamada
                 </a>
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="pd-hero-image">
-              <div className="pd-hero-image-wrapper" style={{ position: 'relative', minHeight: '400px' }}>
-                <Image
-                  src={IMAGES.founderPortrait}
-                  alt="Anwar Sánchez"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'contain', objectPosition: 'bottom center' }}
-                  priority
-                />
-                <div className="pd-hero-image-gradient" />
-                <div className="pd-hero-image-gradient-left" />
               </div>
             </div>
           </div>
