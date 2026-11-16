@@ -1806,9 +1806,12 @@ export default function Home() {
           }
 
           .pd-hero-container {
-            display: block;
-            padding-top: 100px;
-            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 0;
+            height: 100%;
           }
 
           .pd-hero-content {
