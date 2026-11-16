@@ -1240,6 +1240,7 @@ export default function Home() {
           background: #f9fafb;
           border: 1px solid rgba(229, 231, 235, 0.8);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+          height: 100%;
         }
 
         .pd-process-num {
@@ -1278,15 +1279,20 @@ export default function Home() {
         .pd-process-image {
           width: 100%;
           max-width: 200px;
+          height: 150px;
           margin-bottom: 16px;
           margin-top: 8px;
           border-radius: 12px;
           overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .pd-process-image img {
           width: 100%;
-          height: auto;
+          height: 100%;
+          object-fit: contain;
         }
 
         .pd-process-card h3 {
@@ -1300,6 +1306,7 @@ export default function Home() {
           font-size: 14px;
           color: #6b7280;
           line-height: 1.6;
+          flex-grow: 1;
         }
 
         .pd-process-subtitle {
