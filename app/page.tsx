@@ -2433,26 +2433,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
-            {/* Logos Section */}
-            <div className="pd-logos">
-              <p className="pd-logos-label">Han confiado en mí</p>
-              <div className="pd-logos-scroll">
-                <div className="pd-logos-track">
-                  {LOGOS.map((logo) => (
-                    <div key={logo.name} className="pd-logo-item">
-                      <Image
-                        src={logo.logo}
-                        alt={logo.name}
-                        width={logo.large ? 160 : 100}
-                        height={60}
-                        style={{ objectFit: 'contain' }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
