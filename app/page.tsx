@@ -20,7 +20,6 @@ const LOGOS = [
   { name: 'Gastromedical CR', logo: '/assets/yieldge/logos/drzuniga-logo.webp', large: true },
   { name: 'PHYC', logo: '/assets/yieldge/logos/phyclogo-removedbg.webp', large: false },
   { name: 'HS', logo: '/assets/yieldge/logos/hslogo.webp', large: false },
-  { name: 'Construrack', logo: '/assets/yieldge/logos/construrack.webp', large: false },
   { name: 'Quant Energy', logo: '/assets/yieldge/logos/quant_energy.webp', large: false },
 ];
 
@@ -558,31 +557,35 @@ export default function Home() {
           margin-top: 36px;
           padding-top: 24px;
           border-top: 1px solid rgba(209, 213, 219, 0.4);
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
         .pd-logos-label {
-          font-size: 10px;
+          font-size: 11px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: #9ca3af;
           text-align: center;
-          margin-bottom: 16px;
+          margin-bottom: 20px;
         }
 
         .pd-logos-scroll {
           position: relative;
           overflow: hidden;
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
 
         .pd-logos-track {
           display: flex;
-          width: max-content;
-          animation: pd-scroll-logos 25s linear infinite;
-        }
-
-        @keyframes pd-scroll-logos {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          align-items: center;
+          justify-content: center;
+          gap: 32px;
+          flex-wrap: wrap;
         }
 
         .pd-logo-item {
@@ -590,12 +593,12 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 80px;
-          padding: 0 28px;
+          height: 70px;
+          padding: 0 16px;
         }
 
         .pd-logo-item img {
-          max-height: 56px;
+          max-height: 60px;
           width: auto;
           object-fit: contain;
         }
@@ -2429,24 +2432,24 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
+            </div>
 
-              {/* Logos Section */}
-              <div className="pd-logos">
-                <p className="pd-logos-label">Han confiado en mí</p>
-                <div className="pd-logos-scroll">
-                  <div className="pd-logos-track">
-                    {[...LOGOS, ...LOGOS].map((logo, index) => (
-                      <div key={`${logo.name}-${index}`} className="pd-logo-item">
-                        <Image
-                          src={logo.logo}
-                          alt={logo.name}
-                          width={logo.large ? 140 : 80}
-                          height={56}
-                          style={{ objectFit: 'contain' }}
-                        />
-                      </div>
-                    ))}
-                  </div>
+            {/* Logos Section */}
+            <div className="pd-logos">
+              <p className="pd-logos-label">Han confiado en mí</p>
+              <div className="pd-logos-scroll">
+                <div className="pd-logos-track">
+                  {LOGOS.map((logo) => (
+                    <div key={logo.name} className="pd-logo-item">
+                      <Image
+                        src={logo.logo}
+                        alt={logo.name}
+                        width={logo.large ? 160 : 100}
+                        height={60}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
