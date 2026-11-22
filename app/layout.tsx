@@ -833,10 +833,10 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager - Head */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
