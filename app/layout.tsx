@@ -20,25 +20,46 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://anwarsanchez.com'),
   title: {
-    default: 'Anwar Sánchez | Partner Digital para Negocios en Costa Rica',
-    template: '%s | Anwar Sánchez',
+    default: 'Anwar Sánchez | Experto en Marca Personal y Estrategia Digital | Costa Rica y Latinoamérica',
+    template: '%s | Anwar Sánchez - Marca Personal',
   },
-  description: 'Ayudo a negocios y profesionales a crecer con estrategia digital, marketing, tecnología e inteligencia artificial. Conocé el Método SEMILLA.',
+  description: 'Especialista en marca personal y estrategia digital para profesionales y empresas en Costa Rica y Latinoamérica. Creador del Método SEMILLA. Ayudo a construir tu marca personal, atraer clientes ideales y posicionarte como referente en tu industria.',
 
   keywords: [
-    // Primary keywords - Partner Digital
+    // Marca Personal - Primary keywords
+    'marca personal',
+    'marca personal Costa Rica',
+    'marca personal Latinoamérica',
+    'personal branding',
+    'personal branding Costa Rica',
+    'construir marca personal',
+    'estrategia de marca personal',
+    'consultor de marca personal',
+    'experto en marca personal',
+    'cómo crear marca personal',
+    // Partner Digital
     'Partner Digital',
     'Partner Digital Costa Rica',
+    'Partner Digital Latinoamérica',
     'consultoría de crecimiento digital',
     'estrategia digital para empresas',
     'marketing digital para profesionales',
     // Posicionamiento y marca
     'posicionamiento de marca',
+    'posicionamiento digital',
+    'posicionamiento profesional',
+    'posicionamiento en Google',
     'captación de clientes',
     'estrategia de contenido',
     'automatización empresarial',
     'tecnología para negocios',
+    // Latam keywords
     'crecimiento empresarial Costa Rica',
+    'marketing digital México',
+    'marca personal Colombia',
+    'consultoría digital Panamá',
+    'estrategia digital Guatemala',
+    'presencia digital Latinoamérica',
     // Método SEMILLA
     'Método SEMILLA',
     'metodología de crecimiento',
@@ -51,11 +72,14 @@ export const metadata: Metadata = {
     'conversión digital',
     // SEO & Marketing
     'SEO Costa Rica',
+    'GEO SEO',
+    'AEO optimización',
     'marketing digital Costa Rica',
     'estrategia de marketing',
     'atracción de clientes',
     // Brand
     'Anwar Sánchez',
+    'Anwar Sánchez marca personal',
     'Anwar Sánchez Partner Digital',
     'Anwar Sánchez Costa Rica',
     // Software & Tech
@@ -63,6 +87,11 @@ export const metadata: Metadata = {
     'software a la medida',
     'automatización de procesos',
     'inteligencia artificial negocios',
+    // Profesionales específicos
+    'marca personal para médicos',
+    'marca personal para abogados',
+    'marca personal para consultores',
+    'marca personal para emprendedores',
   ],
 
   authors: [{ name: 'Anwar Sánchez', url: 'https://anwarsanchez.com' }],
@@ -74,15 +103,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_CR',
     url: 'https://anwarsanchez.com',
-    siteName: 'Anwar Sánchez - Partner Digital',
-    title: 'Anwar Sánchez | Partner Digital para Negocios en Costa Rica',
-    description: 'Ayudo a negocios y profesionales a crecer con estrategia digital, marketing, tecnología e inteligencia artificial. Conocé el Método SEMILLA.',
+    siteName: 'Anwar Sánchez - Experto en Marca Personal',
+    title: 'Anwar Sánchez | Experto en Marca Personal y Estrategia Digital | Costa Rica y Latinoamérica',
+    description: 'Especialista en marca personal y estrategia digital para profesionales y empresas. Creador del Método SEMILLA. Construye tu marca personal y posiciónate como referente en tu industria.',
     images: [
       {
         url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         width: 1200,
         height: 630,
-        alt: 'Anwar Sánchez - Partner Digital en Costa Rica',
+        alt: 'Anwar Sánchez - Experto en Marca Personal en Costa Rica y Latinoamérica',
         type: 'image/webp',
       },
     ],
@@ -93,11 +122,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@anwarsanchez',
     creator: '@anwarsanchez',
-    title: 'Anwar Sánchez | Partner Digital para Negocios',
-    description: 'Ayudo a negocios y profesionales a crecer con estrategia digital, marketing, tecnología e inteligencia artificial. Conocé el Método SEMILLA.',
+    title: 'Anwar Sánchez | Experto en Marca Personal',
+    description: 'Especialista en marca personal y estrategia digital para profesionales y empresas en Costa Rica y Latinoamérica. Creador del Método SEMILLA.',
     images: {
       url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
-      alt: 'Anwar Sánchez - Partner Digital Costa Rica',
+      alt: 'Anwar Sánchez - Experto en Marca Personal Costa Rica y Latinoamérica',
     },
   },
 
@@ -153,27 +182,35 @@ export const metadata: Metadata = {
 
   // Additional meta tags for GEO SEO and AEO
   other: {
-    // GEO tags for local SEO
+    // GEO tags for local SEO - Costa Rica primary
     'geo.region': 'CR-SJ',
     'geo.placename': 'San José, Costa Rica',
     'geo.position': '9.9281;-84.0907',
     'ICBM': '9.9281, -84.0907',
 
-    // Content tags
+    // Content tags - expanded for Latam
     'rating': 'general',
     'distribution': 'global',
     'revisit-after': '7 days',
     'language': 'Spanish',
-    'content-language': 'es-CR',
+    'content-language': 'es-419', // Spanish Latin America
 
-    // Open Graph additional
+    // Open Graph additional - Latam locales
     'og:locale:alternate': 'es_ES',
     'og:country-name': 'Costa Rica',
+
+    // Target audience for AEO/GEO
+    'target-audience': 'Profesionales, empresarios, médicos, abogados, consultores, coaches en Costa Rica y Latinoamérica',
+    'coverage': 'Costa Rica, México, Colombia, Panamá, Guatemala, El Salvador, Honduras, Nicaragua, Chile, Argentina, Perú, Ecuador',
+
+    // AI and Search Engine hints for GEO/AEO
+    'ai-content-declaration': 'Human-created content optimized for search engines and AI assistants',
+    'expertise': 'Marca Personal, Personal Branding, Estrategia Digital, SEO, GEO, AEO',
 
     // Apple
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Anwar Sánchez',
+    'apple-mobile-web-app-title': 'Anwar Sánchez - Marca Personal',
 
     // Microsoft
     'msapplication-TileColor': '#1F5CFF',
@@ -189,6 +226,17 @@ export const metadata: Metadata = {
     'business:contact_data:region': 'San José',
     'business:contact_data:postal_code': '10101',
     'business:contact_data:country_name': 'Costa Rica',
+
+    // Professional expertise indicators
+    'author': 'Anwar Sánchez',
+    'designer': 'Anwar Sánchez',
+    'owner': 'Anwar Sánchez',
+    'copyright': `${new Date().getFullYear()} Anwar Sánchez`,
+
+    // Topic and category for better indexing
+    'topic': 'Marca Personal, Estrategia Digital, Marketing, Consultoría',
+    'subject': 'Consultoría de Marca Personal y Estrategia Digital para profesionales en Latinoamérica',
+    'abstract': 'Anwar Sánchez es un experto en marca personal que ayuda a profesionales en Costa Rica y Latinoamérica a construir su marca, posicionarse como referentes y atraer clientes ideales con el Método SEMILLA.',
 
     // Verification (placeholders - replace with actual codes)
     // 'google-site-verification': 'your-google-verification-code',
@@ -208,8 +256,8 @@ const structuredData = {
       '@type': 'WebSite',
       '@id': 'https://anwarsanchez.com/#website',
       url: 'https://anwarsanchez.com',
-      name: 'Anwar Sánchez',
-      description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para hacer crecer tu negocio con el Método SEMILLA.',
+      name: 'Anwar Sánchez - Experto en Marca Personal',
+      description: 'Especialista en marca personal y estrategia digital para profesionales y empresas en Costa Rica y Latinoamérica. Creador del Método SEMILLA para construir tu marca personal y posicionarte como referente.',
       publisher: { '@id': 'https://anwarsanchez.com/#person' },
       inLanguage: 'es',
       potentialAction: {
@@ -227,8 +275,8 @@ const structuredData = {
       '@type': 'WebPage',
       '@id': 'https://anwarsanchez.com/#webpage',
       url: 'https://anwarsanchez.com',
-      name: 'Anwar Sánchez | Partner Digital y Estrategia de Crecimiento',
-      description: 'Ayudo a profesionales y empresas a atraer mejores clientes, fortalecer su marca y convertir su presencia digital en oportunidades de negocio con el Método SEMILLA.',
+      name: 'Anwar Sánchez | Experto en Marca Personal y Estrategia Digital | Costa Rica y Latinoamérica',
+      description: 'Especialista en marca personal que ayuda a profesionales y empresas a construir su marca, atraer clientes ideales y posicionarse como referentes en su industria con el Método SEMILLA.',
       inLanguage: 'es',
       isPartOf: { '@id': 'https://anwarsanchez.com/#website' },
       about: { '@id': 'https://anwarsanchez.com/#service' },
@@ -260,7 +308,7 @@ const structuredData = {
       ],
     },
 
-    // Person Schema - Enhanced
+    // Person Schema - Enhanced for Personal Branding
     {
       '@type': 'Person',
       '@id': 'https://anwarsanchez.com/#person',
@@ -273,59 +321,63 @@ const structuredData = {
         url: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         width: 800,
         height: 800,
-        caption: 'Anwar Sánchez - Partner Digital y Estratega de Crecimiento',
+        caption: 'Anwar Sánchez - Experto en Marca Personal y Estrategia Digital',
       },
-      description: 'Ingeniero de software, empresario y Partner Digital con más de 10 años de experiencia en tecnología. Creador del Método SEMILLA. Ayudo a profesionales y empresas a atraer mejores clientes, fortalecer su marca y convertir su presencia digital en oportunidades de negocio.',
+      description: 'Experto en marca personal y estrategia digital con más de 10 años de experiencia. Creador del Método SEMILLA. Ayudo a profesionales y empresas en Costa Rica y Latinoamérica a construir su marca personal, atraer clientes ideales y posicionarse como referentes en su industria.',
       sameAs: [
         'https://www.linkedin.com/in/anwarsanchez',
         'https://github.com/anwarsanchez',
         'https://twitter.com/anwarsanchez',
         'https://wa.me/50670724236',
       ],
-      jobTitle: 'Partner Digital & Estratega de Crecimiento',
+      jobTitle: 'Experto en Marca Personal y Estrategia Digital',
       alumniOf: {
         '@type': 'Organization',
         name: 'Universidad de Costa Rica',
       },
       worksFor: {
         '@type': 'Organization',
-        name: 'Anwar Sánchez - Partner Digital',
+        name: 'Anwar Sánchez - Marca Personal y Estrategia Digital',
         url: 'https://anwarsanchez.com',
       },
       knowsAbout: [
+        'Marca Personal',
+        'Personal Branding',
         'Estrategia Digital',
-        'Desarrollo de Software',
-        'Marketing Digital',
         'Posicionamiento de Marca',
+        'Marketing Digital',
         'Método SEMILLA',
+        'Desarrollo de Software',
         'Automatización Empresarial',
         'Inteligencia Artificial',
+        'SEO y GEO',
+        'AEO (Answer Engine Optimization)',
+        'Captación de Clientes',
+        'Optimización de Conversiones',
         'Next.js',
         'React',
         'TypeScript',
-        'Captación de Clientes',
-        'Optimización de Conversiones',
       ],
       knowsLanguage: ['es', 'en'],
       nationality: {
         '@type': 'Country',
         name: 'Costa Rica',
       },
-      award: '+10 años de experiencia en tecnología',
+      award: '+10 años de experiencia en tecnología y marca personal',
     },
 
     // ProfessionalService / LocalBusiness Schema
     {
       '@type': 'ProfessionalService',
       '@id': 'https://anwarsanchez.com/#business',
-      name: 'Anwar Sánchez - Partner Digital',
+      name: 'Anwar Sánchez - Experto en Marca Personal',
       alternateName: 'Método SEMILLA',
       image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
       logo: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
       url: 'https://anwarsanchez.com',
       telephone: '+50670724236',
       email: 'hola@anwarsanchez.com',
-      description: 'Partner Digital en Costa Rica. Estrategia, marketing y tecnología para fortalecer tu marca, atraer mejores clientes y hacer crecer tu negocio con el Método SEMILLA.',
+      description: 'Experto en marca personal y estrategia digital en Costa Rica y Latinoamérica. Ayudo a profesionales y empresas a construir su marca personal, posicionarse como referentes y atraer clientes ideales con el Método SEMILLA.',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'San José',
@@ -340,11 +392,25 @@ const structuredData = {
         longitude: -84.0907,
       },
       areaServed: [
+        // Costa Rica
         { '@type': 'Country', name: 'Costa Rica' },
         { '@type': 'City', name: 'San José' },
         { '@type': 'City', name: 'Heredia' },
         { '@type': 'City', name: 'Alajuela' },
         { '@type': 'City', name: 'Cartago' },
+        // Latinoamérica
+        { '@type': 'Country', name: 'México' },
+        { '@type': 'Country', name: 'Colombia' },
+        { '@type': 'Country', name: 'Panamá' },
+        { '@type': 'Country', name: 'Guatemala' },
+        { '@type': 'Country', name: 'El Salvador' },
+        { '@type': 'Country', name: 'Honduras' },
+        { '@type': 'Country', name: 'Nicaragua' },
+        { '@type': 'Country', name: 'República Dominicana' },
+        { '@type': 'Country', name: 'Ecuador' },
+        { '@type': 'Country', name: 'Perú' },
+        { '@type': 'Country', name: 'Chile' },
+        { '@type': 'Country', name: 'Argentina' },
         {
           '@type': 'GeoCircle',
           geoMidpoint: {
@@ -352,7 +418,7 @@ const structuredData = {
             latitude: 9.9281,
             longitude: -84.0907,
           },
-          geoRadius: '100 km',
+          geoRadius: '5000 km',
         },
       ],
       priceRange: '$$',
@@ -411,19 +477,25 @@ const structuredData = {
     {
       '@type': 'Service',
       '@id': 'https://anwarsanchez.com/#service',
-      name: 'Partner Digital - Método SEMILLA',
-      alternateName: 'Estrategia de Crecimiento Digital',
-      description: 'Servicio integral de estrategia digital para profesionales y empresas. Incluye diagnóstico de negocio, posicionamiento de marca, estrategias de contenido y marketing, optimización de conversión y tecnología aplicada al crecimiento.',
+      name: 'Consultoría de Marca Personal - Método SEMILLA',
+      alternateName: 'Estrategia de Marca Personal y Crecimiento Digital',
+      description: 'Servicio integral de marca personal y estrategia digital para profesionales y empresas en Costa Rica y Latinoamérica. Incluye construcción de marca personal, posicionamiento como referente, estrategias de contenido, marketing digital y tecnología aplicada al crecimiento.',
       provider: { '@id': 'https://anwarsanchez.com/#business' },
-      serviceType: 'Consultoría de Crecimiento Digital',
-      serviceOutput: 'Estrategia personalizada de crecimiento',
+      serviceType: 'Consultoría de Marca Personal y Estrategia Digital',
+      serviceOutput: 'Marca personal posicionada y estrategia de crecimiento personalizada',
       areaServed: [
         { '@type': 'Country', name: 'Costa Rica' },
-        { '@type': 'City', name: 'San José' },
+        { '@type': 'Country', name: 'México' },
+        { '@type': 'Country', name: 'Colombia' },
+        { '@type': 'Country', name: 'Panamá' },
+        { '@type': 'Country', name: 'Guatemala' },
+        { '@type': 'Country', name: 'Chile' },
+        { '@type': 'Country', name: 'Argentina' },
+        { '@type': 'Country', name: 'Perú' },
       ],
       audience: {
         '@type': 'Audience',
-        audienceType: 'Profesionales independientes, empresas de servicios, negocios en crecimiento',
+        audienceType: 'Profesionales independientes, médicos, abogados, consultores, coaches, empresas de servicios, emprendedores en crecimiento',
       },
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -435,30 +507,38 @@ const structuredData = {
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Servicios del Método SEMILLA',
+        name: 'Servicios de Marca Personal - Método SEMILLA',
         itemListElement: [
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Estrategia y Posicionamiento',
-              description: 'Definimos una dirección clara para fortalecer tu marca, diferenciarte de la competencia y conectar con los clientes correctos.',
+              name: 'Construcción de Marca Personal',
+              description: 'Definimos tu propuesta de valor única, identidad profesional y estrategia de posicionamiento para convertirte en referente de tu industria.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Contenido y Marketing',
-              description: 'Desarrollamos estrategias de comunicación y atracción para generar confianza y nuevas oportunidades comerciales.',
+              name: 'Posicionamiento Digital',
+              description: 'Optimizamos tu presencia en Google, ChatGPT y otras plataformas de IA para que te encuentren cuando buscan expertos en tu área.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Conversión y Crecimiento',
-              description: 'Mejoramos los canales y procesos que conectan a tus clientes potenciales con tu negocio.',
+              name: 'Contenido y Marketing Personal',
+              description: 'Desarrollamos estrategias de contenido y comunicación para generar confianza, autoridad y atraer clientes ideales.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Conversión y Captación de Clientes',
+              description: 'Mejoramos los canales y procesos que conectan a tus clientes potenciales con tu negocio y los convierten en clientes.',
             },
           },
           {
@@ -466,7 +546,7 @@ const structuredData = {
             itemOffered: {
               '@type': 'Service',
               name: 'Tecnología y Automatización',
-              description: 'Implementamos soluciones digitales que simplifican procesos, ahorran tiempo y mejoran la eficiencia.',
+              description: 'Implementamos soluciones digitales que simplifican procesos, ahorran tiempo y escalan tu marca personal.',
             },
           },
         ],
@@ -489,17 +569,33 @@ const structuredData = {
       },
     },
 
-    // FAQPage Schema for AEO
+    // FAQPage Schema for AEO - Expanded for Personal Branding
     {
       '@type': 'FAQPage',
       '@id': 'https://anwarsanchez.com/#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: '¿Qué es un Partner Digital?',
+          name: '¿Qué es marca personal y por qué es importante?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Un Partner Digital es más que un proveedor de servicios. Es un socio estratégico que entiende tu negocio, identifica oportunidades de crecimiento y conecta estrategia, marketing y tecnología para que cada acción tenga un propósito claro.',
+            text: 'La marca personal es la forma en que te perciben profesionalmente. Es la combinación de tu experiencia, valores, comunicación y presencia digital que te diferencia de otros profesionales. Es importante porque te ayuda a atraer clientes ideales, cobrar lo que vales y posicionarte como referente en tu industria.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cómo construir una marca personal efectiva?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Para construir una marca personal efectiva necesitas: 1) Definir tu propuesta de valor única, 2) Identificar tu audiencia ideal, 3) Crear contenido de valor consistente, 4) Optimizar tu presencia digital para que te encuentren en Google y IA, 5) Generar confianza con testimonios y casos de éxito. El Método SEMILLA te guía en cada etapa de este proceso.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Quién es Anwar Sánchez?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Anwar Sánchez es un experto en marca personal y estrategia digital con más de 10 años de experiencia. Creador del Método SEMILLA, ayuda a profesionales y empresas en Costa Rica y Latinoamérica a construir su marca personal, posicionarse como referentes y atraer clientes ideales a través de estrategia, marketing y tecnología.',
           },
         },
         {
@@ -507,31 +603,31 @@ const structuredData = {
           name: '¿Qué es el Método SEMILLA?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Es una metodología de cuatro etapas que desarrollé para ayudar a profesionales y empresas a construir las bases de un crecimiento sostenible: Estrategia, Posicionamiento, Atracción y Conversión.',
+            text: 'El Método SEMILLA es una metodología de cuatro etapas para construir una marca personal sólida: Sembrar (Estrategia), Cultivar (Posicionamiento), Crecer (Atracción) y Cosechar (Conversión). Fue desarrollado por Anwar Sánchez para ayudar a profesionales a construir las bases de un crecimiento sostenible.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Para qué tipo de negocios trabaja Anwar Sánchez?',
+          name: '¿Cuánto cuesta un consultor de marca personal en Costa Rica?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trabajo con profesionales independientes, clínicas, empresas de servicios y negocios que quieren atraer mejores clientes, fortalecer su posicionamiento y convertir su presencia digital en oportunidades reales de negocio.',
+            text: 'Los precios de consultoría de marca personal en Costa Rica varían según el alcance del proyecto. Una consultoría estratégica con Anwar Sánchez incluye diagnóstico, estrategia personalizada, posicionamiento digital y acompañamiento en la implementación. Contacta directamente para recibir una propuesta adaptada a tus necesidades.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Cómo es el proceso de trabajo?',
+          name: '¿Qué es GEO y AEO en marketing digital?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Comenzamos con una conversación para entender tu negocio, tus objetivos y tus desafíos. A partir de ahí, definimos una estrategia personalizada y trabajamos juntos en su implementación.',
+            text: 'GEO (Generative Engine Optimization) es la optimización para motores de IA como ChatGPT. AEO (Answer Engine Optimization) es la optimización para aparecer en respuestas directas de buscadores. Ambas son estrategias clave para que tu marca personal sea visible donde tus clientes buscan información.',
           },
         },
         {
           '@type': 'Question',
-          name: '¿Garantiza resultados específicos?',
+          name: '¿Para qué tipo de profesionales trabaja Anwar Sánchez?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No prometo resultados garantizados porque cada negocio es diferente. Lo que sí garantizo es un trabajo estratégico, profesional y orientado a generar valor real para tu negocio.',
+            text: 'Anwar Sánchez trabaja con profesionales independientes (médicos, abogados, consultores, coaches), clínicas, empresas de servicios y emprendedores en Costa Rica y Latinoamérica que quieren construir su marca personal, atraer mejores clientes y posicionarse como referentes en su industria.',
           },
         },
         {
@@ -539,52 +635,69 @@ const structuredData = {
           name: '¿Por qué trabajar con Anwar Sánchez en lugar de una agencia?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Conmigo trabajás directo. Sin vendedores, sin intermediarios. Eso significa mejor comunicación, mayor compromiso con tu proyecto y una visión integrada de estrategia, marketing y tecnología.',
+            text: 'Con Anwar Sánchez trabajás directo con un experto, sin vendedores ni intermediarios. Esto significa mejor comunicación, mayor compromiso con tu proyecto y una visión integrada de estrategia, marca personal, marketing y tecnología enfocada en resultados reales.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cómo posicionarse en Google como profesional?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Para posicionarte en Google como profesional necesitas: un sitio web optimizado para SEO, contenido de valor sobre tu especialidad, schema markup estructurado, presencia en directorios relevantes y una estrategia de backlinks. El Método SEMILLA incluye todas estas estrategias para maximizar tu visibilidad.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Trabaja con clientes fuera de Costa Rica?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sí, Anwar Sánchez trabaja con profesionales y empresas en toda Latinoamérica, incluyendo México, Colombia, Panamá, Guatemala, Chile, Argentina, Perú y otros países. Las sesiones de consultoría se realizan de forma remota, facilitando el trabajo con clientes internacionales.',
           },
         },
       ],
     },
 
-    // HowTo Schema for Featured Snippets - Método SEMILLA
+    // HowTo Schema for Featured Snippets - Método SEMILLA for Personal Branding
     {
       '@type': 'HowTo',
       '@id': 'https://anwarsanchez.com/#howto',
-      name: 'Cómo hacer crecer tu negocio con el Método SEMILLA',
-      description: 'Metodología de 4 etapas para construir las bases de un crecimiento digital sostenible.',
+      name: 'Cómo construir tu marca personal con el Método SEMILLA',
+      description: 'Metodología de 4 etapas para construir una marca personal sólida y posicionarte como referente en tu industria.',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Sembrar - Estrategia',
-          text: 'Analizamos tu negocio y definimos una estrategia clara para conectar tu valor con los clientes correctos.',
+          name: 'Sembrar - Estrategia de Marca Personal',
+          text: 'Definimos tu propuesta de valor única, audiencia ideal y estrategia para posicionarte como experto en tu área.',
           url: 'https://anwarsanchez.com/#metodo',
           image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Cultivar - Posicionamiento',
-          text: 'Fortalecemos tu propuesta de valor, diferenciación y comunicación para que las personas correctas te elijan.',
+          name: 'Cultivar - Posicionamiento y Diferenciación',
+          text: 'Fortalecemos tu identidad profesional, comunicación y presencia digital para que las personas correctas te elijan sobre la competencia.',
           image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Crecer - Atracción',
-          text: 'Desarrollamos estrategias de contenido, marketing y tecnología para aumentar tu visibilidad y generar confianza.',
+          name: 'Crecer - Visibilidad y Atracción',
+          text: 'Desarrollamos estrategias de contenido, SEO, GEO y marketing para aumentar tu visibilidad en Google, ChatGPT y redes profesionales.',
           image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Cosechar - Conversión',
-          text: 'Optimizamos tus canales digitales para convertir la atención en oportunidades comerciales reales.',
+          name: 'Cosechar - Conversión de Clientes',
+          text: 'Optimizamos tus canales digitales para convertir seguidores y visitantes en clientes que valoren tu expertise.',
           image: 'https://anwarsanchez.com/assets/yieldge/anwar/anwar-founder.webp',
         },
       ],
       tool: [
         { '@type': 'HowToTool', name: 'WhatsApp' },
-        { '@type': 'HowToTool', name: 'Consulta estratégica' },
+        { '@type': 'HowToTool', name: 'Consulta estratégica de marca personal' },
+        { '@type': 'HowToTool', name: 'Auditoría de presencia digital' },
       ],
     },
 
@@ -692,7 +805,7 @@ const structuredData = {
   ],
 };
 
-const GA_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
+const GTM_ID = 'GTM-T4KQQCKV';
 
 export default function RootLayout({
   children,
@@ -720,31 +833,31 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics */}
-        {GA_ID?.startsWith('G-') && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script
-              id="gtag-init"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `,
+          }}
+        />
       </head>
       <body className={`${playfairDisplay.variable} ${dmSans.variable} ${dmSans.className}`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         {children}
       </body>
     </html>

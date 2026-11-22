@@ -36,6 +36,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [heroLoaded, setHeroLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,16 +117,16 @@ export default function Home() {
     {
       name: 'Gastromedical',
       image: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
-      result: '+180%',
-      resultLabel: 'más citas',
+      result: '77%',
+      resultLabel: 'desde Google',
       tag: 'Salud',
       url: 'https://gastromedicalcr.com/',
     },
     {
       name: 'Physical Care',
       image: '/assets/yieldge/cases/image.webp',
-      result: '+120%',
-      resultLabel: 'más clientes',
+      result: '65%',
+      resultLabel: 'desde Google',
       tag: 'Fisioterapia',
       url: 'https://www.physicalcarefisioterapia.com/',
     },
@@ -149,6 +150,16 @@ export default function Home() {
           color: #1d1d1f;
           min-height: 100vh;
           font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* Hero Loading State */
+        .pd-hero-loading .pd-hero-container {
+          opacity: 0;
+        }
+
+        .pd-hero-loaded .pd-hero-container {
+          opacity: 1;
+          transition: opacity 0.4s ease-out;
         }
 
         /* Navbar */
@@ -2107,6 +2118,178 @@ export default function Home() {
             font-size: 2.5rem;
           }
         }
+
+        /* Featured Case Study Section - Gastromedical */
+        .pd-featured-case {
+          padding: 60px 20px;
+          background: #ffffff;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .pd-featured-case-container {
+          max-width: 980px;
+          margin: 0 auto;
+        }
+
+        .pd-featured-case-header {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        .pd-featured-case-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #1F5CFF;
+          margin-bottom: 16px;
+        }
+
+        .pd-featured-case-title {
+          font-size: clamp(1.5rem, 4vw, 2.25rem);
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          color: #111827;
+          margin-bottom: 12px;
+          line-height: 1.2;
+        }
+
+        .pd-featured-case-subtitle {
+          font-size: 16px;
+          color: #6b7280;
+          line-height: 1.6;
+          max-width: 640px;
+          margin: 0 auto;
+        }
+
+        .pd-featured-metrics {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-bottom: 24px;
+        }
+
+        @media (min-width: 640px) {
+          .pd-featured-metrics {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        .pd-featured-metric {
+          padding: 28px 20px;
+          background: #f9fafb;
+          border-radius: 16px;
+          text-align: center;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+        }
+
+        .pd-featured-metric:hover {
+          border-color: rgba(31, 92, 255, 0.2);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .pd-featured-metric-value {
+          font-size: clamp(2.5rem, 6vw, 3.5rem);
+          font-weight: 700;
+          background: linear-gradient(135deg, #1F5CFF 0%, #3b82f6 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          line-height: 1;
+          margin-bottom: 8px;
+        }
+
+        .pd-featured-metric-label {
+          font-size: 14px;
+          color: #6b7280;
+          line-height: 1.4;
+        }
+
+        .pd-featured-note {
+          text-align: center;
+          font-size: 13px;
+          color: #9ca3af;
+          margin-bottom: 32px;
+          font-style: italic;
+        }
+
+        .pd-featured-cta {
+          display: flex;
+          justify-content: center;
+        }
+
+        .pd-featured-cta-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 14px 28px;
+          background: #111827;
+          color: white;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        }
+
+        .pd-featured-cta-link:hover {
+          background: #1f2937;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .pd-featured-cta-link svg {
+          width: 16px;
+          height: 16px;
+        }
+
+        .pd-featured-case-header-link {
+          display: block;
+          text-decoration: none;
+          color: inherit;
+          transition: opacity 0.2s ease;
+        }
+
+        .pd-featured-case-header-link:hover {
+          opacity: 0.85;
+        }
+
+        .pd-featured-case-header-link:hover .pd-featured-case-title {
+          color: #1F5CFF;
+        }
+
+        .pd-featured-metrics-link {
+          display: block;
+          text-decoration: none;
+          color: inherit;
+          cursor: pointer;
+        }
+
+        .pd-featured-metrics-link:hover .pd-featured-metric {
+          border-color: rgba(31, 92, 255, 0.3);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+          transform: translateY(-2px);
+        }
+
+        @media (min-width: 768px) {
+          .pd-featured-case {
+            padding: 80px 48px;
+          }
+
+          .pd-featured-metric {
+            padding: 36px 24px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .pd-featured-case {
+            padding: 100px 64px;
+          }
+        }
       `}</style>
 
       <div className="pd-page">
@@ -2201,7 +2384,7 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pd-hero">
+        <section className={`pd-hero ${heroLoaded ? 'pd-hero-loaded' : 'pd-hero-loading'}`}>
           <div className="pd-hero-bg">
             {/* Background Logo Watermark - hidden on mobile */}
             <div className="pd-hero-bg-logo">
@@ -2225,6 +2408,7 @@ export default function Home() {
                   sizes="(max-width: 768px) 280px, 50vw"
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
                   priority
+                  onLoad={() => setHeroLoaded(true)}
                 />
               </div>
             </div>
@@ -2256,6 +2440,49 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Case Study - Gastromedical CR */}
+        <section className="pd-featured-case">
+          <div className="pd-featured-case-container">
+            <Link href="/casos-de-exito/gastromedical" className="pd-featured-case-header-link">
+              <div className="pd-featured-case-header">
+                <span className="pd-featured-case-tag">Caso de Éxito - Gastromedical CR</span>
+                <h2 className="pd-featured-case-title">Resultados reales. Sin depender de anuncios.</h2>
+                <p className="pd-featured-case-subtitle">
+                  Posicionamiento en Google y ChatGPT que convierte búsquedas en oportunidades de negocio.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/casos-de-exito/gastromedical" className="pd-featured-metrics-link">
+              <div className="pd-featured-metrics">
+                <div className="pd-featured-metric">
+                  <div className="pd-featured-metric-value">77%</div>
+                  <p className="pd-featured-metric-label">Contactos atribuidos a Google orgánico</p>
+                </div>
+                <div className="pd-featured-metric">
+                  <div className="pd-featured-metric-value">~17%</div>
+                  <p className="pd-featured-metric-label">Contactos atribuidos a ChatGPT</p>
+                </div>
+                <div className="pd-featured-metric">
+                  <div className="pd-featured-metric-value">62,5%</div>
+                  <p className="pd-featured-metric-label">Interacción con WhatsApp desde ChatGPT</p>
+                </div>
+              </div>
+            </Link>
+
+            <p className="pd-featured-note">Resultados de 90 días - Sin publicidad pagada</p>
+
+            <div className="pd-featured-cta">
+              <Link href="/casos-de-exito/gastromedical" className="pd-featured-cta-link">
+                Ver caso de éxito
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
             </div>
           </div>
         </section>

@@ -5,33 +5,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString();
 
   return [
-    // Homepage - Highest priority
+    // Homepage - Highest priority (Marca Personal + Partner Digital)
     {
       url: baseUrl,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1,
     },
-    // Cases / Portfolio - High priority for SEO
+    // Casos de Éxito - High priority for social proof
     {
       url: `${baseUrl}/casos-de-exito`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    // Services pages
+    // Caso individual - Gastromedical
+    {
+      url: `${baseUrl}/casos-de-exito/gastromedical`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    // Services - Crecimiento Digital
     {
       url: `${baseUrl}/crecimiento-digital`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    // About / Resume
-    {
-      url: `${baseUrl}/resume`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
     },
     // Legal pages - Lower priority
     {

@@ -13,11 +13,12 @@ const caseStudies = [
     industry: 'Salud · Clínica especializada',
     image: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
     projectUrl: 'https://gastromedicalcr.com/',
-    challenge: 'Gastromedical tenía una página web que no reflejaba la calidad de su servicio. Pacientes potenciales no encontraban la clínica en Google y las consultas llegaban principalmente por recomendación directa.',
-    solution: 'Diseñamos un sitio web profesional optimizado para SEO local y móvil. Implementamos formularios de contacto directos a WhatsApp y un sistema de posicionamiento orgánico enfocado en búsquedas de gastroenterología en Costa Rica.',
+    caseStudyUrl: '/casos-de-exito/gastromedical',
+    challenge: 'Gastromedical CR necesitaba fortalecer su presencia digital para facilitar que más personas encontraran sus servicios de gastroenterología.',
+    solution: 'Implementamos desarrollo web, SEO orgánico, AEO y GEO para visibilidad en Google y ChatGPT, contenido especializado y optimización de conversiones.',
     quote: 'Desde que lanzamos el nuevo sitio, las consultas desde Google aumentaron significativamente. Ahora tengo pacientes que me dicen que me encontraron buscando gastroenterólogo en su zona.',
-    stat: '+180%',
-    statLabel: 'Más consultas desde Google',
+    stat: '77%',
+    statLabel: 'Contactos desde Google orgánico',
     featured: true,
   },
   {
@@ -30,6 +31,8 @@ const caseStudies = [
     challenge: 'La clínica de fisioterapia dependía únicamente de referencias y no tenía presencia digital. Pacientes potenciales no podían encontrar información sobre los servicios ni agendar consultas fácilmente.',
     solution: 'Creamos un sitio web profesional con información clara de servicios, integración directa con WhatsApp para consultas y un diseño que transmite profesionalismo y confianza.',
     quote: 'El sitio web nos ayudó a proyectar una imagen más profesional. Los pacientes ahora llegan más informados y el proceso de agendar citas es mucho más fluido.',
+    stat: '65%',
+    statLabel: 'Contactos desde Google orgánico',
   },
   {
     id: 'bnggroup',
@@ -53,12 +56,17 @@ const logos = [
 
 export default function CasosDeExito() {
   const [currentLogo, setCurrentLogo] = useState(0);
+  const [pageLoaded, setPageLoaded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentLogo((prev) => (prev + 1) % logos.length);
     }, 2500);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setPageLoaded(true);
   }, []);
 
   return (
@@ -77,6 +85,20 @@ export default function CasosDeExito() {
         .cases-page {
           background: var(--white);
           min-height: 100vh;
+        }
+
+        /* Page Loading State */
+        .cases-page-loading .cases-hero,
+        .cases-page-loading .logo-section,
+        .cases-page-loading .cases-section {
+          opacity: 0;
+        }
+
+        .cases-page-loaded .cases-hero,
+        .cases-page-loaded .logo-section,
+        .cases-page-loaded .cases-section {
+          opacity: 1;
+          transition: opacity 0.4s ease-out;
         }
 
         /* Navbar */
@@ -582,7 +604,7 @@ export default function CasosDeExito() {
         }
       `}</style>
 
-      <div className="cases-page">
+      <div className={`cases-page ${pageLoaded ? 'cases-page-loaded' : 'cases-page-loading'}`}>
         {/* Navbar */}
         <nav className="cases-navbar">
           <div className="cases-navbar-container">
@@ -684,9 +706,15 @@ export default function CasosDeExito() {
                     </svg>
                     Quiero resultados similares
                   </a>
-                  <a href={study.projectUrl} target="_blank" rel="noopener noreferrer" className="case-cta-secondary">
-                    Ver proyecto →
-                  </a>
+                  {study.caseStudyUrl ? (
+                    <Link href={study.caseStudyUrl} className="case-cta-secondary">
+                      Ver caso completo →
+                    </Link>
+                  ) : (
+                    <a href={study.projectUrl} target="_blank" rel="noopener noreferrer" className="case-cta-secondary">
+                      Ver proyecto →
+                    </a>
+                  )}
                 </div>
 
                 {/* Testimonial Column */}
