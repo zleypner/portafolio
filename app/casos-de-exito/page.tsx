@@ -9,14 +9,12 @@ const caseStudies = [
   {
     id: 'gastromedical',
     company: 'Gastromedical CR',
-    author: 'Dr. Daniel Zúñiga',
     industry: 'Salud · Clínica especializada',
     image: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
     projectUrl: 'https://gastromedicalcr.com/',
     caseStudyUrl: '/casos-de-exito/gastromedical',
     challenge: 'Gastromedical CR necesitaba fortalecer su presencia digital para facilitar que más personas encontraran sus servicios de gastroenterología.',
     solution: 'Implementamos desarrollo web, SEO orgánico, AEO y GEO para visibilidad en Google y ChatGPT, contenido especializado y optimización de conversiones.',
-    quote: 'Desde que lanzamos el nuevo sitio, las consultas desde Google aumentaron significativamente. Ahora tengo pacientes que me dicen que me encontraron buscando gastroenterólogo en su zona.',
     stat: '77%',
     statLabel: 'Contactos desde Google orgánico',
     featured: true,
@@ -24,27 +22,23 @@ const caseStudies = [
   {
     id: 'physicalcare',
     company: 'Physical Care Fisioterapia',
-    author: 'Lic. Enmanuel Li',
     industry: 'Salud · Fisioterapia',
     image: '/assets/yieldge/cases/image.webp',
     projectUrl: 'https://www.physicalcarefisioterapia.com',
     caseStudyUrl: '/casos-de-exito/physical-care',
     challenge: 'Physical Care necesitaba fortalecer su presencia digital para facilitar que mas personas descubrieran sus servicios de fisioterapia y rehabilitacion.',
     solution: 'Implementamos una estrategia de visibilidad digital, contenido informativo y optimizacion para buscadores que permite alcanzar nuevas audiencias.',
-    quote: 'El sitio web nos ayudo a proyectar una imagen mas profesional. Los pacientes ahora llegan mas informados sobre nuestros servicios.',
     stat: '91%',
     statLabel: 'Usuarios nuevos alcanzados',
   },
   {
     id: 'bnggroup',
     company: 'BNG Group',
-    author: 'Edward Barnett',
     industry: 'Retail · Consultoría',
     image: '/assets/yieldge/cases/Perfil fundador 2.png',
     projectUrl: 'https://edward-barnett.com/',
     challenge: 'BNG Group necesitaba establecer una presencia digital que reflejara su experiencia en consultoría de retail y abriera nuevas oportunidades de negocio a nivel internacional.',
     solution: 'Desarrollamos un sitio web personal y profesional que posiciona a Edward como experto en su industria, con contenido estratégico que atrae clientes potenciales del sector retail.',
-    quote: 'El sitio web me ayudó a posicionarme como referente en mi industria. Ahora recibo consultas de empresas que me encontraron buscando asesoría especializada.',
   },
 ];
 
@@ -390,47 +384,6 @@ export default function CasosDeExito() {
           color: var(--black);
         }
 
-        .case-testimonial-column {
-          padding-left: 30px;
-          border-left: 1px solid rgba(0,0,0,0.08);
-        }
-
-        @media (max-width: 900px) {
-          .case-testimonial-column {
-            padding-left: 0;
-            border-left: none;
-            padding-top: 30px;
-            border-top: 1px solid rgba(0,0,0,0.08);
-          }
-        }
-
-        .case-quote-mark {
-          font-family: var(--font-serif);
-          font-size: 60px;
-          line-height: 1;
-          color: rgba(37, 211, 102, 0.3);
-        }
-
-        .case-quote {
-          font-family: var(--font-serif);
-          font-size: 16px;
-          font-style: italic;
-          line-height: 1.7;
-          color: var(--gray-dark);
-          margin: 10px 0 20px;
-        }
-
-        .case-quote-author {
-          font-size: 14px;
-          font-weight: 600;
-          color: var(--black);
-        }
-
-        .case-quote-company {
-          font-size: 12px;
-          color: var(--gray);
-        }
-
         /* Method Section */
         .method-section {
           padding: 100px 40px;
@@ -666,13 +619,13 @@ export default function CasosDeExito() {
                   <div className="case-photo">
                     <Image
                       src={study.image}
-                      alt={study.author}
+                      alt={study.company}
                       fill
                       style={{ objectFit: 'cover' }}
                     />
                   </div>
                   <div>
-                    <div className="case-author">{study.author}</div>
+                    <div className="case-author">{study.company}</div>
                     <div className="case-company">{study.company}</div>
                   </div>
                   <span className="case-industry">
@@ -716,14 +669,6 @@ export default function CasosDeExito() {
                       Ver proyecto →
                     </a>
                   )}
-                </div>
-
-                {/* Testimonial Column */}
-                <div className="case-testimonial-column">
-                  <span className="case-quote-mark">&ldquo;</span>
-                  <p className="case-quote">&ldquo;{study.quote}&rdquo;</p>
-                  <div className="case-quote-author">{study.author}</div>
-                  <div className="case-quote-company">{study.company}</div>
                 </div>
               </div>
             ))}

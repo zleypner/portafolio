@@ -326,6 +326,7 @@ export default function Home() {
           background: linear-gradient(135deg, #0d2922 0%, #143d33 50%, #0a1f1a 100%);
           overflow: hidden;
           padding: 72px 20px 40px;
+          z-index: 1;
         }
 
         .pd-hero::before {
@@ -889,6 +890,9 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
         }
 
         .pd-casestudy-header {
@@ -1017,6 +1021,8 @@ export default function Home() {
           position: relative;
           width: 80px;
           height: 80px;
+          min-width: 80px;
+          min-height: 80px;
           border-radius: 50%;
           overflow: hidden;
           border: 2px solid rgba(255, 255, 255, 0.2);
@@ -1852,7 +1858,7 @@ export default function Home() {
           }
 
           .pd-cases-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
           }
 
@@ -2425,6 +2431,73 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Success Cases Section */}
+        <section id="casos" className="pd-cases">
+          <div className="pd-container">
+            <div className="pd-section-header">
+              <div className="pd-section-tag">
+                <span className="pd-section-tag-dot">·</span>
+                Casos de éxito
+                <span className="pd-section-tag-dot">·</span>
+              </div>
+              <h2 className="pd-section-title">Los resultados no se prometen. Se construyen.</h2>
+              <p className="pd-section-description">Cada negocio tiene desafíos diferentes, pero todos necesitan lo mismo: entender qué está frenando su crecimiento y tomar decisiones que generen valor.</p>
+            </div>
+
+            <div className="pd-cases-grid">
+              {cases.map((caseItem) => {
+                const CardContent = (
+                  <>
+                    <div className="pd-case-image" style={{ position: 'relative', aspectRatio: '4/3', minHeight: '180px' }}>
+                      <Image
+                        src={caseItem.image}
+                        alt={caseItem.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        style={{ objectFit: 'cover', objectPosition: 'center' }}
+                      />
+                      <span className="pd-case-tag">{caseItem.tag}</span>
+                    </div>
+                    <div className="pd-case-body">
+                      <h3 className="pd-case-name">{caseItem.name}</h3>
+                      <div className="pd-case-result">
+                        <span className="pd-case-result-value">{caseItem.result}</span>
+                        <span className="pd-case-result-label">{caseItem.resultLabel}</span>
+                      </div>
+                    </div>
+                  </>
+                );
+
+                return caseItem.isInternal ? (
+                  <Link key={caseItem.name} href={caseItem.url} className="pd-case-card">
+                    {CardContent}
+                  </Link>
+                ) : (
+                  <a
+                    key={caseItem.name}
+                    href={caseItem.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pd-case-card"
+                  >
+                    {CardContent}
+                  </a>
+                );
+              })}
+            </div>
+
+            <div className="pd-stats-grid">
+              {stats.map((stat) => (
+                <div key={stat.label} className="pd-stat-card">
+                  <p className="pd-stat-value">{stat.value}</p>
+                  <p className="pd-stat-label">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Featured Case Study - Gastromedical CR */}
         <section className="pd-featured-case">
           <div className="pd-featured-case-container">
@@ -2480,47 +2553,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Gastromedical Case Study Section */}
-        <section id="casos" className="pd-casestudy-new">
-          <div className="pd-container">
-            <p className="pd-casestudy-new-label">CASO DE EXITO · GASTROMEDICAL CR</p>
-            <h2 className="pd-casestudy-new-title">Resultados que demuestran el valor de una estrategia digital</h2>
-            <p className="pd-casestudy-new-subtitle">Como ayudamos a una clinica especializada a convertir busquedas en Google y ChatGPT en oportunidades reales de negocio, sin depender de anuncios pagados.</p>
-
-            <div className="pd-casestudy-new-stats">
-              <div className="pd-casestudy-new-stat">
-                <p className="pd-casestudy-new-stat-value">77%</p>
-                <p className="pd-casestudy-new-stat-label">Atraccion organica desde Google</p>
-              </div>
-              <div className="pd-casestudy-new-stat">
-                <p className="pd-casestudy-new-stat-value">62,5%</p>
-                <p className="pd-casestudy-new-stat-label">Conversion a WhatsApp desde ChatGPT</p>
-              </div>
-              <div className="pd-casestudy-new-stat">
-                <p className="pd-casestudy-new-stat-value">~4,8x</p>
-                <p className="pd-casestudy-new-stat-label">Mayor intencion de contacto desde IA</p>
-              </div>
-            </div>
-
-            <p className="pd-casestudy-new-source"><em>Periodo: 90 dias · Fuente: Google Analytics 4 · Sin publicidad pagada</em></p>
-
-            <div className="pd-casestudy-new-actions">
-              <Link href="/casos-de-exito/gastromedical" className="pd-casestudy-new-btn-dark">
-                Ver caso de exito
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </Link>
-              <a href="https://wa.me/50670724236" target="_blank" rel="noopener noreferrer" className="pd-casestudy-new-btn-whatsapp">
-                Quiero mejorar mi negocio
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Problem Identification Section */}
         <section id="problema" className="pd-problem">
           <div className="pd-problem-content">
@@ -2547,7 +2579,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Physical Care Case Study Section */}
+        {/* Case Study Section */}
         <section id="resultados" className="pd-casestudy">
           <div className="pd-container">
             <div className="pd-casestudy-header">
@@ -2558,21 +2590,7 @@ export default function Home() {
                 </svg>
                 Caso de exito verificado
               </div>
-              <h2>Physical Care — Clinica de Fisioterapia</h2>
-            </div>
-
-            <div className="pd-casestudy-featured">
-              <div className="pd-casestudy-image">
-                <Image
-                  src="/assets/yieldge/cases/image.webp"
-                  alt="Physical Care - Clínica de Fisioterapia"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 400px"
-                  loading="lazy"
-                  style={{ objectFit: 'cover', objectPosition: 'center' }}
-                />
-                <span className="pd-case-tag">Fisioterapia</span>
-              </div>
+              <h2>Gastromedical CR — Clinica de Gastroenterologia</h2>
             </div>
 
             <div className="pd-casestudy-grid">
@@ -2581,7 +2599,7 @@ export default function Home() {
                   <div className="pd-casestudy-card-num">1</div>
                   <h3>El desafio</h3>
                 </div>
-                <p>Necesitaban aumentar su visibilidad digital y atraer nuevos pacientes a sus servicios de fisioterapia especializada.</p>
+                <p>Necesitaban fortalecer su presencia digital y facilitar que mas personas descubrieran sus servicios de gastroenterologia.</p>
               </div>
 
               <div className="pd-casestudy-card solution">
@@ -2589,7 +2607,7 @@ export default function Home() {
                   <div className="pd-casestudy-card-num">2</div>
                   <h3>La estrategia</h3>
                 </div>
-                <p>Optimizacion del sitio web, contenido educativo sobre tratamientos y posicionamiento local en buscadores.</p>
+                <p>Posicionamiento en Google y ChatGPT. Contenido que genera confianza. Conversion optimizada hacia WhatsApp.</p>
               </div>
 
               <div className="pd-casestudy-card result">
@@ -2597,13 +2615,38 @@ export default function Home() {
                   <div className="pd-casestudy-card-num">3</div>
                   <h3>Los resultados</h3>
                 </div>
-                <p className="result-value">91% usuarios nuevos</p>
-                <p>Incremento significativo en trafico web y consultas de nuevos pacientes.</p>
+                <p className="result-value">77% organico</p>
+                <p>De los contactos medidos provino de Google. Sin inversion publicitaria.</p>
+              </div>
+            </div>
+
+            {/* Testimonial */}
+            <div className="pd-testimonial">
+              <div className="pd-testimonial-avatar">
+                <Image
+                  src={IMAGES.testimonialAvatar}
+                  alt="Dr. Daniel Zuniga"
+                  fill
+                  sizes="96px"
+                  loading="lazy"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+              <div className="pd-testimonial-content">
+                <svg width="32" height="32" className="pd-testimonial-quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"/>
+                  <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+                </svg>
+                <blockquote>
+                  &ldquo;Ahora tengo pacientes que me dicen que me encontraron buscando gastroenterologo en su zona. Eso antes casi no pasaba.&rdquo;
+                </blockquote>
+                <p className="pd-testimonial-author">Dr. Daniel Zuniga</p>
+                <p className="pd-testimonial-role">Director Medico, Gastromedical CR</p>
               </div>
             </div>
 
             <div className="pd-cases-link" style={{ marginTop: '32px' }}>
-              <Link href="/casos-de-exito/physical-care">
+              <Link href="/casos-de-exito/gastromedical">
                 Ver caso completo
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
