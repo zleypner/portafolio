@@ -36,7 +36,6 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const [heroLoaded, setHeroLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -115,29 +114,22 @@ export default function Home() {
 
   const cases = [
     {
-      name: 'Gastromedical',
+      name: 'Gastromedical CR',
       image: '/assets/yieldge/presencia-digital/gastro-hero-2.webp',
       result: '77%',
-      resultLabel: 'desde Google',
+      resultLabel: 'captacion organica',
       tag: 'Salud',
-      url: 'https://gastromedicalcr.com/',
+      url: '/casos-de-exito/gastromedical',
+      isInternal: true,
     },
     {
       name: 'Physical Care',
       image: '/assets/yieldge/cases/image.webp',
-      result: '65%',
-      resultLabel: 'desde Google',
+      result: '91%',
+      resultLabel: 'usuarios nuevos',
       tag: 'Fisioterapia',
-      url: 'https://www.physicalcarefisioterapia.com/',
-    },
-    {
-      name: 'BNG Group',
-      image: '/assets/yieldge/cases/Perfil fundador 2.webp',
-      result: '2x',
-      resultLabel: 'leads calificados',
-      tag: 'Retail',
-      url: 'https://edward-barnett.com/',
-      objectPosition: 'top',
+      url: '/casos-de-exito/physical-care',
+      isInternal: true,
     },
   ];
 
@@ -150,16 +142,6 @@ export default function Home() {
           color: #1d1d1f;
           min-height: 100vh;
           font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        /* Hero Loading State */
-        .pd-hero-loading .pd-hero-container {
-          opacity: 0;
-        }
-
-        .pd-hero-loaded .pd-hero-container {
-          opacity: 1;
-          transition: opacity 0.4s ease-out;
         }
 
         /* Navbar */
@@ -2384,7 +2366,7 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <section className={`pd-hero ${heroLoaded ? 'pd-hero-loaded' : 'pd-hero-loading'}`}>
+        <section className="pd-hero">
           <div className="pd-hero-bg">
             {/* Background Logo Watermark - hidden on mobile */}
             <div className="pd-hero-bg-logo">
@@ -2408,7 +2390,6 @@ export default function Home() {
                   sizes="(max-width: 768px) 280px, 50vw"
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
                   priority
-                  onLoad={() => setHeroLoaded(true)}
                 />
               </div>
             </div>
@@ -2449,10 +2430,10 @@ export default function Home() {
           <div className="pd-featured-case-container">
             <Link href="/casos-de-exito/gastromedical" className="pd-featured-case-header-link">
               <div className="pd-featured-case-header">
-                <span className="pd-featured-case-tag">Caso de Éxito - Gastromedical CR</span>
-                <h2 className="pd-featured-case-title">Resultados reales. Sin depender de anuncios.</h2>
+                <span className="pd-featured-case-tag">Caso de Exito · Gastromedical CR</span>
+                <h2 className="pd-featured-case-title">Resultados que demuestran el valor de una estrategia digital</h2>
                 <p className="pd-featured-case-subtitle">
-                  Posicionamiento en Google y ChatGPT que convierte búsquedas en oportunidades de negocio.
+                  Como ayudamos a una clinica especializada a convertir busquedas en Google y ChatGPT en oportunidades reales de negocio, sin depender de anuncios pagados.
                 </p>
               </div>
             </Link>
@@ -2461,28 +2442,40 @@ export default function Home() {
               <div className="pd-featured-metrics">
                 <div className="pd-featured-metric">
                   <div className="pd-featured-metric-value">77%</div>
-                  <p className="pd-featured-metric-label">Contactos atribuidos a Google orgánico</p>
-                </div>
-                <div className="pd-featured-metric">
-                  <div className="pd-featured-metric-value">~17%</div>
-                  <p className="pd-featured-metric-label">Contactos atribuidos a ChatGPT</p>
+                  <p className="pd-featured-metric-label">Captacion organica desde Google</p>
                 </div>
                 <div className="pd-featured-metric">
                   <div className="pd-featured-metric-value">62,5%</div>
-                  <p className="pd-featured-metric-label">Interacción con WhatsApp desde ChatGPT</p>
+                  <p className="pd-featured-metric-label">Conversion a WhatsApp desde ChatGPT</p>
+                </div>
+                <div className="pd-featured-metric">
+                  <div className="pd-featured-metric-value">~4,8x</div>
+                  <p className="pd-featured-metric-label">Mayor intencion de contacto desde IA</p>
                 </div>
               </div>
             </Link>
 
-            <p className="pd-featured-note">Resultados de 90 días - Sin publicidad pagada</p>
+            <p className="pd-featured-note">Periodo: 90 dias · Fuente: Google Analytics 4 · Sin publicidad pagada</p>
 
-            <div className="pd-featured-cta">
+            <div className="pd-featured-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <Link href="/casos-de-exito/gastromedical" className="pd-featured-cta-link">
-                Ver caso de éxito
+                Ver caso de exito
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </Link>
+              <a
+                href={getWhatsAppUrl('Hola Anwar, vi el caso de éxito de Gastromedical y me gustaría saber cómo podemos mejorar la visibilidad y la captación de clientes de mi negocio.')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pd-featured-cta-link"
+                style={{ background: '#25D366' }}
+              >
+                Quiero mejorar mi negocio
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </a>
             </div>
           </div>
         </section>
@@ -2501,34 +2494,46 @@ export default function Home() {
             </div>
 
             <div className="pd-cases-grid">
-              {cases.map((caseItem) => (
-                <a
-                  key={caseItem.name}
-                  href={caseItem.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="pd-case-card"
-                >
-                  <div className="pd-case-image" style={{ position: 'relative', aspectRatio: '4/3', minHeight: '180px' }}>
-                    <Image
-                      src={caseItem.image}
-                      alt={caseItem.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      loading="lazy"
-                      style={{ objectFit: 'cover', objectPosition: caseItem.objectPosition || 'center' }}
-                    />
-                    <span className="pd-case-tag">{caseItem.tag}</span>
-                  </div>
-                  <div className="pd-case-body">
-                    <h3 className="pd-case-name">{caseItem.name}</h3>
-                    <div className="pd-case-result">
-                      <span className="pd-case-result-value">{caseItem.result}</span>
-                      <span className="pd-case-result-label">{caseItem.resultLabel}</span>
+              {cases.map((caseItem) => {
+                const CardContent = (
+                  <>
+                    <div className="pd-case-image" style={{ position: 'relative', aspectRatio: '4/3', minHeight: '180px' }}>
+                      <Image
+                        src={caseItem.image}
+                        alt={caseItem.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        loading="lazy"
+                        style={{ objectFit: 'cover', objectPosition: 'center' }}
+                      />
+                      <span className="pd-case-tag">{caseItem.tag}</span>
                     </div>
-                  </div>
-                </a>
-              ))}
+                    <div className="pd-case-body">
+                      <h3 className="pd-case-name">{caseItem.name}</h3>
+                      <div className="pd-case-result">
+                        <span className="pd-case-result-value">{caseItem.result}</span>
+                        <span className="pd-case-result-label">{caseItem.resultLabel}</span>
+                      </div>
+                    </div>
+                  </>
+                );
+
+                return caseItem.isInternal ? (
+                  <Link key={caseItem.name} href={caseItem.url} className="pd-case-card">
+                    {CardContent}
+                  </Link>
+                ) : (
+                  <a
+                    key={caseItem.name}
+                    href={caseItem.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pd-case-card"
+                  >
+                    {CardContent}
+                  </a>
+                );
+              })}
             </div>
 
             <div className="pd-stats-grid">
@@ -2577,35 +2582,35 @@ export default function Home() {
                   <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
                   <polyline points="17 6 23 6 23 12"/>
                 </svg>
-                Caso de éxito destacado
+                Caso de exito verificado
               </div>
-              <h2>Dr. Daniel Zúñiga — Gastromedical CR</h2>
+              <h2>Gastromedical CR — Clinica de Gastroenterologia</h2>
             </div>
 
             <div className="pd-casestudy-grid">
               <div className="pd-casestudy-card problem">
                 <div className="pd-casestudy-card-header">
                   <div className="pd-casestudy-card-num">1</div>
-                  <h3>El problema</h3>
+                  <h3>El desafio</h3>
                 </div>
-                <p>Sitio web básico, sin SEO, casi todos los pacientes llegaban por referidos. No aparecía en Google.</p>
+                <p>Necesitaban fortalecer su presencia digital y facilitar que mas personas descubrieran sus servicios de gastroenterologia.</p>
               </div>
 
               <div className="pd-casestudy-card solution">
                 <div className="pd-casestudy-card-header">
                   <div className="pd-casestudy-card-num">2</div>
-                  <h3>Lo que hicimos</h3>
+                  <h3>La estrategia</h3>
                 </div>
-                <p>Rediseño completo enfocado en confianza. Páginas por tratamiento. SEO local real. Botón de WhatsApp integrado.</p>
+                <p>Posicionamiento en Google y ChatGPT. Contenido que genera confianza. Conversion optimizada hacia WhatsApp.</p>
               </div>
 
               <div className="pd-casestudy-card result">
                 <div className="pd-casestudy-card-header">
                   <div className="pd-casestudy-card-num">3</div>
-                  <h3>El resultado</h3>
+                  <h3>Los resultados</h3>
                 </div>
-                <p className="result-value">+180% consultas</p>
-                <p>En 4 meses, la mitad de pacientes nuevos llegaban desde Google. Sin publicidad pagada.</p>
+                <p className="result-value">77% organico</p>
+                <p>De los contactos medidos provino de Google. Sin inversion publicitaria.</p>
               </div>
             </div>
 
@@ -2614,7 +2619,7 @@ export default function Home() {
               <div className="pd-testimonial-avatar" style={{ position: 'relative', width: '72px', height: '72px', minWidth: '72px', minHeight: '72px' }}>
                 <Image
                   src={IMAGES.testimonialAvatar}
-                  alt="Dr. Daniel Zúñiga"
+                  alt="Dr. Daniel Zuniga"
                   fill
                   sizes="96px"
                   loading="lazy"
@@ -2627,16 +2632,16 @@ export default function Home() {
                   <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
                 </svg>
                 <blockquote>
-                  &ldquo;Antes casi todo llegaba por referidos. Hoy hay semanas en que la mitad de las consultas vienen del sitio — y por fin se ve como la clínica que somos.&rdquo;
+                  &ldquo;Ahora tengo pacientes que me dicen que me encontraron buscando gastroenterologo en su zona. Eso antes casi no pasaba.&rdquo;
                 </blockquote>
-                <p className="pd-testimonial-author">Dr. Daniel Zúñiga</p>
-                <p className="pd-testimonial-role">Director Médico, Gastromedical CR</p>
+                <p className="pd-testimonial-author">Dr. Daniel Zuniga</p>
+                <p className="pd-testimonial-role">Director Medico, Gastromedical CR</p>
               </div>
             </div>
 
             <div className="pd-cases-link" style={{ marginTop: '32px' }}>
-              <Link href="/casos-de-exito">
-                Conocé los resultados
+              <Link href="/casos-de-exito/gastromedical">
+                Ver caso completo
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
