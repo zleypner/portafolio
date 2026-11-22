@@ -2505,10 +2505,10 @@ export default function Home() {
           <div className="pd-featured-case-container">
             <Link href="/casos-de-exito/gastromedical" className="pd-featured-case-header-link">
               <div className="pd-featured-case-header">
-                <span className="pd-featured-case-tag">Caso de Exito · Gastromedical CR</span>
+                <span className="pd-featured-case-tag">Caso de Éxito · Gastromedical CR</span>
                 <h2 className="pd-featured-case-title">Resultados que demuestran el valor de una estrategia digital</h2>
                 <p className="pd-featured-case-subtitle">
-                  Como ayudamos a una clinica especializada a convertir busquedas en Google y ChatGPT en oportunidades reales de negocio, sin depender de anuncios pagados.
+                  Cómo ayudamos a una clínica especializada a convertir búsquedas en Google y ChatGPT en oportunidades reales de negocio, sin depender de anuncios pagados.
                 </p>
               </div>
             </Link>
@@ -2517,24 +2517,24 @@ export default function Home() {
               <div className="pd-featured-metrics">
                 <div className="pd-featured-metric">
                   <div className="pd-featured-metric-value">77%</div>
-                  <p className="pd-featured-metric-label">Captacion organica desde Google</p>
+                  <p className="pd-featured-metric-label">Captación orgánica desde Google</p>
                 </div>
                 <div className="pd-featured-metric">
                   <div className="pd-featured-metric-value">62,5%</div>
-                  <p className="pd-featured-metric-label">Conversion a WhatsApp desde ChatGPT</p>
+                  <p className="pd-featured-metric-label">Conversión a WhatsApp desde ChatGPT</p>
                 </div>
                 <div className="pd-featured-metric">
                   <div className="pd-featured-metric-value">~4,8x</div>
-                  <p className="pd-featured-metric-label">Mayor intencion de contacto desde IA</p>
+                  <p className="pd-featured-metric-label">Mayor intención de contacto desde IA</p>
                 </div>
               </div>
             </Link>
 
-            <p className="pd-featured-note">Periodo: 90 dias · Fuente: Google Analytics 4 · Sin publicidad pagada</p>
+            <p className="pd-featured-note">Período: 90 días · Fuente: Google Analytics 4 · Sin publicidad pagada</p>
 
             <div className="pd-featured-cta" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <Link href="/casos-de-exito/gastromedical" className="pd-featured-cta-link">
-                Ver caso de exito
+                Ver caso de éxito
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -2590,18 +2590,18 @@ export default function Home() {
                   <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
                   <polyline points="17 6 23 6 23 12"/>
                 </svg>
-                Caso de exito verificado
+                Caso de éxito verificado
               </div>
-              <h2>Gastromedical CR — Clinica de Gastroenterologia</h2>
+              <h2>Gastromedical CR — Clínica de Gastroenterología</h2>
             </div>
 
             <div className="pd-casestudy-grid">
               <div className="pd-casestudy-card problem">
                 <div className="pd-casestudy-card-header">
                   <div className="pd-casestudy-card-num">1</div>
-                  <h3>El desafio</h3>
+                  <h3>El desafío</h3>
                 </div>
-                <p>Necesitaban fortalecer su presencia digital y facilitar que mas personas descubrieran sus servicios de gastroenterologia.</p>
+                <p>Necesitaban fortalecer su presencia digital y facilitar que más personas descubrieran sus servicios de gastroenterología.</p>
               </div>
 
               <div className="pd-casestudy-card solution">
@@ -2609,7 +2609,7 @@ export default function Home() {
                   <div className="pd-casestudy-card-num">2</div>
                   <h3>La estrategia</h3>
                 </div>
-                <p>Posicionamiento en Google y ChatGPT. Contenido que genera confianza. Conversion optimizada hacia WhatsApp.</p>
+                <p>Posicionamiento en Google y ChatGPT. Contenido que genera confianza. Conversión optimizada hacia WhatsApp.</p>
               </div>
 
               <div className="pd-casestudy-card result">
@@ -2617,8 +2617,8 @@ export default function Home() {
                   <div className="pd-casestudy-card-num">3</div>
                   <h3>Los resultados</h3>
                 </div>
-                <p className="result-value">77% organico</p>
-                <p>De los contactos medidos provino de Google. Sin inversion publicitaria.</p>
+                <p className="result-value">77% orgánico</p>
+                <p>De los contactos medidos provino de Google. Sin inversión publicitaria.</p>
               </div>
             </div>
 
