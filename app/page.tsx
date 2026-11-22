@@ -2429,6 +2429,26 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
+
+              {/* Logos Section */}
+              <div className="pd-logos">
+                <p className="pd-logos-label">Han confiado en mí</p>
+                <div className="pd-logos-scroll">
+                  <div className="pd-logos-track">
+                    {[...LOGOS, ...LOGOS].map((logo, index) => (
+                      <div key={`${logo.name}-${index}`} className="pd-logo-item">
+                        <Image
+                          src={logo.logo}
+                          alt={logo.name}
+                          width={logo.large ? 140 : 80}
+                          height={56}
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
